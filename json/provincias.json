@@ -1,0 +1,262 @@
+[
+  {
+    "ID": "1",
+    "NOMBRE": "Araba/Álava",
+    "COD_CCAA": "16"
+  },
+  {
+    "ID": "2",
+    "NOMBRE": "Albacete",
+    "COD_CCAA": "8"
+  },
+  {
+    "ID": "3",
+    "NOMBRE": "Alacant/Alicante",
+    "COD_CCAA": "10"
+  },
+  {
+    "ID": "4",
+    "NOMBRE": "Almería",
+    "COD_CCAA": "1"
+  },
+  {
+    "ID": "5",
+    "NOMBRE": "Ávila",
+    "COD_CCAA": "7"
+  },
+  {
+    "ID": "6",
+    "NOMBRE": "Badajoz",
+    "COD_CCAA": "11"
+  },
+  {
+    "ID": "7",
+    "NOMBRE": "Illes Balears",
+    "COD_CCAA": "4"
+  },
+  {
+    "ID": "8",
+    "NOMBRE": "Barcelona",
+    "COD_CCAA": "9"
+  },
+  {
+    "ID": "9",
+    "NOMBRE": "Burgos",
+    "COD_CCAA": "7"
+  },
+  {
+    "ID": "10",
+    "NOMBRE": "Cáceres",
+    "COD_CCAA": "11"
+  },
+  {
+    "ID": "11",
+    "NOMBRE": "Cádiz",
+    "COD_CCAA": "1"
+  },
+  {
+    "ID": "12",
+    "NOMBRE": "Castelló/Castellón",
+    "COD_CCAA": "10"
+  },
+  {
+    "ID": "13",
+    "NOMBRE": "Ciudad Real",
+    "COD_CCAA": "8"
+  },
+  {
+    "ID": "14",
+    "NOMBRE": "Córdoba",
+    "COD_CCAA": "1"
+  },
+  {
+    "ID": "15",
+    "NOMBRE": "A Coruña",
+    "COD_CCAA": "12"
+  },
+  {
+    "ID": "16",
+    "NOMBRE": "Cuenca",
+    "COD_CCAA": "8"
+  },
+  {
+    "ID": "17",
+    "NOMBRE": "Girona",
+    "COD_CCAA": "9"
+  },
+  {
+    "ID": "18",
+    "NOMBRE": "Granada",
+    "COD_CCAA": "1"
+  },
+  {
+    "ID": "19",
+    "NOMBRE": "Guadalajara",
+    "COD_CCAA": "8"
+  },
+  {
+    "ID": "20",
+    "NOMBRE": "Gipuzkoa",
+    "COD_CCAA": "16"
+  },
+  {
+    "ID": "21",
+    "NOMBRE": "Huelva",
+    "COD_CCAA": "1"
+  },
+  {
+    "ID": "22",
+    "NOMBRE": "Huesca",
+    "COD_CCAA": "2"
+  },
+  {
+    "ID": "23",
+    "NOMBRE": "Jaén",
+    "COD_CCAA": "1"
+  },
+  {
+    "ID": "24",
+    "NOMBRE": "León",
+    "COD_CCAA": "7"
+  },
+  {
+    "ID": "25",
+    "NOMBRE": "Lleida",
+    "COD_CCAA": "9"
+  },
+  {
+    "ID": "26",
+    "NOMBRE": "La Rioja",
+    "COD_CCAA": "17"
+  },
+  {
+    "ID": "27",
+    "NOMBRE": "Lugo",
+    "COD_CCAA": "12"
+  },
+  {
+    "ID": "28",
+    "NOMBRE": "Madrid",
+    "COD_CCAA": "13"
+  },
+  {
+    "ID": "29",
+    "NOMBRE": "Málaga",
+    "COD_CCAA": "1"
+  },
+  {
+    "ID": "30",
+    "NOMBRE": "Murcia",
+    "COD_CCAA": "14"
+  },
+  {
+    "ID": "31",
+    "NOMBRE": "Navarra",
+    "COD_CCAA": "15"
+  },
+  {
+    "ID": "32",
+    "NOMBRE": "Ourense",
+    "COD_CCAA": "12"
+  },
+  {
+    "ID": "33",
+    "NOMBRE": "Asturias",
+    "COD_CCAA": "3"
+  },
+  {
+    "ID": "34",
+    "NOMBRE": "Palencia",
+    "COD_CCAA": "7"
+  },
+  {
+    "ID": "35",
+    "NOMBRE": "Las Palmas",
+    "COD_CCAA": "5"
+  },
+  {
+    "ID": "36",
+    "NOMBRE": "Pontevedra",
+    "COD_CCAA": "12"
+  },
+  {
+    "ID": "37",
+    "NOMBRE": "Salamanca",
+    "COD_CCAA": "7"
+  },
+  {
+    "ID": "38",
+    "NOMBRE": "Santa Cruz de Tenerife",
+    "COD_CCAA": "5"
+  },
+  {
+    "ID": "39",
+    "NOMBRE": "Cantabria",
+    "COD_CCAA": "6"
+  },
+  {
+    "ID": "40",
+    "NOMBRE": "Segovia",
+    "COD_CCAA": "7"
+  },
+  {
+    "ID": "41",
+    "NOMBRE": "Sevilla",
+    "COD_CCAA": "1"
+  },
+  {
+    "ID": "42",
+    "NOMBRE": "Soria",
+    "COD_CCAA": "7"
+  },
+  {
+    "ID": "43",
+    "NOMBRE": "Tarragona",
+    "COD_CCAA": "9"
+  },
+  {
+    "ID": "44",
+    "NOMBRE": "Teruel",
+    "COD_CCAA": "2"
+  },
+  {
+    "ID": "45",
+    "NOMBRE": "Toledo",
+    "COD_CCAA": "8"
+  },
+  {
+    "ID": "46",
+    "NOMBRE": "València/Valencia",
+    "COD_CCAA": "10"
+  },
+  {
+    "ID": "47",
+    "NOMBRE": "Valladolid",
+    "COD_CCAA": "7"
+  },
+  {
+    "ID": "48",
+    "NOMBRE": "Bizkaia",
+    "COD_CCAA": "16"
+  },
+  {
+    "ID": "49",
+    "NOMBRE": "Zamora",
+    "COD_CCAA": "7"
+  },
+  {
+    "ID": "50",
+    "NOMBRE": "Zaragoza",
+    "COD_CCAA": "2"
+  },
+  {
+    "ID": "51",
+    "NOMBRE": "Ceuta",
+    "COD_CCAA": "18"
+  },
+  {
+    "ID": "52",
+    "NOMBRE": "Melilla",
+    "COD_CCAA": "19"
+  }
+]

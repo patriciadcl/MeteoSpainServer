@@ -1,0 +1,32 @@
+[{
+    "NOMBRE":"Costa de Andalucía Occidental y Ceuta",
+		"ID":"42"
+	},
+	{
+		"NOMBRE":"Costa de Andalucía Oriental y Melilla",
+		"ID":"47"
+	},
+	{
+		"NOMBRE":"Costa de Asturias, Cantabria y País Vasco",
+		"ID":"41"
+	},
+	{
+		"NOMBRE":"Costa de Cataluña",
+		"ID":"45"
+	},
+	{
+		"NOMBRE":"Costa de Galicia",
+		"ID":"40"
+	},
+	{
+		"NOMBRE":"Costa de Illes Balears",
+		"ID":"44"
+	},
+	{
+		"NOMBRE":"Costa de las Islas Canarias",
+		"ID":"43"
+	},		
+	{
+		"NOMBRE":"Costa de Valencia y Murcia",
+		"ID":"46"
+	}]
