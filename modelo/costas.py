@@ -1,8 +1,10 @@
 class Zona:
-    def __init__(self,id_aemet,id_api,texto):
+    def __init__(self, id_aemet, id_api, texto, aviso, tendencia):
         self.__id_aemet = id_aemet
         self.__id_api = id_api
         self.__texto = texto
+        self.__aviso = aviso
+        self.__tendencia = tendencia
 
     @property
     def id_aemet(self):
@@ -17,6 +19,14 @@ class Zona:
         return self.__texto
 
     @property
+    def aviso(self):
+        return self.__aviso
+
+    @property
+    def tendencia(self):
+        return self.__tendencia
+
+    @property
     def to_dict(self):
         diccionario = dict()
         for k, v in self.__dict__.items():
@@ -26,8 +36,7 @@ class Zona:
 
 
 class SubZona:
-
-    def __init__(self,id_aemet,texto):
+    def __init__(self, id_aemet, texto):
         self.__id_aemet = id_aemet
         self.__texto = texto
 
@@ -46,4 +55,3 @@ class SubZona:
             key = k.split("__")[1]
             diccionario[key] = v
         return diccionario
-
