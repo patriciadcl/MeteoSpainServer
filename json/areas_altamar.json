@@ -1,4 +1,4 @@
 [
-  {"ID":0,"NOMBRE":"Océano Atlántico al sur de 35º N"},
-  {"ID":1,"NOMBRE":"Océano Atlántico al norte de 30º N"},
-  {"ID":2,"NOMBRE":"Mar Mediterráneo"}]
+  {"ID_API":"0","NOMBRE":"Océano Atlántico al sur de 35º N","ID_AEMET":"S902"},
+  {"ID_API":"1","NOMBRE":"Océano Atlántico al norte de 30º N","ID_AEMET":"S901"},
+  {"ID_API":"2","NOMBRE":"Mar Mediterráneo","ID_AEMET":"S905"}]
