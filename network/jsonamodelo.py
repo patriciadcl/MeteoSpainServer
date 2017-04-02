@@ -1,6 +1,7 @@
 import json
 import modelo.altamar as altamar
 import modelo.costas as costas
+import modelo.montaña as montana
 
 
 class JsonAModelo:
@@ -12,7 +13,7 @@ class JsonAModelo:
         return new_fecha[0] + "-" + new_fecha[1] + "-" + new_fecha[2]
 
     @classmethod
-    def get_altamar(self,cadena_json):
+    def json_a_altamar(self,cadena_json):
         try:
             js = json.loads(cadena_json)
         except:
@@ -32,7 +33,7 @@ class JsonAModelo:
         return zona
 
     @classmethod
-    def get_costas(self,cadena_json):
+    def json_a_costas(self,cadena_json):
         try:
             js = json.loads(cadena_json)
         except:
@@ -51,4 +52,34 @@ class JsonAModelo:
             subzona = costas.SubZona(str(json_subzona["subzona"]['id']), json_subzona["subzona"]['texto'])
             subzonas.append(subzona)
         zona = costas.Zona(id_aemet, "", f_elaboracion, f_inicio, f_fin, situacion, aviso, tendencia, subzonas)
+        return zona
+
+
+    @classmethod
+    def json_a_montana(self, cadena_json, f_pronostico):
+        try:
+            js = json.loads(cadena_json)
+        except:
+            js = None
+        id_api = js[0]["id"]
+        prediccion = js[0]["seccion"][0]["apartado"]
+        estado_cielo = prediccion[0]["texto"]
+        tormentas = prediccion[1]["texto"]
+        temperaturas = prediccion[2]["texto"]
+        viento = prediccion[3]["texto"]
+        precipitaciones = prediccion[4]["texto"]
+        json_lugares = js[0]["seccion"][2]["lugar"]
+        if len(json_lugares) > 0:
+            lugares = list()
+            for json_lugar in json_lugares:
+                minima = str(json_lugar["minima"])
+                st_minima = str(json_lugar["stminima"])
+                maxima = str(json_lugar["maxima"])
+                st_maxima = str(json_lugar["stmaxima"])
+                nombre = json_lugar["nombre"]
+                altitud = json_lugar["altitud"]
+                lugar = montana.Lugar( minima, st_minima, maxima, st_maxima, nombre, altitud)
+                lugares.append(lugar)
+        zona = montana.Montana(id_api, self.girar_fecha(f_pronostico), estado_cielo, precipitaciones, tormentas, temperaturas, viento, lugares)
+
         return zona

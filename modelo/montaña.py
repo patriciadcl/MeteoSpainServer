@@ -31,7 +31,6 @@ class Lugar:
     def altitud(self):
         return self.__altitud
 
-
     @property
     def to_dict(self):
         diccionario = dict()
@@ -40,9 +39,11 @@ class Lugar:
             diccionario[key] = v
         return diccionario
 
-class Montaña:
-    def __init__(self, id_api, estado_cielo, precipitaciones, tormentas, temperaturas, viento,s_termica):
+
+class Montana:
+    def __init__(self, id_api,f_pronostico, estado_cielo, precipitaciones, tormentas, temperaturas, viento,s_termica):
         self.__id_api = id_api
+        self.__f_pronostico = f_pronostico
         self.__estado_cielo = estado_cielo
         self.__precipitaciones = precipitaciones
         self.__tormentas = tormentas
@@ -53,6 +54,10 @@ class Montaña:
     @property
     def id_api(self):
         return self.__id_api
+
+    @property
+    def f_pronostico(self):
+        return self.__f_pronostico
 
     @property
     def estado_cielo(self):
@@ -85,4 +90,5 @@ class Montaña:
             key = k.split("__")[1]
             diccionario[key] = v
         return diccionario
+
 
