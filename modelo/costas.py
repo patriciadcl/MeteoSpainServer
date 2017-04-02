@@ -1,8 +1,8 @@
 class Zona:
-    def __init__(self, id_aemet, id_api, texto, aviso, tendencia):
+    def __init__(self, id_aemet, id_api, situacion, aviso, tendencia):
         self.__id_aemet = id_aemet
         self.__id_api = id_api
-        self.__texto = texto
+        self.__situacion = situacion
         self.__aviso = aviso
         self.__tendencia = tendencia
 
@@ -15,8 +15,8 @@ class Zona:
         return self.__id_api
 
     @property
-    def texto(self):
-        return self.__texto
+    def situacion(self):
+        return self.__situacion
 
     @property
     def aviso(self):

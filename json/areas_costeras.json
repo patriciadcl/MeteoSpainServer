@@ -1,32 +1,40 @@
 [{
     "NOMBRE":"Costa de Andalucía Occidental y Ceuta",
 		"ID":"42"
+        "ID_AEMET":"803"
 	},
 	{
 		"NOMBRE":"Costa de Andalucía Oriental y Melilla",
 		"ID":"47"
+        "ID_AEMET":"804"
 	},
 	{
 		"NOMBRE":"Costa de Asturias, Cantabria y País Vasco",
 		"ID":"41"
+        "ID_AEMET":"801"
 	},
 	{
 		"NOMBRE":"Costa de Cataluña",
 		"ID":"45"
+        "ID_AEMET":"806"
 	},
 	{
 		"NOMBRE":"Costa de Galicia",
 		"ID":"40"
+        "ID_AEMET":"802"
 	},
 	{
 		"NOMBRE":"Costa de Illes Balears",
 		"ID":"44"
+        "ID_AEMET":"807"
 	},
 	{
 		"NOMBRE":"Costa de las Islas Canarias",
 		"ID":"43"
+        "ID_AEMET":"808"
 	},		
 	{
 		"NOMBRE":"Costa de Valencia y Murcia",
 		"ID":"46"
+        "ID_AEMET":"805"
 	}]
