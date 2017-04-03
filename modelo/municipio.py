@@ -126,8 +126,8 @@ class Municipio:
         return self.__f_elaboracion
 
     @property
-    def dias(self):
-        return self.__dias
+    def prediccion(self):
+        return self.__prediccion
 
     @property
     def to_dict(self):
