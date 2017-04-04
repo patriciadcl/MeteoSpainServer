@@ -1,6 +1,6 @@
-class Playa:
-    def __init__(self, id, f_validez,estado_cielo,viento,oleaje,t_maxima,s_termica,t_agua,uv_max):
-        self.__id = id
+class Prediccion:
+
+    def __init__(self, f_validez,estado_cielo,viento,oleaje,t_maxima,s_termica,t_agua,uv_max):
         self.__f_validez = f_validez
         self.__estado_cielo = estado_cielo
         self.__viento = viento
@@ -10,11 +10,6 @@ class Playa:
         self.__t_agua = t_agua
         self.__uv_max = uv_max
 
-    @property
-    def id(self):
-        return self.__id
-
-    @property
     def fecha_validez(self):
         return self.__f_validez
 
@@ -45,6 +40,35 @@ class Playa:
     @property
     def uv_max(self):
         return self.__uv_max
+
+    @property
+    def to_dict(self):
+        diccionario = dict()
+        for k, v in self.__dict__.items():
+            key = k.split("__")[1]
+            diccionario[key] = v
+        return diccionario
+
+
+
+
+class Playa:
+    def __init__(self, id, f_elaboracion, prediccion):
+        self.__id = id
+        self.__f_elaboracion = f_elaboracion
+        self.__prediccion = prediccion
+
+    @property
+    def id(self):
+        return self.__id
+
+    @property
+    def fecha_elaboracion(self):
+        return self.__f_elaboracion
+
+    @property
+    def prediccion(self):
+        return self.__prediccion
 
     @property
     def to_dict(self):
