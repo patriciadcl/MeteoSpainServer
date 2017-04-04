@@ -66,8 +66,8 @@ class PrediccionHoras(PredicionDia):
     def __init__(self,f_validez,orto,ocaso,estado_cielo,precipitacion,prob_precipitacion,prob_tormenta,nieve,
                  prob_nieve,viento,racha_max,temperatura,s_termica,humedad_rel):
 
-        super().__init__(f_validez,prob_precipitacion,None,estado_cielo,viento,racha_max,temperatura,
-                 s_termica,humedad_rel,None)
+        super().__init__(f_validez,prob_precipitacion,"",estado_cielo,viento,racha_max,temperatura,
+                 s_termica,humedad_rel,"")
         self.__orto = orto
         self.__ocaso = ocaso
         self.__precipitacion = precipitacion
