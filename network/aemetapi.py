@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 import json, sys
-import urllib.request as ur
-import codecs
-
 
 class AemetAPI:
 
