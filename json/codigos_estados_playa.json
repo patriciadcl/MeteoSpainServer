@@ -1,0 +1,29 @@
+{
+  "estado_cielo": {
+    "100": "despejado",
+    "110": "nuboso",
+    "120": "muy nuboso",
+    "130": "chubascos",
+    "140": "muy nuboso con lluvia"
+  },
+  "viento": {
+    "210": "flojo",
+    "220": "moderado",
+    "230": "fuerte"
+  },
+  "oleaje": {
+    "310": "débil",
+    "320": "moderado",
+    "330": "fuerte"
+  },
+  "sensacion_termica": {
+    "410": "muy frío",
+    "420": "frío",
+    "430": "muy fresco",
+    "440": "fresco",
+    "450": "suave",
+    "460": "calor agradable",
+    "470": "calor moderado",
+    "480": "calor fuerte"
+  }
+}

@@ -1,6 +1,6 @@
 class PredicionDia:
-    def __init__(self, f_validez,prob_precipitacion,cota_nieve,estado_cielo,viento,racha_max,temperatura,
-                 s_termica,humedad_rel,uv_max):
+    def __init__(self, f_validez, prob_precipitacion, cota_nieve, estado_cielo, viento, racha_max, temperatura,
+                 s_termica, humedad_rel, uv_max):
         self.__prob_precipitacion = prob_precipitacion
         self.__cota_nieve = cota_nieve
         self.__f_validez = f_validez
@@ -62,12 +62,10 @@ class PredicionDia:
 
 
 class PrediccionHoras(PredicionDia):
-
-    def __init__(self,f_validez,orto,ocaso,estado_cielo,precipitacion,prob_precipitacion,prob_tormenta,nieve,
-                 prob_nieve,viento,racha_max,temperatura,s_termica,humedad_rel):
-
-        super().__init__(f_validez,prob_precipitacion,"ND",estado_cielo,viento,racha_max,temperatura,
-                 s_termica,humedad_rel,"ND")
+    def __init__(self, f_validez, orto, ocaso, estado_cielo, precipitacion, prob_precipitacion, prob_tormenta, nieve,
+                 prob_nieve, viento, racha_max, temperatura, s_termica, humedad_rel):
+        super().__init__(f_validez, prob_precipitacion, "ND", estado_cielo, viento, racha_max, temperatura, s_termica,
+                         humedad_rel, "ND")
         self.__orto = orto
         self.__ocaso = ocaso
         self.__precipitacion = precipitacion
@@ -108,10 +106,7 @@ class PrediccionHoras(PredicionDia):
         return diccionario
 
 
-
-
 class Municipio:
-
     def __init__(self, id_aemet, f_elaboracion, prediccion):
         self.__id_aemet = id_aemet
         self.__f_elaboracion = f_elaboracion
@@ -136,4 +131,3 @@ class Municipio:
             key = k.split("__")[1]
             diccionario[key] = v
         return diccionario
-

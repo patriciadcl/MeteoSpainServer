@@ -1,6 +1,6 @@
 class Prediccion:
 
-    def __init__(self, f_validez,estado_cielo,viento,oleaje,t_maxima,s_termica,t_agua,uv_max):
+    def __init__(self, f_validez, estado_cielo, viento, oleaje, t_maxima, s_termica, t_agua, uv_max):
         self.__f_validez = f_validez
         self.__estado_cielo = estado_cielo
         self.__viento = viento
@@ -50,17 +50,15 @@ class Prediccion:
         return diccionario
 
 
-
-
 class Playa:
-    def __init__(self, id, f_elaboracion, prediccion):
-        self.__id = id
+    def __init__(self, id_aemet, f_elaboracion, prediccion):
+        self.__id_aemet = id_aemet
         self.__f_elaboracion = f_elaboracion
         self.__prediccion = prediccion
 
     @property
-    def id(self):
-        return self.__id
+    def id_aemet(self):
+        return self.__id_aemet
 
     @property
     def fecha_elaboracion(self):
