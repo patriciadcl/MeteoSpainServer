@@ -1,4 +1,7 @@
-import json
+# -*- coding: utf-8 -*-
+import json, sys
+import urllib.request as ur
+import codecs
 
 
 class AemetAPI:
@@ -18,30 +21,33 @@ class AemetAPI:
     @classmethod
     def __init__(cls, archivo_aemet):
         try:
-            f_open = open(archivo_aemet, 'r')
+            f_open = open(archivo_aemet, encoding="utf-8")
             cadena_json = ""
             for line in f_open:
                 cadena_json += line
             js = json.loads(cadena_json)
-        except:
+        except Exception as inst:
+            print(inst.args)
+            print("Unexpected error:", sys.exc_info()[0])
             js = None
 
         if js:
             cls.url_base = js["URL_BASE"]
             cls.api_key = js["AEMET_API_KEY"]
-            cls.path_montaña = js["PATH_MONTAÑA"]
-            cls.path_montaña_dia = js["PATH_MONTAÑA_DIA"]
+            cls.path_montaña = js["PATH_MONTANA"]
+            cls.path_montaña_dia = js["PATH_MONTANA_DIA"]
             cls.path_municipio = js["PATH_MUNICIPIO"]
             cls.path_municipio_dia = js["PATH_MUNICIPIO_DIARIA"]
             cls.path_municipio_hora = js["PATH_MUNICIPIO_HORARIA"]
             cls.path_maritima = js["PATH_MARITIMA"]
             cls.path_altamar = js["PATH_ALTAMAR"]
-            cls.path_costas = js["PATH_COSTA"]
+            cls.path_costa = js["PATH_COSTA"]
             cls.path_playa = js["PATH_PLAYA"]
 
     @classmethod
     def url_montaña(cls, id_area, dia):
-        url = cls.url_base + cls.path_montaña + "/" + id_area + "/" + cls.path_montaña_dia + "/" + dia
+        address = cls.path_montaña + "/" + id_area + cls.path_montaña_dia + "/" + dia
+        url = cls.url_base + address
         return url
 
     @classmethod
@@ -50,7 +56,7 @@ class AemetAPI:
         return url
 
     @classmethod
-    def url_municipio_hora(cls, id_municipio):
+    def url_municipio_horas(cls, id_municipio):
         url = cls.url_base + cls.path_municipio + cls.path_municipio_hora + "/" + id_municipio
         return url
 
@@ -65,6 +71,6 @@ class AemetAPI:
         return url
 
     @classmethod
-    def url_playa(cls, id_costa):
+    def url_costa(cls, id_costa):
         url = cls.url_base + cls.path_costa + "/" + id_costa
         return url
