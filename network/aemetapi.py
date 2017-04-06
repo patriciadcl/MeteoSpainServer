@@ -1,73 +1,46 @@
-import json
-import sys
-
-
 class AemetAPI:
 
-    url_base = ""
-    api_key = ""
-    path_montaña = ""
-    path_montaña_dia = ""
-    path_municipio = ""
-    path_municipio_dia = ""
-    path_municipio_hora = ""
-    path_playa = ""
-    path_maritima = ""
-    path_altamar = ""
-    path_costa = ""
+    DATOS_AEMET = dict(
+        AEMET_API_KEY="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYXRyaWNpYWRjbEBnbWFpbC5jb20iLCJqdGkiOiI3" +
+                      "MGU3ZjQ5Yy05ZGY1LTQ3ZDEtYTViMy05YjBmOWJhNDFkMmMiLCJleHAiOjE0OTY5MzQxNjMsI" +
+                      "mlzcyI6IkFFTUVUIiwiaWF0IjoxNDg5MTU4MTYzLCJ1c2VySWQiOiI3MGU3ZjQ5Yy05ZGY1LT" +
+                      "Q3ZDEtYTViMy05YjBmOWJhNDFkMmMiLCJyb2xlIjoiIn0.qyhEVJ3tiUyq7UzDRHmXGHS8Icx" +
+                      "zZoej1V3KnSN9XpU",
+        URL_BASE="https://opendata.aemet.es/opendata/api/prediccion", PATH_MONTAÑA="/especifica/montaña/pasada/area",
+        PATH_MONTAÑA_DIA="/dia", PATH_MUNICIPIO="/especifica/municipio", PATH_MUNICIPIO_DIARIA="/diaria",
+        PATH_MUNICIPIO_HORARIA="/horaria", PATH_PLAYA="/especifica/playa", PATH_MARITIMA="/maritima",
+        PATH_ALTAMAR="/altamar", PATH_COSTA="/costera")
 
-    @classmethod
-    def __init__(cls, archivo_aemet):
-        try:
-            f_open = open(archivo_aemet, encoding="utf-8")
-            cadena_json = ""
-            for line in f_open:
-                cadena_json += line
-            js = json.loads(cadena_json)
-        except Exception as inst:
-            print(inst.args)
-            js = None
-
-        if js:
-            cls.url_base = js["URL_BASE"]
-            cls.api_key = js["AEMET_API_KEY"]
-            cls.path_montaña = js["PATH_MONTANA"]
-            cls.path_montaña_dia = js["PATH_MONTANA_DIA"]
-            cls.path_municipio = js["PATH_MUNICIPIO"]
-            cls.path_municipio_dia = js["PATH_MUNICIPIO_DIARIA"]
-            cls.path_municipio_hora = js["PATH_MUNICIPIO_HORARIA"]
-            cls.path_maritima = js["PATH_MARITIMA"]
-            cls.path_altamar = js["PATH_ALTAMAR"]
-            cls.path_costa = js["PATH_COSTA"]
-            cls.path_playa = js["PATH_PLAYA"]
 
     @classmethod
     def url_montaña(cls, id_area, dia):
-        address = cls.path_montaña + "/" + id_area + cls.path_montaña_dia + "/" + dia
-        url = cls.url_base + address
+        address = cls.DATOS_AEMET["PATH_MONTAÑA"] + "/" + id_area + cls.DATOS_AEMET["PATH_MONTAÑA_DIA"] + "/" + dia
+        url = cls.DATOS_AEMET["URL_BASE"] + address
         return url
 
     @classmethod
     def url_municipio_dia(cls, id_municipio):
-        url = cls.url_base + cls.path_municipio + cls.path_municipio_dia + "/" + id_municipio
+        url = cls.DATOS_AEMET["URL_BASE"] + cls.DATOS_AEMET["PATH_MUNICIPIO"] + \
+              cls.DATOS_AEMET["PATH_MUNICIPIO_DIARIA"] + "/" + id_municipio
         return url
 
     @classmethod
     def url_municipio_horas(cls, id_municipio):
-        url = cls.url_base + cls.path_municipio + cls.path_municipio_hora + "/" + id_municipio
+        url = cls.DATOS_AEMET["URL_BASE"] + cls.DATOS_AEMET["PATH_MUNICIPIO"] + \
+              cls.DATOS_AEMET["PATH_MUNICIPIO_HORARIA"] + "/" + id_municipio
         return url
 
     @classmethod
     def url_playa(cls, id_playa):
-        url = cls.url_base + cls.path_playa + "/" + id_playa
+        url = cls.DATOS_AEMET["URL_BASE"] + cls.DATOS_AEMET["PATH_PLAYA"] + "/" + id_playa
         return url
 
     @classmethod
     def url_altamar(cls, id_altamar):
-        url = cls.url_base + cls.path_altamar + "/" + id_altamar
+        url = cls.DATOS_AEMET["URL_BASE"] + cls.DATOS_AEMET["PATH_ALTAMAR"] + "/" + id_altamar
         return url
 
     @classmethod
     def url_costa(cls, id_costa):
-        url = cls.url_base + cls.path_costa + "/" + id_costa
+        url = cls.DATOS_AEMET["URL_BASE"] + cls.DATOS_AEMET["PATH_COSTERA"] + "/" + id_costa
         return url

@@ -1,6 +1,4 @@
 import network.aemetapi as api
-import urllib.request as request
-
 
 class Servidor:
     def __init__(self) -> None:
