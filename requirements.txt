@@ -7,7 +7,6 @@ Jinja2==2.9.6
 MarkupSafe==1.0
 portend==1.8
 psycopg2==2.7.1
-pypiwin32==220
 pytz==2017.2
 requests==2.13.0
 virtualenv==15.1.0
