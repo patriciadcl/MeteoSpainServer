@@ -9,19 +9,16 @@ _predicciones = set()
 def get_altamar(area):
 
     url = api.AemetAPI.url_altamar(area)
-    print("URL: ", url)
-    url = "https://opendata.aemet.es/opendata/api/valores/climatologicos/inventarioestaciones/todasestaciones/"
-    querystring = {
-        "api_key": api.AemetAPI.DATOS_AEMET["AEMET_API_KEY"]}
+    # querystring = {
+    #     "api_key": api.AemetAPI.DATOS_AEMET["AEMET_API_KEY"]}
+    #
+    # headers = {
+    #     'cache-control': "no-cache"
+    # }
+    #
+    # aemet_response = requests.request("GET", url, headers=headers, params=querystring)
 
-    headers = {
-        'cache-control': "no-cache"
-    }
-
-    aemet_response = requests.request("GET", url, headers=headers, params=querystring)
-    print(aemet_response)
-
-    return "Altamar " + aemet_response.text
+    return "Altamar " + area
 
 
 @get('/predicciones/costa/<area>')
