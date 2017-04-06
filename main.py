@@ -6,24 +6,27 @@
 #     run(host='localhost', port=8080)
 #
 # app = application = bottle.default_app()
+import network.aemetapi as api
+import requests
 from flask import Flask
 
 app = Flask(__name__)
 
+
 @app.route('/predicciones/altamar/<area>', methods=['GET'])
 def get_altamar(area):
 
-    #url = api.AemetAPI.url_altamar(area)
-    # querystring = {
-    #     "api_key": api.AemetAPI.DATOS_AEMET["AEMET_API_KEY"]}
-    #
-    # headers = {
-    #     'cache-control': "no-cache"
-    # }
-    #
-    # aemet_response = requests.request("GET", url, headers=headers, params=querystring)
+    url = api.AemetAPI.url_altamar(area)
+    querystring = {
+        "api_key": api.AemetAPI.DATOS_AEMET["AEMET_API_KEY"]}
 
-    return "Altamar " + area
+    headers = {
+        'cache-control': "no-cache"
+    }
+
+    aemet_response = requests.request("GET", url, headers=headers, params=querystring)
+
+    return "Altamar " + aemet_response.text
 
 
 @app.route('/predicciones/costa/<area>', methods=['GET'])
