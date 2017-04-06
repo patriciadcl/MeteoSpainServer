@@ -22,8 +22,9 @@ def get_altamar(area):
     headers = {
         'cache-control': "no-cache"
     }
+    url = "https://opendata.aemet.es/opendata/api/prediccion/maritima/altamar/area/0"
 
-    aemet_response = requests.request("GET", url, headers=headers, params=querystring, verify=True)
+    aemet_response = requests.request("GET", url, headers=headers, params=querystring, verify=False)
 
     return "Altamar " + aemet_response.text
 

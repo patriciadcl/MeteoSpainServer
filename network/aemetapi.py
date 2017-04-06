@@ -9,8 +9,8 @@ class AemetAPI:
         URL_BASE="https://opendata.aemet.es/opendata/api/prediccion", PATH_MONTAÑA="/especifica/montaña/pasada/area",
         PATH_MONTAÑA_DIA="/dia", PATH_MUNICIPIO="/especifica/municipio", PATH_MUNICIPIO_DIARIA="/diaria",
         PATH_MUNICIPIO_HORARIA="/horaria", PATH_PLAYA="/especifica/playa", PATH_MARITIMA="/maritima",
-        PATH_ALTAMAR="/altamar", PATH_COSTA="/costera")
-
+        PATH_ALTAMAR="/altamar/area", PATH_COSTA="/costera/costa")
+    
 
     @classmethod
     def url_montaña(cls, id_area, dia):
@@ -37,7 +37,8 @@ class AemetAPI:
 
     @classmethod
     def url_altamar(cls, id_altamar):
-        url = cls.DATOS_AEMET["URL_BASE"] + cls.DATOS_AEMET["PATH_ALTAMAR"] + "/" + id_altamar
+        url = cls.DATOS_AEMET["URL_BASE"] +  cls.DATOS_AEMET["PATH_MARITIMA"] + \
+              cls.DATOS_AEMET["PATH_ALTAMAR"] + "/" + id_altamar
         return url
 
     @classmethod
