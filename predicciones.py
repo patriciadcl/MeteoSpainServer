@@ -1,6 +1,6 @@
 import network.aemetapi as api
 import requests
-from bottle import get
+#from bottle import get
 
 _predicciones = set()
 

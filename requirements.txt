@@ -1,8 +1,14 @@
-appdirs==1.4.3
 bottle==0.12.13
+click==6.7
+Flask==0.12.1
 gunicorn==19.7.1
-packaging==16.8
+itsdangerous==0.24
+Jinja2==2.9.6
+MarkupSafe==1.0
+portend==1.8
 psycopg2==2.7.1
-pyparsing==2.2.0
+pypiwin32==220
+pytz==2017.2
 requests==2.13.0
 virtualenv==15.1.0
+Werkzeug==0.12.1
