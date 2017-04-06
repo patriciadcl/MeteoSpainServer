@@ -15,7 +15,6 @@ app = Flask(__name__)
 
 @app.route('/predicciones/altamar/<area>', methods=['GET'])
 def get_altamar(area):
-
     url = api.AemetAPI.url_altamar(area)
     querystring = {
         "api_key": api.AemetAPI.DATOS_AEMET["AEMET_API_KEY"]}
@@ -24,7 +23,7 @@ def get_altamar(area):
         'cache-control': "no-cache"
     }
 
-    aemet_response = requests.request("GET", url, headers=headers, params=querystring)
+    aemet_response = requests.request("GET", url, headers=headers, params=querystring, verify=True)
 
     return "Altamar " + aemet_response.text
 
@@ -52,6 +51,7 @@ def get_municipo_horaria(municipio):
 @app.route('/predicciones/playa/<playa>', methods=['GET'])
 def get_playa(playa):
     return "Playa " + playa
+
 
 if __name__ == '__main__':
     app.run(debug=True)
