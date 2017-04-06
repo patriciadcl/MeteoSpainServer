@@ -1,9 +1,9 @@
-[{"ID":"arn2","NOMBRE":"Ibérica Aragonesa"},
-{"ID":"rio1","NOMBRE":"Ibérica Riojana"},
-{"ID":"peu1","NOMBRE":"Picos de Europa"},
-{"ID":"arn1","NOMBRE":"Pirineo Aragonés"},
-{"ID":"cat1","NOMBRE":"Pirineo Catalán"},
-{"ID":"nav1","NOMBRE":"Pirineo Navarro"},
-{"ID":"gre1","NOMBRE":"Sierra de Gredos"},
-{"ID":"nev1","NOMBRE":"Sierra Nevada"},
-{"ID":"mad2","NOMBRE":"Sierras de Guadarrama y Somosierra"}]
+[{"ID_API":"arn2","NOMBRE":"Ibérica Aragonesa"},
+{"ID_API":"rio1","NOMBRE":"Ibérica Riojana"},
+{"ID_API":"peu1","NOMBRE":"Picos de Europa"},
+{"ID_API":"arn1","NOMBRE":"Pirineo Aragonés"},
+{"ID_API":"cat1","NOMBRE":"Pirineo Catalán"},
+{"ID_API":"nav1","NOMBRE":"Pirineo Navarro"},
+{"ID_API":"gre1","NOMBRE":"Sierra de Gredos"},
+{"ID_API":"nev1","NOMBRE":"Sierra Nevada"},
+{"ID_API":"mad2","NOMBRE":"Sierras de Guadarrama y Somosierra"}]

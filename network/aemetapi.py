@@ -1,5 +1,6 @@
-# -*- coding: utf-8 -*-
-import json, sys
+import json
+import sys
+
 
 class AemetAPI:
 
@@ -25,7 +26,6 @@ class AemetAPI:
             js = json.loads(cadena_json)
         except Exception as inst:
             print(inst.args)
-            print("Unexpected error:", sys.exc_info()[0])
             js = None
 
         if js:
