@@ -1,11 +1,13 @@
 import json
-from modelo import altamar as altamar, costas as costas, montaña as montana, municipio as municipio, playa
+from datetime import date, timedelta
+from modelo import altamar, costas, montaña, municipio, playa
 
 
 class JsonAModelo:
     periodo_horas = ["00-24", "00-12", "12-24", "00-06", "06-12", "12-18", '18-24']
     periodo_horas_6 = ["6", "12", "18", "24"]
     periodo_horas_12 = ["00-24", "00-12", "12-24"]
+
     @staticmethod
     def girar_fecha(fecha):
         new_fecha = str(fecha).split("-")
@@ -38,9 +40,11 @@ class JsonAModelo:
             js = json.loads(cadena_json)
         except:
             js = None
-        f_elaboracion = cls.girar_fecha(str(js[0]['origen']['elaborado']))
-        f_inicio = cls.girar_fecha(str(js[0]['origen']['inicio']))
-        f_fin = cls.girar_fecha(str(js[0]['origen']['fin']))
+
+        origen = js[0]['origen']
+        f_elaboracion = cls.girar_fecha(str(origen['elaborado']))
+        f_inicio = cls.girar_fecha(str(origen['inicio']))
+        f_fin = cls.girar_fecha(str(origen['fin']))
         situacion = js[0]["situacion"]
         id_aemet = situacion['id'][1:]
         situacion = situacion["texto"]
@@ -55,7 +59,7 @@ class JsonAModelo:
         return zona
 
     @classmethod
-    def json_a_montana(cls, cadena_json):
+    def json_a_montaña(cls, cadena_json, a_dia):
         try:
             js = json.loads(cadena_json)
         except:
@@ -67,7 +71,7 @@ class JsonAModelo:
         tormentas = prediccion[2]["texto"]
         temperaturas = prediccion[3]["texto"]
         viento = prediccion[4]["texto"]
-        lugares = list()
+        zonas = list()
         if len(js[0]["seccion"]) == 3:
             json_lugares = js[0]["seccion"][2]["lugar"]
             for json_lugar in json_lugares:
@@ -77,11 +81,16 @@ class JsonAModelo:
                 st_maxima = str(json_lugar["stmaxima"])
                 nombre = json_lugar["nombre"]
                 altitud = json_lugar["altitud"]
-                lugar = montana.Lugar(minima, st_minima, maxima, st_maxima, nombre, altitud)
-                lugares.append(lugar)
-        zona = montana.Montana(id_api, "", estado_cielo, precipitaciones, tormentas, temperaturas, viento, lugares)
-
-        return zona
+                zona = montaña.Zona(minima, st_minima, maxima, st_maxima, nombre, altitud)
+                zonas.append(zona)
+        dia = date.today()
+        d = timedelta(days=a_dia)
+        f_pronostico = dia + d
+        dia = cls.girar_fecha(str(dia))
+        f_pronostico = cls.girar_fecha(f_pronostico)
+        new_montaña = montaña.Montaña(id_api, dia,f_pronostico, estado_cielo, precipitaciones, tormentas, temperaturas,
+                                      viento, zonas)
+        return new_montaña
 
     @classmethod
     def get_campos_pcev(cls, dia_json, periodo):

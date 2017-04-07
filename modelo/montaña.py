@@ -1,4 +1,4 @@
-class Lugar:
+class Zona:
     def __init__(self, minima, st_minima, maxima, st_maxima, nombre, altitud):
         self.__minima = minima
         self.__st_minima = st_minima
@@ -40,20 +40,25 @@ class Lugar:
         return diccionario
 
 
-class Montana:
-    def __init__(self, id_api,f_pronostico, estado_cielo, precipitaciones, tormentas, temperaturas, viento,s_termica):
+class Montaña:
+    def __init__(self,id_api,f_elaborado, f_pronostico, estado_cielo, precipitaciones, tormentas, temperaturas, viento, zonas):
         self.__id_api = id_api
+        self.__f_elaborado = f_elaborado
         self.__f_pronostico = f_pronostico
         self.__estado_cielo = estado_cielo
         self.__precipitaciones = precipitaciones
         self.__tormentas = tormentas
         self.__temperaturas = temperaturas
         self.__viento = viento
-        self.__s_termica = s_termica
+        self.__zonas = zonas
 
     @property
     def id_api(self):
         return self.__id_api
+
+    @property
+    def f_elaborado(self):
+        return self.__f_elaborado
 
     @property
     def f_pronostico(self):
@@ -80,15 +85,21 @@ class Montana:
         return self.__viento
 
     @property
-    def s_termica(self):
-        return self.__s_termica
+    def zonas(self):
+        return self.__zonas
 
     @property
     def to_dict(self):
         diccionario = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
-            diccionario[key] = v
+            if key == "zonas":
+                zonas = list()
+                for zona in v:
+                    zonas.append(zona.to_dict)
+                diccionario[key] = zonas
+            else:
+                diccionario[key] = v
         return diccionario
 
 

@@ -51,7 +51,13 @@ class Zona:
         diccionario = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
-            diccionario[key] = v
+            if key == "sub_zonas":
+                sub_zonas = list()
+                for sub_zona in v:
+                    sub_zonas.append(sub_zona.to_dict)
+                diccionario[key] = sub_zonas
+            else:
+                diccionario[key] = v
         return diccionario
 
 

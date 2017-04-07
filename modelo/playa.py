@@ -73,5 +73,11 @@ class Playa:
         diccionario = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
-            diccionario[key] = v
+            if key == "prediccion":
+                predicciones = list()
+                for prediccion in v:
+                    predicciones.append(prediccion.to_dict)
+                diccionario[key] = predicciones
+            else:
+                diccionario[key] = v
         return diccionario
