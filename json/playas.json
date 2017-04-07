@@ -1,590 +1,2957 @@
-[{"NOMBRE":"Arenal/Bol (Calp)","ID":"304709","COD_PROVINCIA": "03"},
-{"NOMBRE":"Arenales del Sol (Elche/Elx)","ID":"306502","COD_PROVINCIA": "03"},
-{"NOMBRE":"Cala Capitan (Orihuela)","ID":"309907","COD_PROVINCIA": "03"},
-{"NOMBRE":"Cala Fustera (Benissa)","ID":"304105","COD_PROVINCIA": "03"},
-{"NOMBRE":"Cala Roig (Orihuela)","ID":"309908","COD_PROVINCIA": "03"},
-{"NOMBRE":"Campoamor / Barranco Rubio (Orihuela)","ID":"309911","COD_PROVINCIA": "03"},
-{"NOMBRE":"Cantal Roig (Calp)","ID":"304707","COD_PROVINCIA": "03"},
-{"NOMBRE":"Cap Blanch (Altea)","ID":"301809","COD_PROVINCIA": "03"},
-{"NOMBRE":"Carrer la Mar (Campello, el)","ID":"305013","COD_PROVINCIA": "03"},
-{"NOMBRE":"Centro / La Roqueta (Guardamar del Segura)","ID":"307605","COD_PROVINCIA": "03"},
-{"NOMBRE":"El Arenal (J·vea/X‡bia)","ID":"308204","COD_PROVINCIA": "03"},
-{"NOMBRE":"El Postiguet (Alicante/Alacant)","ID":"301408","COD_PROVINCIA": "03"},
-{"NOMBRE":"Finestrat / La Cala (Finestrat)","ID":"306901","COD_PROVINCIA": "03"},
-{"NOMBRE":"La Fossa (Calp)","ID":"304704","COD_PROVINCIA": "03"},
-{"NOMBRE":"La Granadella (J·vea/X‡bia)","ID":"308211","COD_PROVINCIA": "03"},
-{"NOMBRE":"La Marina / Les Pesqueres - El Rebollo (Elche/Elx)","ID":"306505","COD_PROVINCIA": "03"},
-{"NOMBRE":"La Mata (Torrevieja)","ID":"313302","COD_PROVINCIA": "03"},
-{"NOMBRE":"La Roda (Altea)","ID":"301808","COD_PROVINCIA": "03"},
-{"NOMBRE":"L'Ampolla (Teulada)","ID":"312803","COD_PROVINCIA": "03"},
-{"NOMBRE":"Les Boves / Les Marines (DÈnia)","ID":"306308","COD_PROVINCIA": "03"},
-{"NOMBRE":"Les Devesses (DÈnia)","ID":"306301","COD_PROVINCIA": "03"},
-{"NOMBRE":"Llevant / Playa de Levante (Benidorm)","ID":"303102","COD_PROVINCIA": "03"},
-{"NOMBRE":"Marineta Cassiana (DÈnia)","ID":"306310","COD_PROVINCIA": "03"},
-{"NOMBRE":"Paradis (Villajoyosa/Vila Joiosa, la)","ID":"313909","COD_PROVINCIA": "03"},
-{"NOMBRE":"Ponent / Playa de Poniente (Benidorm)","ID":"303104","COD_PROVINCIA": "03"},
-{"NOMBRE":"Port / El Puerto (Pilar de la Horadada)","ID":"390208","COD_PROVINCIA": "03"},
-{"NOMBRE":"Raco de l'Albir (Alf‡s del Pi, l')","ID":"301101","COD_PROVINCIA": "03"},
-{"NOMBRE":"Saladar (Alicante/Alacant)","ID":"301410","COD_PROVINCIA": "03"},
-{"NOMBRE":"Sant Joan / San Juan (Alicante/Alacant)","ID":"301401","COD_PROVINCIA": "03"},
-{"NOMBRE":"Tamarit (Santa Pola)","ID":"312108","COD_PROVINCIA": "03"},
-{"NOMBRE":"Varador - Calas del Este (Santa Pola)","ID":"312103","COD_PROVINCIA": "03"},
-{"NOMBRE":"Aguamarga (NÌjar)","ID":"406601","COD_PROVINCIA": "04"},
-{"NOMBRE":"Almerinar-San Miguel de Levante (Ejido, El)","ID":"490205","COD_PROVINCIA": "04"},
-{"NOMBRE":"Almerinar-San Miguel de Poniente (Ejido, El)","ID":"490204","COD_PROVINCIA": "04"},
-{"NOMBRE":"Balerma (Ejido, El)","ID":"490201","COD_PROVINCIA": "04"},
-{"NOMBRE":"Berja-Balanegra (Berja)","ID":"402901","COD_PROVINCIA": "04"},
-{"NOMBRE":"El Descargador (Moj·car)","ID":"406403","COD_PROVINCIA": "04"},
-{"NOMBRE":"El Lancon (Carboneras)","ID":"403203","COD_PROVINCIA": "04"},
-{"NOMBRE":"Garrucha (Garrucha)","ID":"404901","COD_PROVINCIA": "04"},
-{"NOMBRE":"La Romanilla (Roquetas de Mar)","ID":"407904","COD_PROVINCIA": "04"},
-{"NOMBRE":"Los Barquicos/Los Cocones (Carboneras)","ID":"403204","COD_PROVINCIA": "04"},
-{"NOMBRE":"Mar Serena (PulpÌ)","ID":"407506","COD_PROVINCIA": "04"},
-{"NOMBRE":"Marina de la Torre (Moj·car)","ID":"406401","COD_PROVINCIA": "04"},
-{"NOMBRE":"Poniente (Adra)","ID":"400308","COD_PROVINCIA": "04"},
-{"NOMBRE":"Pozo del Esparto (Cuevas del Almanzora)","ID":"403501","COD_PROVINCIA": "04"},
-{"NOMBRE":"Puerto del Rey (Vera)","ID":"410002","COD_PROVINCIA": "04"},
-{"NOMBRE":"Retamar (AlmerÌa)","ID":"401310","COD_PROVINCIA": "04"},
-{"NOMBRE":"San JosÈ (NÌjar)","ID":"406614","COD_PROVINCIA": "04"},
-{"NOMBRE":"San Miguel de Cabo de Gata (AlmerÌa)","ID":"401313","COD_PROVINCIA": "04"},
-{"NOMBRE":"San Miguel/Las Conchas/Zapillo (AlmerÌa)","ID":"401304","COD_PROVINCIA": "04"},
-{"NOMBRE":"San Nicol·s (Adra)","ID":"400309","COD_PROVINCIA": "04"},
-{"NOMBRE":"UrbanizaciÛn Roquetas del Mar (Roquetas de Mar)","ID":"407906","COD_PROVINCIA": "04"},
-{"NOMBRE":"Villaricos (Cuevas del Almanzora)","ID":"403510","COD_PROVINCIA": "04"},
-{"NOMBRE":"Aguilar (Muros de NalÛn)","ID":"3303902","COD_PROVINCIA": "33"},
-{"NOMBRE":"Anguileiro, La Grande / Los Campos (Tapia de Casariego)","ID":"3307007","COD_PROVINCIA": "33"},
-{"NOMBRE":"Arenal de Moris (Caravia)","ID":"3301303","COD_PROVINCIA": "33"},
-{"NOMBRE":"Arnielles (CoaÒa)","ID":"3301804","COD_PROVINCIA": "33"},
-{"NOMBRE":"Cand·s - La Palmera (CarreÒo)","ID":"3301403","COD_PROVINCIA": "33"},
-{"NOMBRE":"La Concha de Artedo (Cudillero)","ID":"3302120","COD_PROVINCIA": "33"},
-{"NOMBRE":"La Franca (Ribadedeva)","ID":"3305501","COD_PROVINCIA": "33"},
-{"NOMBRE":"La Isla (Colunga)","ID":"3301903","COD_PROVINCIA": "33"},
-{"NOMBRE":"Los Quebrantos (Soto del Barco)","ID":"3306901","COD_PROVINCIA": "33"},
-{"NOMBRE":"Navia (Navia)","ID":"3304101","COD_PROVINCIA": "33"},
-{"NOMBRE":"Niembro, Toranda (Llanes)","ID":"3303612","COD_PROVINCIA": "33"},
-{"NOMBRE":"Otur (ValdÈs)","ID":"3303402","COD_PROVINCIA": "33"},
-{"NOMBRE":"Palombina - Las Camaras, Los Frailes (Llanes)","ID":"3303618","COD_PROVINCIA": "33"},
-{"NOMBRE":"PeÒarronda (Castropol)","ID":"3301704","COD_PROVINCIA": "33"},
-{"NOMBRE":"Pormenande (Franco, El)","ID":"3302302","COD_PROVINCIA": "33"},
-{"NOMBRE":"Primera y Segunda de Luarca (ValdÈs)","ID":"3303407","COD_PROVINCIA": "33"},
-{"NOMBRE":"Rodiles (Villaviciosa)","ID":"3307606","COD_PROVINCIA": "33"},{"NOMBRE":"Salinas - San Juan, El Espartal (CastrillÛn)","ID":"3301608","COD_PROVINCIA": "33"},
-{"NOMBRE":"San Lorenzo (GijÛn)","ID":"3302403","COD_PROVINCIA": "33"},
-{"NOMBRE":"San Pedro de Bocamar (Cudillero)","ID":"3302117","COD_PROVINCIA": "33"},
-{"NOMBRE":"Santa Marina (Ribadesella)","ID":"3305602","COD_PROVINCIA": "33"},
-{"NOMBRE":"Santa Marina de Luanco (GozÛn)","ID":"3302509","COD_PROVINCIA": "33"},
-{"NOMBRE":"TorÛ (Llanes)","ID":"3303626","COD_PROVINCIA": "33"},
-{"NOMBRE":"Vega (Ribadesella)","ID":"3305601","COD_PROVINCIA": "33"},
-{"NOMBRE":"Xiglu - Barro - Sorraos (Llanes)","ID":"3303614","COD_PROVINCIA": "33"},
-{"NOMBRE":"Xivares (CarreÒo)","ID":"3301406","COD_PROVINCIA": "33"},
-{"NOMBRE":"Alc˙dia (Alc˙dia)","ID":"700307","COD_PROVINCIA": "07"},
-{"NOMBRE":"Arenal d'en Castell (Mercadal, Es)","ID":"703710","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Agulla (Capdepera)","ID":"701403","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Barques (PollenÁa)","ID":"704202","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Bassa (Sant Josep de sa Talaia)","ID":"704806","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Blanca (Ciutadella de Menorca)","ID":"701507","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala d'Hort (Sant Josep de sa Talaia)","ID":"704821","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Estany (Manacor)","ID":"703307","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Formentor (PollenÁa)","ID":"704208","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Galdana (Ferreries)","ID":"702302","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala GrasiÛ (Sant Antoni de Portmany)","ID":"704605","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Llonga (Santa Eul‡ria des Riu)","ID":"705418","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Major (Palma de Mallorca)","ID":"704001","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala MarÁal (Felanitx)","ID":"702201","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Mesquida (Capdepera)","ID":"701401","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Mesquida (MaÛ-MahÛn)","ID":"703211","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Millor (Sant LlorenÁ des Cardassar)","ID":"705101","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala MondragÛ (SantanyÌ)","ID":"705706","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala San Vicente (Sant Joan de Labritja)","ID":"705019","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Santa PonÁa (Calvi‡)","ID":"701103","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Santandria (Ciutadella de Menorca)","ID":"701506","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala SantanyÌ (SantanyÌ)","ID":"705707","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Saona (Formentera)","ID":"702414","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cala Vedella (Sant Josep de sa Talaia)","ID":"704817","COD_PROVINCIA": "07"},
-{"NOMBRE":"Camp de Mar (Andratx)","ID":"700513","COD_PROVINCIA": "07"},
-{"NOMBRE":"C'An Picafort (Santa Margalida)","ID":"705501","COD_PROVINCIA": "07"},
-{"NOMBRE":"Colonia de Sant Jordi / Ees DolÁ (Salines, Ses)","ID":"705904","COD_PROVINCIA": "07"},
-{"NOMBRE":"En Bossa (Sant Josep de sa Talaia)","ID":"704836","COD_PROVINCIA": "07"},
-{"NOMBRE":"Es Domingos Gran (Manacor)","ID":"703316","COD_PROVINCIA": "07"},
-{"NOMBRE":"Es Grau (MaÛ-MahÛn)","ID":"703209","COD_PROVINCIA": "07"},
-{"NOMBRE":"Es Ribell (Son Servera)","ID":"706202","COD_PROVINCIA": "07"},
-{"NOMBRE":"Es Trenc (Campos)","ID":"701303","COD_PROVINCIA": "07"},
-{"NOMBRE":"Magalluf (Calvi‡)","ID":"701105","COD_PROVINCIA": "07"},
-{"NOMBRE":"Muro (Muro)","ID":"703901","COD_PROVINCIA": "07"},
-{"NOMBRE":"Palmira (Calvi‡)","ID":"701102","COD_PROVINCIA": "07"},
-{"NOMBRE":"Playa de Llevant (Formentera)","ID":"702402","COD_PROVINCIA": "07"},
-{"NOMBRE":"Playa de Migjorn (Formentera)","ID":"702413","COD_PROVINCIA": "07"},
-{"NOMBRE":"Playa de Palma (Palma de Mallorca)","ID":"704007","COD_PROVINCIA": "07"},
-{"NOMBRE":"PollenÁa / Llenaire (PollenÁa)","ID":"704210","COD_PROVINCIA": "07"},
-{"NOMBRE":"Port Sant Miquel (Sant Joan de Labritja)","ID":"705005","COD_PROVINCIA": "07"},
-{"NOMBRE":"Portinatx (Sant Joan de Labritja)","ID":"705016","COD_PROVINCIA": "07"},
-{"NOMBRE":"Puerto de SÛller (SÛller)","ID":"706101","COD_PROVINCIA": "07"},
-{"NOMBRE":"Punta Prima (Sant LluÌs)","ID":"705202","COD_PROVINCIA": "07"},
-{"NOMBRE":"Sa Calobra (Escorca)","ID":"701906","COD_PROVINCIA": "07"},
-{"NOMBRE":"Sa Coma (Sant LlorenÁ des Cardassar)","ID":"705104","COD_PROVINCIA": "07"},
-{"NOMBRE":"Sa Font de Sa Cala (Capdepera)","ID":"701406","COD_PROVINCIA": "07"},
-{"NOMBRE":"San Antonio / Es ReguerÛ (Sant Antoni de Portmany)","ID":"704608","COD_PROVINCIA": "07"},
-{"NOMBRE":"Sant Elm (Andratx)","ID":"700506","COD_PROVINCIA": "07"},
-{"NOMBRE":"Sant Tomas (Migjorn Gran, Es)","ID":"790202","COD_PROVINCIA": "07"},
-{"NOMBRE":"Santa Eul‡ria (Santa Eul‡ria des Riu)","ID":"705416","COD_PROVINCIA": "07"},
-{"NOMBRE":"Ses Figueretes (Eivissa)","ID":"702603","COD_PROVINCIA": "07"},
-{"NOMBRE":"Ses Salines / Mitjon (Sant Josep de sa Talaia)","ID":"704834","COD_PROVINCIA": "07"},
-{"NOMBRE":"S'Illot / Cala Moreira (Manacor)","ID":"703301","COD_PROVINCIA": "07"},
-{"NOMBRE":"Son Bou (Alaior)","ID":"700201","COD_PROVINCIA": "07"},
-{"NOMBRE":"Son Xoriguer (Ciutadella de Menorca)","ID":"701509","COD_PROVINCIA": "07"},
-{"NOMBRE":"Talamanca (Eivissa)","ID":"702601","COD_PROVINCIA": "07"},
-{"NOMBRE":"Tirant (Mercadal, Es)","ID":"703706","COD_PROVINCIA": "07"},
-{"NOMBRE":"Cabrera (Cabrera de Mar)","ID":"802901","COD_PROVINCIA": "08"},
-{"NOMBRE":"Canet (Canet de Mar)","ID":"804001","COD_PROVINCIA": "08"},
-{"NOMBRE":"Castelldefels (Castelldefels)","ID":"805601","COD_PROVINCIA": "08"},
-{"NOMBRE":"D'Arenys (Arenys de Mar)","ID":"800601","COD_PROVINCIA": "08"},
-{"NOMBRE":"Del Bogatell (Barcelona)","ID":"801903","COD_PROVINCIA": "08"},
-{"NOMBRE":"Del Centre (Badalona)","ID":"801502","COD_PROVINCIA": "08"},
-{"NOMBRE":"Gav‡ (Gav‡)","ID":"808901","COD_PROVINCIA": "08"},
-{"NOMBRE":"Gran - GarbÌ (Calella)","ID":"803501","COD_PROVINCIA": "08"},
-{"NOMBRE":"La Barceloneta (Barcelona)","ID":"801905","COD_PROVINCIA": "08"},
-{"NOMBRE":"La Riera - Els Tres Micos (Caldes d'Estrac)","ID":"803201","COD_PROVINCIA": "08"},
-{"NOMBRE":"L'Estanyol (Sitges)","ID":"827009","COD_PROVINCIA": "08"},
-{"NOMBRE":"Llarga (Cubelles)","ID":"807401","COD_PROVINCIA": "08"},
-{"NOMBRE":"Malgrat (Malgrat de Mar)","ID":"811002","COD_PROVINCIA": "08"},
-{"NOMBRE":"Montgat (Montgat)","ID":"812602","COD_PROVINCIA": "08"},
-{"NOMBRE":"Ocata (Masnou, El)","ID":"811801","COD_PROVINCIA": "08"},
-{"NOMBRE":"Pineda de Mar (Pineda de Mar)","ID":"816301","COD_PROVINCIA": "08"},
-{"NOMBRE":"Pla de l'Os (Premi‡ de Mar)","ID":"817203","COD_PROVINCIA": "08"},
-{"NOMBRE":"Ribes Roges (Vilanova i la Geltr˙)","ID":"830702","COD_PROVINCIA": "08"},
-{"NOMBRE":"Sant Andreu de Llavaneres (Sant Andreu de Llavaneres)","ID":"819703","COD_PROVINCIA": "08"},
-{"NOMBRE":"Sant Pol (Sant Pol de Mar)","ID":"823504","COD_PROVINCIA": "08"},
-{"NOMBRE":"Sant VicenÁ de Montalt (Sant VicenÁ de Montalt)","ID":"826401","COD_PROVINCIA": "08"},
-{"NOMBRE":"Santa Susanna (Santa Susanna)","ID":"826101","COD_PROVINCIA": "08"},
-{"NOMBRE":"Varador (MatarÛ)","ID":"812103","COD_PROVINCIA": "08"},
-{"NOMBRE":"Armintxekoalde (Lemoiz)","ID":"4805601","COD_PROVINCIA": "48"},
-{"NOMBRE":"Arrigorri (Ondarroa)","ID":"4807301","COD_PROVINCIA": "48"},
-{"NOMBRE":"Atxabiribil-Arrietara (Sopela)","ID":"4808502","COD_PROVINCIA": "48"},
-{"NOMBRE":"Azkorri-Gorrondatxe (Getxo)","ID":"4804401","COD_PROVINCIA": "48"},
-{"NOMBRE":"Barinatxe-Salvaje (Getxo)","ID":"4804402","COD_PROVINCIA": "48"},
-{"NOMBRE":"Ea (Ea)","ID":"4802802","COD_PROVINCIA": "48"},
-{"NOMBRE":"Gorlitz-Gorliz (Gorliz)","ID":"4804301","COD_PROVINCIA": "48"},
-{"NOMBRE":"Isuntza (Lekeitio)","ID":"4805701","COD_PROVINCIA": "48"},
-{"NOMBRE":"Karraspio (Mendexa)","ID":"4806302","COD_PROVINCIA": "48"},
-{"NOMBRE":"Laga (Ibarrangelu)","ID":"4804802","COD_PROVINCIA": "48"},
-{"NOMBRE":"Laida (Ibarrangelu)","ID":"4804801","COD_PROVINCIA": "48"},
-{"NOMBRE":"Laidatxu (Mundaka)","ID":"4806801","COD_PROVINCIA": "48"},
-{"NOMBRE":"Muriola- La Cantera (Barrika)","ID":"4801401","COD_PROVINCIA": "48"},
-{"NOMBRE":"Muskiz-La Arena (Muskiz)","ID":"4807101","COD_PROVINCIA": "48"},
-{"NOMBRE":"Ogeia-Ispaster (Ispaster)","ID":"4804901","COD_PROVINCIA": "48"},
-{"NOMBRE":"Plentzia-Plencia (Plentzia)","ID":"4807701","COD_PROVINCIA": "48"},
-{"NOMBRE":"San Antonio De AbiÒa (Sukarrieta)","ID":"4807603","COD_PROVINCIA": "48"},
-{"NOMBRE":"ToÒa (Sukarrieta)","ID":"4807602","COD_PROVINCIA": "48"},
-{"NOMBRE":"Bolonia (Tarifa)","ID":"1103504","COD_PROVINCIA": "41"},
-{"NOMBRE":"Camposoto - El Castillo (San Fernando)","ID":"1103101","COD_PROVINCIA": "41"},
-{"NOMBRE":"CaÒos de Meca (Barbate)","ID":"1100702","COD_PROVINCIA": "41"},
-{"NOMBRE":"Cruz del Mar (Chipiona)","ID":"1101602","COD_PROVINCIA": "41"},
-{"NOMBRE":"El Carmen (Barbate)","ID":"1100703","COD_PROVINCIA": "41"},
-{"NOMBRE":"El Palmar (Vejer de la Frontera)","ID":"1103901","COD_PROVINCIA": "41"},
-{"NOMBRE":"El Rinconcillo (Algeciras)","ID":"1100401","COD_PROVINCIA": "41"},
-{"NOMBRE":"El Rompidillo - El Chorrillo (Rota)","ID":"1103006","COD_PROVINCIA": "41"},
-{"NOMBRE":"FuentebravÌa - Santa Catalina (Puerto de Santa MarÌa, El)","ID":"1102701","COD_PROVINCIA": "41"},
-{"NOMBRE":"Getares / San GarcÌa (Algeciras)","ID":"1100402","COD_PROVINCIA": "41"},
-{"NOMBRE":"La Ballena (Rota)","ID":"1103001","COD_PROVINCIA": "41"},
-{"NOMBRE":"La Barrosa (Chiclana de la Frontera)","ID":"1101503","COD_PROVINCIA": "41"},
-{"NOMBRE":"La Caleta (C·diz)","ID":"1101201","COD_PROVINCIA": "41"},
-{"NOMBRE":"La Calzada - Piletas (Sanl˙car de Barrameda)","ID":"1103203","COD_PROVINCIA": "41"},
-{"NOMBRE":"La Costilla (Rota)","ID":"1103005","COD_PROVINCIA": "41"},
-{"NOMBRE":"La Fontanilla (Conil de la Frontera)","ID":"1101406","COD_PROVINCIA": "41"},
-{"NOMBRE":"La Puntilla (Puerto de Santa MarÌa, El)","ID":"1102704","COD_PROVINCIA": "41"},
-{"NOMBRE":"La Victoria (C·diz)","ID":"1101203","COD_PROVINCIA": "41"},
-{"NOMBRE":"Levante - La Atunara (LÌnea de la ConcepciÛn, La)","ID":"1102205","COD_PROVINCIA": "41"},
-{"NOMBRE":"Los Lances (Tarifa)","ID":"1103506","COD_PROVINCIA": "41"},
-{"NOMBRE":"Palmones (Barrios, Los)","ID":"1100801","COD_PROVINCIA": "41"},
-{"NOMBRE":"Poniente (LÌnea de la ConcepciÛn, La)","ID":"1102207","COD_PROVINCIA": "41"},
-{"NOMBRE":"Punta Candor (Rota)","ID":"1103003","COD_PROVINCIA": "41"},
-{"NOMBRE":"Regla (Chipiona)","ID":"1101604","COD_PROVINCIA": "41"},
-{"NOMBRE":"Roche (Conil de la Frontera)","ID":"1101401","COD_PROVINCIA": "41"},
-{"NOMBRE":"Torreguadiaro (San Roque)","ID":"1103302","COD_PROVINCIA": "41"},
-{"NOMBRE":"Valdelagrana (Puerto de Santa MarÌa, El)","ID":"1102705","COD_PROVINCIA": "41"},
-{"NOMBRE":"Zahara de los Atunes (Barbate)","ID":"1100706","COD_PROVINCIA": "41"},
-{"NOMBRE":"Amio (Val de San Vicente)","ID":"3909504","COD_PROVINCIA": "39"},
-{"NOMBRE":"Comillas (Comillas)","ID":"3902401","COD_PROVINCIA": "39"},
-{"NOMBRE":"Cuberris (Bareyo)","ID":"3901102","COD_PROVINCIA": "39"},
-{"NOMBRE":"Cuchia-Marzan (Miengo)","ID":"3904401","COD_PROVINCIA": "39"},
-{"NOMBRE":"El Sable de MerÛn (San Vicente de la Barquera)","ID":"3908004","COD_PROVINCIA": "39"},
-{"NOMBRE":"La Arena (Arnuero)","ID":"3900602","COD_PROVINCIA": "39"},
-{"NOMBRE":"La Concha (Suances)","ID":"3908503","COD_PROVINCIA": "39"},
-{"NOMBRE":"La Magdalena (Santander)","ID":"3907511","COD_PROVINCIA": "39"},
-{"NOMBRE":"La Salve (Laredo)","ID":"3903502","COD_PROVINCIA": "39"},
-{"NOMBRE":"LuaÒa-Cobreces (Alfoz de Lloredo)","ID":"3900101","COD_PROVINCIA": "39"},
-{"NOMBRE":"Mogro-Usil (Miengo)","ID":"3904405","COD_PROVINCIA": "39"},
-{"NOMBRE":"OriÒon (Castro-Urdiales)","ID":"3902002","COD_PROVINCIA": "39"},
-{"NOMBRE":"Ostende (Castro-Urdiales)","ID":"3902004","COD_PROVINCIA": "39"},
-{"NOMBRE":"Oyambre (Vald·liga)","ID":"3909101","COD_PROVINCIA": "39"},
-{"NOMBRE":"Ris (Noja)","ID":"3904701","COD_PROVINCIA": "39"},
-{"NOMBRE":"San Juan de la Canal (Santa Cruz de Bezana)","ID":"3907302","COD_PROVINCIA": "39"},
-{"NOMBRE":"San MartÌn (SantoÒa)","ID":"3907902","COD_PROVINCIA": "39"},
-{"NOMBRE":"Sardinero (Santander)","ID":"3907506","COD_PROVINCIA": "39"},
-{"NOMBRE":"Somo-Loredo (Ribamont·n al Mar)","ID":"3906102","COD_PROVINCIA": "39"},
-{"NOMBRE":"Valdearenas (PiÈlagos)","ID":"3905201","COD_PROVINCIA": "39"},
-{"NOMBRE":"Casa Blanca (Almenara)","ID":"1201101","COD_PROVINCIA": "12"},
-{"NOMBRE":"El Arenal (Borriana/Burriana)","ID":"1203201","COD_PROVINCIA": "12"},
-{"NOMBRE":"El Carregador (Alcal‡ de Xivert)","ID":"1200403","COD_PROVINCIA": "12"},
-{"NOMBRE":"El Morrongo (BenicarlÛ)","ID":"1202702","COD_PROVINCIA": "12"},
-{"NOMBRE":"El Pinar (CastellÛn de la Plana/CastellÛ de la Plana)","ID":"1204003","COD_PROVINCIA": "12"},
-{"NOMBRE":"Forti (VinarÚs)","ID":"1213810","COD_PROVINCIA": "12"},
-{"NOMBRE":"Heliopolis (Benicasim/Benic‡ssim)","ID":"1202805","COD_PROVINCIA": "12"},
-{"NOMBRE":"La Concha (Oropesa del Mar/Orpesa)","ID":"1208503","COD_PROVINCIA": "12"},
-{"NOMBRE":"La Torre (Almazora/Almassora)","ID":"1200902","COD_PROVINCIA": "12"},
-{"NOMBRE":"L'Almadrava (Benicasim/Benic‡ssim)","ID":"1202802","COD_PROVINCIA": "12"},
-{"NOMBRE":"Las Casas / Les Cases (Chilches/Xilxes)","ID":"1205301","COD_PROVINCIA": "12"},
-{"NOMBRE":"Las Fuentes (Alcal‡ de Xivert)","ID":"1200402","COD_PROVINCIA": "12"},
-{"NOMBRE":"Masbo (Moncofa)","ID":"1207703","COD_PROVINCIA": "12"},
-{"NOMBRE":"Morro de Gos (Oropesa del Mar/Orpesa)","ID":"1208502","COD_PROVINCIA": "12"},
-{"NOMBRE":"Norte de Torreblanca (Torreblanca)","ID":"1211701","COD_PROVINCIA": "12"},
-{"NOMBRE":"Nules (Nules)","ID":"1208201","COD_PROVINCIA": "12"},
-{"NOMBRE":"Playa Norte (PenÌscola/PeÒÌscola)","ID":"1208901","COD_PROVINCIA": "12"},
-{"NOMBRE":"A Concha, CariÒo (CariÒo)","ID":"1590101","COD_PROVINCIA": "15"},
-{"NOMBRE":"Aguieira (Porto do Son)","ID":"1507101","COD_PROVINCIA": "15"},
-{"NOMBRE":"Areal (Pobra do CaramiÒal, A)","ID":"1506701","COD_PROVINCIA": "15"},
-{"NOMBRE":"Ares (Ares)","ID":"1500401","COD_PROVINCIA": "15"},
-{"NOMBRE":"Arou (CamariÒas)","ID":"1501602","COD_PROVINCIA": "15"},
-{"NOMBRE":"As Furnas (Porto do Son)","ID":"1507110","COD_PROVINCIA": "15"},
-{"NOMBRE":"BalarÈs (Ponteceso)","ID":"1506802","COD_PROVINCIA": "15"},
-{"NOMBRE":"Bares (MaÒÛn)","ID":"1504402","COD_PROVINCIA": "15"},
-{"NOMBRE":"Barizo (Malpica de BergantiÒos)","ID":"1504303","COD_PROVINCIA": "15"},
-{"NOMBRE":"BaroÒa (Porto do Son)","ID":"1507111","COD_PROVINCIA": "15"},
-{"NOMBRE":"BarraÒa (Boiro)","ID":"1501101","COD_PROVINCIA": "15"},
-{"NOMBRE":"BarraÒ·n (Arteixo)","ID":"1500501","COD_PROVINCIA": "15"},
-{"NOMBRE":"Bastiagueiro (Oleiros)","ID":"1505801","COD_PROVINCIA": "15"},
-{"NOMBRE":"Ber (Pontedeume)","ID":"1506901","COD_PROVINCIA": "15"},
-{"NOMBRE":"Boa Grande (Noia)","ID":"1505701","COD_PROVINCIA": "15"},
-{"NOMBRE":"BroÒa (Outes)","ID":"1506201","COD_PROVINCIA": "15"},
-{"NOMBRE":"CabÌo-LombiÒa (Pobra do CaramiÒal, A)","ID":"1506702","COD_PROVINCIA": "15"},
-{"NOMBRE":"CaiÛn (Laracha, A)","ID":"1504101","COD_PROVINCIA": "15"},
-{"NOMBRE":"Carnota (Carnota)","ID":"1502001","COD_PROVINCIA": "15"},
-{"NOMBRE":"Coira (Porto do Son)","ID":"1507104","COD_PROVINCIA": "15"},
-{"NOMBRE":"Coroso (Ribeira)","ID":"1507304","COD_PROVINCIA": "15"},
-{"NOMBRE":"Corrubedo (Ribeira)","ID":"1507305","COD_PROVINCIA": "15"},
-{"NOMBRE":"DoniÒos (Ferrol)","ID":"1503603","COD_PROVINCIA": "15"},
-{"NOMBRE":"Espasante (Ortigueira)","ID":"1506101","COD_PROVINCIA": "15"},
-{"NOMBRE":"Esteiro (Muros)","ID":"1505303","COD_PROVINCIA": "15"},
-{"NOMBRE":"Estorde (Cee)","ID":"1502301","COD_PROVINCIA": "15"},
-{"NOMBRE":"Ezaro (DumbrÌa)","ID":"1503401","COD_PROVINCIA": "15"},
-{"NOMBRE":"Frouxeira (ValdoviÒo)","ID":"1508701","COD_PROVINCIA": "15"},
-{"NOMBRE":"GandarÌo (Bergondo)","ID":"1500801","COD_PROVINCIA": "15"},
-{"NOMBRE":"Grande de MiÒo (MiÒo)","ID":"1504801","COD_PROVINCIA": "15"},
-{"NOMBRE":"Hermida (Ponteceso)","ID":"1506803","COD_PROVINCIA": "15"},
-{"NOMBRE":"Lago (MuxÌa)","ID":"1505202","COD_PROVINCIA": "15"},
-{"NOMBRE":"Langosteira (Fisterra)","ID":"1503701","COD_PROVINCIA": "15"},
-{"NOMBRE":"Laxe (Laxe)","ID":"1504001","COD_PROVINCIA": "15"},
-{"NOMBRE":"Lourido (MuxÌa)","ID":"1505205","COD_PROVINCIA": "15"},
-{"NOMBRE":"Magdalena (Cedeira)","ID":"1502202","COD_PROVINCIA": "15"},
-{"NOMBRE":"Magdalena, Cabanas (Cabanas)","ID":"1501501","COD_PROVINCIA": "15"},
-{"NOMBRE":"Maior, Malpica (Malpica de BergantiÒos)","ID":"1504302","COD_PROVINCIA": "15"},
-{"NOMBRE":"MaÒÛns (Boiro)","ID":"1501103","COD_PROVINCIA": "15"},
-{"NOMBRE":"Mera (Oleiros)","ID":"1505802","COD_PROVINCIA": "15"},
-{"NOMBRE":"Morouzos (Ortigueira)","ID":"1506102","COD_PROVINCIA": "15"},
-{"NOMBRE":"O Castro, AguiÒo (Ribeira)","ID":"1507302","COD_PROVINCIA": "15"},
-{"NOMBRE":"Os MuiÒos, Area Maior (MuxÌa)","ID":"1505204","COD_PROVINCIA": "15"},
-{"NOMBRE":"Perbes (MiÒo)","ID":"1504803","COD_PROVINCIA": "15"},
-{"NOMBRE":"Queiruga (Porto do Son)","ID":"1507109","COD_PROVINCIA": "15"},
-{"NOMBRE":"Quenxe (CorcubiÛn)","ID":"1502802","COD_PROVINCIA": "15"},
-{"NOMBRE":"Razo-Baldaio (Carballo)","ID":"1501902","COD_PROVINCIA": "15"},
-{"NOMBRE":"Riazor-Orz·n (CoruÒa, A)","ID":"1503005","COD_PROVINCIA": "15"},
-{"NOMBRE":"Sada (Sada)","ID":"1507507","COD_PROVINCIA": "15"},
-{"NOMBRE":"San Francisco (Muros)","ID":"1505301","COD_PROVINCIA": "15"},
-{"NOMBRE":"San Pedro (Sada)","ID":"1507506","COD_PROVINCIA": "15"},
-{"NOMBRE":"San Xurxo (Ferrol)","ID":"1503608","COD_PROVINCIA": "15"},
-{"NOMBRE":"Santa Cristina (Oleiros)","ID":"1505803","COD_PROVINCIA": "15"},
-{"NOMBRE":"SardiÒeiro (Fisterra)","ID":"1503707","COD_PROVINCIA": "15"},
-{"NOMBRE":"Seselle (Ares)","ID":"1500403","COD_PROVINCIA": "15"},
-{"NOMBRE":"Tanxil (Rianxo)","ID":"1507202","COD_PROVINCIA": "15"},
-{"NOMBRE":"Testal (Noia)","ID":"1505703","COD_PROVINCIA": "15"},
-{"NOMBRE":"BenÌtez (Ceuta)","ID":"5100104","COD_PROVINCIA": "51"},
-{"NOMBRE":"La Ribera - El Chorrillo (Ceuta)","ID":"5100108","COD_PROVINCIA": "51"},
-{"NOMBRE":"Blanes (Blanes)","ID":"1702303","COD_PROVINCIA": "17"},
-{"NOMBRE":"De la Fosca (PalamÛs)","ID":"1711804","COD_PROVINCIA": "17"},
-{"NOMBRE":"De Roses (Roses)","ID":"1715203","COD_PROVINCIA": "17"},
-{"NOMBRE":"El Port (LlanÁ‡)","ID":"1709203","COD_PROVINCIA": "17"},
-{"NOMBRE":"Emp˙riabrava (CastellÛ d'Emp˙ries)","ID":"1704702","COD_PROVINCIA": "17"},
-{"NOMBRE":"En Goixa (Colera)","ID":"1705402","COD_PROVINCIA": "17"},
-{"NOMBRE":"Fenals (Lloret de Mar)","ID":"1709509","COD_PROVINCIA": "17"},
-{"NOMBRE":"Gran de CadaquÈs (CadaquÈs)","ID":"1703209","COD_PROVINCIA": "17"},
-{"NOMBRE":"Gran de Tossa (Tossa de Mar)","ID":"1720207","COD_PROVINCIA": "17"},
-{"NOMBRE":"L'Estartit (Torroella de MontgrÌ)","ID":"1719902","COD_PROVINCIA": "17"},
-{"NOMBRE":"Llafranc (Palafrugell)","ID":"1711703","COD_PROVINCIA": "17"},
-{"NOMBRE":"Lloret (Lloret de Mar)","ID":"1709507","COD_PROVINCIA": "17"},
-{"NOMBRE":"Pals (Pals)","ID":"1712401","COD_PROVINCIA": "17"},
-{"NOMBRE":"Platja d'Aro (Castell-Platja d'Aro)","ID":"1704805","COD_PROVINCIA": "17"},
-{"NOMBRE":"Port de la Selva (Port de la Selva, El)","ID":"1714003","COD_PROVINCIA": "17"},
-{"NOMBRE":"Portbou (Portbou)","ID":"1713803","COD_PROVINCIA": "17"},
-{"NOMBRE":"Riells (Escala, L')","ID":"1706209","COD_PROVINCIA": "17"},
-{"NOMBRE":"Sa Riera (Begur)","ID":"1701303","COD_PROVINCIA": "17"},
-{"NOMBRE":"S'Abanell (Blanes)","ID":"1702304","COD_PROVINCIA": "17"},
-{"NOMBRE":"Sant Feliu de GuÌxols (Sant Feliu de GuÌxols)","ID":"1716002","COD_PROVINCIA": "17"},
-{"NOMBRE":"Sant Pere Pescador (Sant Pere Pescador)","ID":"1717801","COD_PROVINCIA": "17"},
-{"NOMBRE":"Sant Pol (Sant Feliu de GuÌxols)","ID":"1716001","COD_PROVINCIA": "17"},
-{"NOMBRE":"Torre Valentina - Sant Antoni (Calonge)","ID":"1703402","COD_PROVINCIA": "17"},
-{"NOMBRE":"Calahonda (Motril)","ID":"1814008","COD_PROVINCIA": "18"},
-{"NOMBRE":"Cambriles (L˙jar)","ID":"1812401","COD_PROVINCIA": "18"},
-{"NOMBRE":"Cantarrij·n (AlmuÒÈcar)","ID":"1801701","COD_PROVINCIA": "18"},
-{"NOMBRE":"El Lance (Rubite)","ID":"1817001","COD_PROVINCIA": "18"},
-{"NOMBRE":"La Charca-Solamar (SalobreÒa)","ID":"1817304","COD_PROVINCIA": "18"},
-{"NOMBRE":"La Herradura (AlmuÒÈcar)","ID":"1801703","COD_PROVINCIA": "18"},
-{"NOMBRE":"La Mamola (Polopos)","ID":"1816201","COD_PROVINCIA": "18"},
-{"NOMBRE":"La R·bita (AlbuÒol)","ID":"1800606","COD_PROVINCIA": "18"},
-{"NOMBRE":"Melicena (Sorvil·n)","ID":"1817704","COD_PROVINCIA": "18"},
-{"NOMBRE":"Pelaillo-Poniente (Motril)","ID":"1814002","COD_PROVINCIA": "18"},
-{"NOMBRE":"Puerta del Mar-Fuentepiedra (AlmuÒÈcar)","ID":"1801709","COD_PROVINCIA": "18"},
-{"NOMBRE":"San Cristobal-La China (AlmuÒÈcar)","ID":"1801707","COD_PROVINCIA": "18"},
-{"NOMBRE":"Sotillo-Castell de Ferro (Gualchos)","ID":"1809302","COD_PROVINCIA": "18"},
-{"NOMBRE":"Torrenueva (Motril)","ID":"1814004","COD_PROVINCIA": "18"},
-{"NOMBRE":"Velilla (AlmuÒÈcar)","ID":"1801710","COD_PROVINCIA": "18"},
-{"NOMBRE":"Deba-Deva (Deba)","ID":"2002901","COD_PROVINCIA": "20"},
-{"NOMBRE":"Gaztetape-Gastetape (Getaria)","ID":"2003903","COD_PROVINCIA": "20"},
-{"NOMBRE":"Hondarribia-FuenterrabÌa (Hondarribia)","ID":"2003602","COD_PROVINCIA": "20"},
-{"NOMBRE":"Itzurun-San Telmo (Zumaia)","ID":"2008102","COD_PROVINCIA": "20"},
-{"NOMBRE":"La Antilla-San Juan (Orio)","ID":"2006102","COD_PROVINCIA": "20"},
-{"NOMBRE":"La Kontxa-La Concha (Donostia/San Sebasti·n)","ID":"2006904","COD_PROVINCIA": "20"},
-{"NOMBRE":"La Zurriola (Donostia/San Sebasti·n)","ID":"2006905","COD_PROVINCIA": "20"},
-{"NOMBRE":"Malkorbe-Marcorbe (Getaria)","ID":"2003904","COD_PROVINCIA": "20"},
-{"NOMBRE":"Mutriku- Motrico (Mutriku)","ID":"2005604","COD_PROVINCIA": "20"},
-{"NOMBRE":"Ondarreta-Ondarreta (Donostia/San Sebasti·n)","ID":"2006902","COD_PROVINCIA": "20"},
-{"NOMBRE":"Santixo-Santiago (Zumaia)","ID":"2008103","COD_PROVINCIA": "20"},
-{"NOMBRE":"Saturraran (Mutriku)","ID":"2005601","COD_PROVINCIA": "20"},
-{"NOMBRE":"Zarautz-Zarauz (Zarautz)","ID":"2007901","COD_PROVINCIA": "20"},
-{"NOMBRE":"Antilla (Lepe)","ID":"2104402","COD_PROVINCIA": "21"},
-{"NOMBRE":"Central (Isla Cristina)","ID":"2104202","COD_PROVINCIA": "21"},
-{"NOMBRE":"De MazagÛn (Palos de la Frontera)","ID":"2105501","COD_PROVINCIA": "21"},
-{"NOMBRE":"Del Hoyo (Isla Cristina)","ID":"2104203","COD_PROVINCIA": "21"},
-{"NOMBRE":"El EspigÛn (Huelva)","ID":"2104101","COD_PROVINCIA": "21"},
-{"NOMBRE":"El Parador (Moguer)","ID":"2105001","COD_PROVINCIA": "21"},
-{"NOMBRE":"El Portil (Cartaya)","ID":"2102102","COD_PROVINCIA": "21"},
-{"NOMBRE":"Isla Canela (Ayamonte)","ID":"2101001","COD_PROVINCIA": "21"},
-{"NOMBRE":"Islantilla (Isla Cristina)","ID":"2104205","COD_PROVINCIA": "21"},
-{"NOMBRE":"La Bota (Punta UmbrÌa)","ID":"2106002","COD_PROVINCIA": "21"},
-{"NOMBRE":"MatalascaÒas (Almonte)","ID":"2100502","COD_PROVINCIA": "21"},
-{"NOMBRE":"Punta UmbrÌa (Punta UmbrÌa)","ID":"2106004","COD_PROVINCIA": "21"},
-{"NOMBRE":"A Marosa (Burela)","ID":"2790201","COD_PROVINCIA": "27"},
-{"NOMBRE":"A Rapadoira (Foz)","ID":"2701901","COD_PROVINCIA": "27"},
-{"NOMBRE":"Abrela (Vicedo, O)","ID":"2706401","COD_PROVINCIA": "27"},
-{"NOMBRE":"Altar, San Cosme (Barreiros)","ID":"2700501","COD_PROVINCIA": "27"},
-{"NOMBRE":"Area (Viveiro)","ID":"2706601","COD_PROVINCIA": "27"},
-{"NOMBRE":"Area Longa (Foz)","ID":"2701902","COD_PROVINCIA": "27"},
-{"NOMBRE":"Area Longa (Vicedo, O)","ID":"2706402","COD_PROVINCIA": "27"},
-{"NOMBRE":"Areagrande, San Roman (Vicedo, O)","ID":"2706403","COD_PROVINCIA": "27"},
-{"NOMBRE":"As Catedrais (Ribadeo)","ID":"2705101","COD_PROVINCIA": "27"},
-{"NOMBRE":"Covas (Viveiro)","ID":"2706602","COD_PROVINCIA": "27"},
-{"NOMBRE":"Esteiro (Xove)","ID":"2702501","COD_PROVINCIA": "27"},
-{"NOMBRE":"Lago (Xove)","ID":"2702503","COD_PROVINCIA": "27"},
-{"NOMBRE":"O Torno (Cervo)","ID":"2701302","COD_PROVINCIA": "27"},
-{"NOMBRE":"Os Castros (Ribadeo)","ID":"2705005","COD_PROVINCIA": "27"},
-{"NOMBRE":"San Miguel Reinante/Area Longa (Barreiros)","ID":"2700503","COD_PROVINCIA": "27"},
-{"NOMBRE":"Valea, Benquerencia (Barreiros)","ID":"2700504","COD_PROVINCIA": "27"},
-{"NOMBRE":"Xilloi (Vicedo, O)","ID":"2706405","COD_PROVINCIA": "27"},
-{"NOMBRE":"Alicate - Costa Bella - Pinomar (Marbella)","ID":"2906921","COD_PROVINCIA": "29"},
-{"NOMBRE":"Ancha (Casares)","ID":"2904101","COD_PROVINCIA": "29"},
-{"NOMBRE":"Bil-Bil y Arroyo de la Miel (Benalm·dena)","ID":"2902503","COD_PROVINCIA": "29"},
-{"NOMBRE":"Burriana (Nerja)","ID":"2907509","COD_PROVINCIA": "29"},
-{"NOMBRE":"Carvajal (Benalm·dena)","ID":"2902514","COD_PROVINCIA": "29"},
-{"NOMBRE":"El Dedo - El Chanquete (M·laga)","ID":"2906712","COD_PROVINCIA": "29"},
-{"NOMBRE":"Ferrara - Las Lindes (Torrox)","ID":"2909103","COD_PROVINCIA": "29"},
-{"NOMBRE":"La Bajadilla (Marbella)","ID":"2906912","COD_PROVINCIA": "29"},
-{"NOMBRE":"La Butibamba (Mijas)","ID":"2907002","COD_PROVINCIA": "29"},
-{"NOMBRE":"La Carihuela - El Bajondillo - Playamar (Torremolinos)","ID":"2990102","COD_PROVINCIA": "29"},
-{"NOMBRE":"La Malagueta (M·laga)","ID":"2906707","COD_PROVINCIA": "29"},
-{"NOMBRE":"La Rada (Estepona)","ID":"2905106","COD_PROVINCIA": "29"},
-{"NOMBRE":"Los Boliches - Las Gaviotas (Fuengirola)","ID":"2905402","COD_PROVINCIA": "29"},
-{"NOMBRE":"RincÛn de la Victoria (RincÛn de la Victoria)","ID":"2908202","COD_PROVINCIA": "29"},
-{"NOMBRE":"Rio Verde - Puerto Ban˙s (Marbella)","ID":"2906906","COD_PROVINCIA": "29"},
-{"NOMBRE":"Sabinillas (Manilva)","ID":"2906801","COD_PROVINCIA": "29"},
-{"NOMBRE":"Torre del Mar (VÈlez-M·laga)","ID":"2909406","COD_PROVINCIA": "29"},
-{"NOMBRE":"Torrecilla (Nerja)","ID":"2907502","COD_PROVINCIA": "29"},
-{"NOMBRE":"El HipÛdromo (Melilla)","ID":"5200103","COD_PROVINCIA": "29"},
-{"NOMBRE":"Banco del Tabal (San Javier)","ID":"3003531","COD_PROVINCIA": "30"},
-{"NOMBRE":"Barco Perdido, Gal˙a (Cartagena)","ID":"3001655","COD_PROVINCIA": "30"},
-{"NOMBRE":"Bolnuevo (MazarrÛn)","ID":"3002618","COD_PROVINCIA": "30"},
-{"NOMBRE":"Cala Cortina (Cartagena)","ID":"3001624","COD_PROVINCIA": "30"},
-{"NOMBRE":"Calabardina (¡guilas)","ID":"3000327","COD_PROVINCIA": "30"},
-{"NOMBRE":"De Calblanque (Cartagena)","ID":"3001634","COD_PROVINCIA": "30"},
-{"NOMBRE":"De ColÛn (San Javier)","ID":"3003503","COD_PROVINCIA": "30"},
-{"NOMBRE":"Del Lastre (UniÛn, La)","ID":"3004102","COD_PROVINCIA": "30"},
-{"NOMBRE":"Del MojÛn (MazarrÛn)","ID":"3002633","COD_PROVINCIA": "30"},
-{"NOMBRE":"El Alamillo (MazarrÛn)","ID":"3002630","COD_PROVINCIA": "30"},
-{"NOMBRE":"El Arenal (San Javier)","ID":"3003526","COD_PROVINCIA": "30"},
-{"NOMBRE":"El Espejo (Alc·zares, Los)","ID":"3090205","COD_PROVINCIA": "30"},
-{"NOMBRE":"El Port˙s (Cartagena)","ID":"3001619","COD_PROVINCIA": "30"},
-{"NOMBRE":"La AzohÌa (Cartagena)","ID":"3001610","COD_PROVINCIA": "30"},
-{"NOMBRE":"La Carolina (¡guilas)","ID":"3000301","COD_PROVINCIA": "30"},
-{"NOMBRE":"La Colonia (¡guilas)","ID":"3000312","COD_PROVINCIA": "30"},
-{"NOMBRE":"La Isla (MazarrÛn)","ID":"3002626","COD_PROVINCIA": "30"},
-{"NOMBRE":"La Reya (MazarrÛn)","ID":"3002623","COD_PROVINCIA": "30"},
-{"NOMBRE":"La Torre Derribada (San Pedro del Pinatar)","ID":"3003605","COD_PROVINCIA": "30"},
-{"NOMBRE":"Las Amoladeras (Cartagena)","ID":"3001653","COD_PROVINCIA": "30"},
-{"NOMBRE":"Las Delicias (¡guilas)","ID":"3000315","COD_PROVINCIA": "30"},
-{"NOMBRE":"Las Salinas (San Pedro del Pinatar)","ID":"3003606","COD_PROVINCIA": "30"},
-{"NOMBRE":"Levante (¡guilas)","ID":"3000314","COD_PROVINCIA": "30"},
-{"NOMBRE":"Los Urrutias (Cartagena)","ID":"3001676","COD_PROVINCIA": "30"},
-{"NOMBRE":"Manzanares (Alc·zares, Los)","ID":"3090206","COD_PROVINCIA": "30"},
-{"NOMBRE":"Mistral (San Javier)","ID":"3003509","COD_PROVINCIA": "30"},
-{"NOMBRE":"Poniente (¡guilas)","ID":"3000313","COD_PROVINCIA": "30"},
-{"NOMBRE":"Punta Calera (Alc·zares, Los)","ID":"3090202","COD_PROVINCIA": "30"},
-{"NOMBRE":"Puntas de Calnegre (Lorca)","ID":"3002414","COD_PROVINCIA": "30"},
-{"NOMBRE":"Villananitos (San Pedro del Pinatar)","ID":"3003602","COD_PROVINCIA": "30"},
-{"NOMBRE":"AjuÌ (P·jara)","ID":"3501501","COD_PROVINCIA": "35"},
-{"NOMBRE":"Amadores (Mog·n)","ID":"3501202","COD_PROVINCIA": "35"},
-{"NOMBRE":"Arinaga (Ag¸imes)","ID":"3500201","COD_PROVINCIA": "35"},
-{"NOMBRE":"Blanca (Puerto del Rosario)","ID":"3501702","COD_PROVINCIA": "35"},
-{"NOMBRE":"Butihondo y El Matorral (P·jara)","ID":"3501506","COD_PROVINCIA": "35"},
-{"NOMBRE":"Caleta de Fuste (Antigua)","ID":"3500301","COD_PROVINCIA": "35"},
-{"NOMBRE":"Charco de San Lorenzo (Moya)","ID":"3501301","COD_PROVINCIA": "35"},
-{"NOMBRE":"Corralejo (Oliva, La)","ID":"3501402","COD_PROVINCIA": "35"},
-{"NOMBRE":"Costa Calma y Sotavento de JandÌa (P·jara)","ID":"3501507","COD_PROVINCIA": "35"},
-{"NOMBRE":"El Burrero (Ingenio)","ID":"3501101","COD_PROVINCIA": "35"},
-{"NOMBRE":"El Cofete (P·jara)","ID":"3501503","COD_PROVINCIA": "35"},
-{"NOMBRE":"El InglÈs (San BartolomÈ de Tirajana)","ID":"3501902","COD_PROVINCIA": "35"},
-{"NOMBRE":"El Puertillo (Arucas)","ID":"3500601","COD_PROVINCIA": "35"},
-{"NOMBRE":"El Puertito (P·jara)","ID":"3501504","COD_PROVINCIA": "35"},
-{"NOMBRE":"El Puertito, Los Molinos (Puerto del Rosario)","ID":"3501701","COD_PROVINCIA": "35"},
-{"NOMBRE":"El Reducto (Arrecife)","ID":"3500403","COD_PROVINCIA": "35"},
-{"NOMBRE":"Gran Tarajal (Tuineje)","ID":"3503001","COD_PROVINCIA": "35"},
-{"NOMBRE":"Grandes Playas-El CaserÛn (Oliva, La)","ID":"3501403","COD_PROVINCIA": "35"},
-{"NOMBRE":"Guacimeta (TÌas)","ID":"3502811","COD_PROVINCIA": "35"},
-{"NOMBRE":"Honda (San BartolomÈ)","ID":"3501801","COD_PROVINCIA": "35"},
-{"NOMBRE":"La Garita (HarÌa)","ID":"3501017","COD_PROVINCIA": "35"},
-{"NOMBRE":"La Pared (P·jara)","ID":"3501502","COD_PROVINCIA": "35"},
-{"NOMBRE":"Las Canteras (Palmas de Gran Canaria, Las)","ID":"3501601","COD_PROVINCIA": "35"},
-{"NOMBRE":"Las Cucharas (Teguise)","ID":"3502425","COD_PROVINCIA": "35"},
-{"NOMBRE":"Las Nieves (Agaete)","ID":"3500101","COD_PROVINCIA": "35"},
-{"NOMBRE":"Los Pocillos (TÌas)","ID":"3502808","COD_PROVINCIA": "35"},
-{"NOMBRE":"MarfolÌn (Oliva, La)","ID":"3501401","COD_PROVINCIA": "35"},
-{"NOMBRE":"Maspalomas (San BartolomÈ de Tirajana)","ID":"3501901","COD_PROVINCIA": "35"},
-{"NOMBRE":"Matagorda (TÌas)","ID":"3502809","COD_PROVINCIA": "35"},
-{"NOMBRE":"Melenara (Telde)","ID":"3502601","COD_PROVINCIA": "35"},
-{"NOMBRE":"Morro Jable (P·jara)","ID":"3501505","COD_PROVINCIA": "35"},
-{"NOMBRE":"Playa Blanca (Yaiza)","ID":"3503410","COD_PROVINCIA": "35"},
-{"NOMBRE":"Pozo Izquierdo, El Arenal (Santa LucÌa de Tirajana)","ID":"3502201","COD_PROVINCIA": "35"},
-{"NOMBRE":"Puerto La Aldea y La Aldea (Aldea de San Nicol·s, La)","ID":"3502001","COD_PROVINCIA": "35"},
-{"NOMBRE":"RÌa de la Santa (Tinajo)","ID":"3502904","COD_PROVINCIA": "35"},
-{"NOMBRE":"San AgustÌn (San BartolomÈ de Tirajana)","ID":"3501903","COD_PROVINCIA": "35"},
-{"NOMBRE":"San Felipe (Santa MarÌa de GuÌa de Gran Canaria)","ID":"3502301","COD_PROVINCIA": "35"},
-{"NOMBRE":"Sardina (G·ldar)","ID":"3500901","COD_PROVINCIA": "35"},
-{"NOMBRE":"Tasarte (Aldea de San Nicol·s, La)","ID":"3502002","COD_PROVINCIA": "35"},
-{"NOMBRE":"Taurito (Mog·n)","ID":"3501201","COD_PROVINCIA": "35"},
-{"NOMBRE":"A Fonte (Vigo)","ID":"3605701","COD_PROVINCIA": "36"},
-{"NOMBRE":"A Lanzada (Grove, O)","ID":"3602201","COD_PROVINCIA": "36"},
-{"NOMBRE":"Aguete (MarÌn)","ID":"3602601","COD_PROVINCIA": "36"},
-{"NOMBRE":"Area Brava (Cangas)","ID":"3600805","COD_PROVINCIA": "36"},
-{"NOMBRE":"Area da Cruz (Grove, O)","ID":"3602202","COD_PROVINCIA": "36"},
-{"NOMBRE":"Area de Bon (Bueu)","ID":"3600402","COD_PROVINCIA": "36"},
-{"NOMBRE":"Area Grande (Cangas)","ID":"3600806","COD_PROVINCIA": "36"},
-{"NOMBRE":"Area Grande (Grove, O)","ID":"3602208","COD_PROVINCIA": "36"},
-{"NOMBRE":"Areas (Sanxenxo)","ID":"3605102","COD_PROVINCIA": "36"},
-{"NOMBRE":"As Sinas (Vilanova de Arousa)","ID":"3606102","COD_PROVINCIA": "36"},
-{"NOMBRE":"Bao (Vigo)","ID":"3605702","COD_PROVINCIA": "36"},
-{"NOMBRE":"Barra-Nerga (Cangas)","ID":"3600802","COD_PROVINCIA": "36"},
-{"NOMBRE":"Camaxe (Illa de Arousa, A)","ID":"3690102","COD_PROVINCIA": "36"},
-{"NOMBRE":"Camposancos (Guarda, A)","ID":"3602305","COD_PROVINCIA": "36"},
-{"NOMBRE":"Canelas (Sanxenxo)","ID":"3605105","COD_PROVINCIA": "36"},
-{"NOMBRE":"Canido (Vigo)","ID":"3605711","COD_PROVINCIA": "36"},
-{"NOMBRE":"Cesantes (Redondela)","ID":"3604501","COD_PROVINCIA": "36"},
-{"NOMBRE":"Chancelas (Poio)","ID":"3604103","COD_PROVINCIA": "36"},
-{"NOMBRE":"Compostela (VilagarcÌa de Arousa)","ID":"3606001","COD_PROVINCIA": "36"},
-{"NOMBRE":"Ladeira, Ramallosa (Baiona)","ID":"3600303","COD_PROVINCIA": "36"},
-{"NOMBRE":"Lapam·n (MarÌn)","ID":"3602606","COD_PROVINCIA": "36"},
-{"NOMBRE":"Limens (Cangas)","ID":"3600807","COD_PROVINCIA": "36"},
-{"NOMBRE":"Maxor (Sanxenxo)","ID":"3605110","COD_PROVINCIA": "36"},
-{"NOMBRE":"Melide, Ons (Bueu)","ID":"3600419","COD_PROVINCIA": "36"},
-{"NOMBRE":"Mexilloeira (Grove, O)","ID":"3602209","COD_PROVINCIA": "36"},
-{"NOMBRE":"Mogor (MarÌn)","ID":"3602603","COD_PROVINCIA": "36"},
-{"NOMBRE":"Montalvo (Sanxenxo)","ID":"3605111","COD_PROVINCIA": "36"},
-{"NOMBRE":"Mourisca (Bueu)","ID":"3600408","COD_PROVINCIA": "36"},
-{"NOMBRE":"O TerrÛn (Vilanova de Arousa)","ID":"3606103","COD_PROVINCIA": "36"},
-{"NOMBRE":"PanxÛn-AmÈrica (Nigr·n)","ID":"3603501","COD_PROVINCIA": "36"},
-{"NOMBRE":"Patos (Nigr·n)","ID":"3603504","COD_PROVINCIA": "36"},
-{"NOMBRE":"Portomaior-Agrelo (Bueu)","ID":"3600411","COD_PROVINCIA": "36"},
-{"NOMBRE":"Portonovo-Baltar (Sanxenxo)","ID":"3605103","COD_PROVINCIA": "36"},
-{"NOMBRE":"Rodas, CÌes (Vigo)","ID":"3605703","COD_PROVINCIA": "36"},
-{"NOMBRE":"Rodeira (Cangas)","ID":"3600803","COD_PROVINCIA": "36"},
-{"NOMBRE":"Samil (Vigo)","ID":"3605706","COD_PROVINCIA": "36"},
-{"NOMBRE":"Silgar (Sanxenxo)","ID":"3605117","COD_PROVINCIA": "36"},
-{"NOMBRE":"Tir·n (MoaÒa)","ID":"3602902","COD_PROVINCIA": "36"},
-{"NOMBRE":"VilariÒo-Arnelas, Hio (Cangas)","ID":"3600808","COD_PROVINCIA": "36"},
-{"NOMBRE":"Xunqueira, MoaÒa (MoaÒa)","ID":"3602903","COD_PROVINCIA": "36"},
-{"NOMBRE":"Bajamar (BreÒa Alta)","ID":"3800801","COD_PROVINCIA": "38"},
-{"NOMBRE":"CaletÛn De Garachico (Garachico)","ID":"3801503","COD_PROVINCIA": "38"},
-{"NOMBRE":"Charco Azul (San AndrÈs y Sauces)","ID":"3803302","COD_PROVINCIA": "38"},
-{"NOMBRE":"El Arenisco (San CristÛbal de La Laguna)","ID":"3802305","COD_PROVINCIA": "38"},
-{"NOMBRE":"El Bollullo (Orotava, La)","ID":"3802601","COD_PROVINCIA": "38"},
-{"NOMBRE":"El CaletÛn (Matanza de Acentejo, La)","ID":"3802501","COD_PROVINCIA": "38"},
-{"NOMBRE":"El Faro (Fuencaliente de la Palma)","ID":"3801404","COD_PROVINCIA": "38"},
-{"NOMBRE":"El Gomero (Silos, Los)","ID":"3804203","COD_PROVINCIA": "38"},
-{"NOMBRE":"El MÈdano (Granadilla de Abona)","ID":"3801705","COD_PROVINCIA": "38"},
-{"NOMBRE":"El Puertito (G¸Ìmar)","ID":"3802002","COD_PROVINCIA": "38"},
-{"NOMBRE":"El Socorro (Realejos, Los)","ID":"3803101","COD_PROVINCIA": "38"},
-{"NOMBRE":"El Tamaduste (Valverde)","ID":"3804803","COD_PROVINCIA": "38"},
-{"NOMBRE":"FaÒabe (Adeje)","ID":"3800112","COD_PROVINCIA": "38"},
-{"NOMBRE":"Hermigua (Hermigua)","ID":"3802101","COD_PROVINCIA": "38"},
-{"NOMBRE":"JardÌn (Puerto de la Cruz)","ID":"3802801","COD_PROVINCIA": "38"},
-{"NOMBRE":"La Arena (Santiago del Teide)","ID":"3804004","COD_PROVINCIA": "38"},
-{"NOMBRE":"La Arena/Mesa del Mar (Tacoronte)","ID":"3804302","COD_PROVINCIA": "38"},
-{"NOMBRE":"La Ballenita (Buenavista del Norte)","ID":"3801005","COD_PROVINCIA": "38"},
-{"NOMBRE":"La GaraÒona (Sauzal, El)","ID":"3804101","COD_PROVINCIA": "38"},
-{"NOMBRE":"La Hornilla - Los Guanches (Candelaria)","ID":"3801103","COD_PROVINCIA": "38"},
-{"NOMBRE":"La Nea (Santa Cruz de Tenerife)","ID":"3803801","COD_PROVINCIA": "38"},
-{"NOMBRE":"La Restinga (Frontera)","ID":"3801311","COD_PROVINCIA": "38"},
-{"NOMBRE":"Las Aguas (San Juan de la Rambla)","ID":"3803401","COD_PROVINCIA": "38"},
-{"NOMBRE":"Las AmÈricas (Adeje)","ID":"3800116","COD_PROVINCIA": "38"},
-{"NOMBRE":"Las Teresitas (Santa Cruz de Tenerife)","ID":"3803806","COD_PROVINCIA": "38"},
-{"NOMBRE":"Las Vistas (Arona)","ID":"3800603","COD_PROVINCIA": "38"},
-{"NOMBRE":"Los Cancajos (BreÒa Baja)","ID":"3800901","COD_PROVINCIA": "38"},
-{"NOMBRE":"Marti·nez (Puerto de la Cruz)","ID":"3802804","COD_PROVINCIA": "38"},
-{"NOMBRE":"Nogales (Puntallana)","ID":"3800302","COD_PROVINCIA": "38"},
-{"NOMBRE":"Poris (Arico)","ID":"3800504","COD_PROVINCIA": "38"},
-{"NOMBRE":"Puerto de Tazacorte (Tazacorte)","ID":"3804502","COD_PROVINCIA": "38"},
-{"NOMBRE":"Puerto Naos (Llanos de Aridane, Los)","ID":"3802403","COD_PROVINCIA": "38"},
-{"NOMBRE":"San Juan (GuÌa de Isora)","ID":"3801905","COD_PROVINCIA": "38"},
-{"NOMBRE":"San Juan/Castillo (San CristÛbal de La Laguna)","ID":"3802302","COD_PROVINCIA": "38"},
-{"NOMBRE":"San Marcos (Icod de los Vinos)","ID":"3802201","COD_PROVINCIA": "38"},
-{"NOMBRE":"San Sebastian (San Sebasti·n de la Gomera)","ID":"3803605","COD_PROVINCIA": "38"},
-{"NOMBRE":"Santiago (AlajerÛ)","ID":"3800301","COD_PROVINCIA": "38"},
-{"NOMBRE":"Santo Domingo (Guancha, La)","ID":"3801801","COD_PROVINCIA": "38"},
-{"NOMBRE":"Valle Gran Rey (Valle Gran Rey)","ID":"3804902","COD_PROVINCIA": "38"},
-{"NOMBRE":"Vallehermoso (Vallehermoso)","ID":"3805004","COD_PROVINCIA": "38"},
-{"NOMBRE":"Altafulla (Altafulla)","ID":"4301202","COD_PROVINCIA": "43"},
-{"NOMBRE":"Barrio Maritimo/La Paella (Torredembarra)","ID":"4315302","COD_PROVINCIA": "43"},
-{"NOMBRE":"Calafell (Calafell)","ID":"4303703","COD_PROVINCIA": "43"},
-{"NOMBRE":"Cap Roig (Ampolla, L')","ID":"4390602","COD_PROVINCIA": "43"},
-{"NOMBRE":"Coma Ruga (Vendrell, El)","ID":"4316303","COD_PROVINCIA": "43"},
-{"NOMBRE":"Creixell (Creixell)","ID":"4305001","COD_PROVINCIA": "43"},
-{"NOMBRE":"Cristall (Mont-roig del Camp)","ID":"4309211","COD_PROVINCIA": "43"},
-{"NOMBRE":"Cunit (Cunit)","ID":"4305101","COD_PROVINCIA": "43"},
-{"NOMBRE":"D'Avellaners (Ampolla, L')","ID":"4390606","COD_PROVINCIA": "43"},
-{"NOMBRE":"El Garbi (Sant Carles de la R‡pita)","ID":"4313601","COD_PROVINCIA": "43"},
-{"NOMBRE":"Els Eucaliptus (Amposta)","ID":"4301401","COD_PROVINCIA": "43"},
-{"NOMBRE":"La Mora (Tarragona)","ID":"4314808","COD_PROVINCIA": "43"},
-{"NOMBRE":"La Pineda (Vila-seca)","ID":"4317101","COD_PROVINCIA": "43"},
-{"NOMBRE":"L'Alguer (Ametlla de Mar, L')","ID":"4301313","COD_PROVINCIA": "43"},
-{"NOMBRE":"L'Arenal (VandellÚs i l'Hospitalet de l'Infant)","ID":"4316203","COD_PROVINCIA": "43"},
-{"NOMBRE":"L'Arrabassada (Tarragona)","ID":"4314802","COD_PROVINCIA": "43"},
-{"NOMBRE":"Llevant (Salou)","ID":"4390502","COD_PROVINCIA": "43"},
-{"NOMBRE":"Peixerota (Mont-roig del Camp)","ID":"4309201","COD_PROVINCIA": "43"},
-{"NOMBRE":"Prat d'en Fores i Regueral (Cambrils)","ID":"4303804","COD_PROVINCIA": "43"},
-{"NOMBRE":"Riomar (Deltebre)","ID":"4390103","COD_PROVINCIA": "43"},
-{"NOMBRE":"Roda de Bara (Roda de Ber‡)","ID":"4313105","COD_PROVINCIA": "43"},
-{"NOMBRE":"Vilafortuny-L'Esquirol (Cambrils)","ID":"4303806","COD_PROVINCIA": "43"},
-{"NOMBRE":"Bellreguard (Bellreguard)","ID":"4604801","COD_PROVINCIA": "46"},
-{"NOMBRE":"Corint / Malvarrosa (Sagunto/Sagunt)","ID":"4622001","COD_PROVINCIA": "46"},
-{"NOMBRE":"Daim˙s (Daim˙s)","ID":"4611302","COD_PROVINCIA": "46"},
-{"NOMBRE":"El Dossel (Cullera)","ID":"4610502","COD_PROVINCIA": "46"},
-{"NOMBRE":"El Port / Saplaya (Alboraya)","ID":"4601301","COD_PROVINCIA": "46"},
-{"NOMBRE":"El Raco (Cullera)","ID":"4610506","COD_PROVINCIA": "46"},
-{"NOMBRE":"La Devesa (Valencia)","ID":"4625004","COD_PROVINCIA": "46"},
-{"NOMBRE":"La Pobla de Farnals (Pobla de Farnals, la)","ID":"4619901","COD_PROVINCIA": "46"},
-{"NOMBRE":"L'Aigua Blanca (Oliva)","ID":"4618103","COD_PROVINCIA": "46"},
-{"NOMBRE":"Mareny Blau (Sueca)","ID":"4623505","COD_PROVINCIA": "46"},
-{"NOMBRE":"Norte de Gandia (Gandia)","ID":"4613102","COD_PROVINCIA": "46"},
-{"NOMBRE":"Pau-Pi (Oliva)","ID":"4618102","COD_PROVINCIA": "46"},
-{"NOMBRE":"Piles (Piles)","ID":"4619501","COD_PROVINCIA": "46"},
-{"NOMBRE":"Playa de Levante / Malvarrosa (Valencia)","ID":"4625001","COD_PROVINCIA": "46"},
-{"NOMBRE":"Port de Sagunt / Sagunt (Sagunto/Sagunt)","ID":"4622003","COD_PROVINCIA": "46"},
-{"NOMBRE":"Raco de Mar (Canet d'En Berenguer)","ID":"4608201","COD_PROVINCIA": "46"},
-{"NOMBRE":"Sant Antoni (Cullera)","ID":"4610507","COD_PROVINCIA": "46"},
-{"NOMBRE":"Tavernes (Tavernes de la Valldigna)","ID":"4623801","COD_PROVINCIA": "46"},
-{"NOMBRE":"Xeraco (Xeraco)","ID":"4614301","COD_PROVINCIA": "46"}]
+[
+  {
+    "NOMBRE": "Arenal/Bol (Calp)",
+    "ID": "304709",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Arenales del Sol (Elche/Elx)",
+    "ID": "306502",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Cala Capitan (Orihuela)",
+    "ID": "309907",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Cala Fustera (Benissa)",
+    "ID": "304105",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Cala Roig (Orihuela)",
+    "ID": "309908",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Campoamor / Barranco Rubio (Orihuela)",
+    "ID": "309911",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Cantal Roig (Calp)",
+    "ID": "304707",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Cap Blanch (Altea)",
+    "ID": "301809",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Carrer la Mar (Campello, el)",
+    "ID": "305013",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Centro / La Roqueta (Guardamar del Segura)",
+    "ID": "307605",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "El Arenal (J√°vea/X√†bia)",
+    "ID": "308204",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "El Postiguet (Alicante/Alacant)",
+    "ID": "301408",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Finestrat / La Cala (Finestrat)",
+    "ID": "306901",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "La Fossa (Calp)",
+    "ID": "304704",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "La Granadella (J√°vea/X√†bia)",
+    "ID": "308211",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "La Marina / Les Pesqueres - El Rebollo (Elche/Elx)",
+    "ID": "306505",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "La Mata (Torrevieja)",
+    "ID": "313302",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "La Roda (Altea)",
+    "ID": "301808",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "L'Ampolla (Teulada)",
+    "ID": "312803",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Les Boves / Les Marines (D√©nia)",
+    "ID": "306308",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Les Devesses (D√©nia)",
+    "ID": "306301",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Llevant / Playa de Levante (Benidorm)",
+    "ID": "303102",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Marineta Cassiana (D√©nia)",
+    "ID": "306310",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Paradis (Villajoyosa/Vila Joiosa, la)",
+    "ID": "313909",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Ponent / Playa de Poniente (Benidorm)",
+    "ID": "303104",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Port / El Puerto (Pilar de la Horadada)",
+    "ID": "390208",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Raco de l'Albir (Alf√†s del Pi, l')",
+    "ID": "301101",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Saladar (Alicante/Alacant)",
+    "ID": "301410",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Sant Joan / San Juan (Alicante/Alacant)",
+    "ID": "301401",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Tamarit (Santa Pola)",
+    "ID": "312108",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Varador - Calas del Este (Santa Pola)",
+    "ID": "312103",
+    "COD_PROVINCIA": "03"
+  },
+  {
+    "NOMBRE": "Aguamarga (N√≠jar)",
+    "ID": "406601",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Almerinar-San Miguel de Levante (Ejido, El)",
+    "ID": "490205",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Almerinar-San Miguel de Poniente (Ejido, El)",
+    "ID": "490204",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Balerma (Ejido, El)",
+    "ID": "490201",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Berja-Balanegra (Berja)",
+    "ID": "402901",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "El Descargador (Moj√°car)",
+    "ID": "406403",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "El Lancon (Carboneras)",
+    "ID": "403203",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Garrucha (Garrucha)",
+    "ID": "404901",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "La Romanilla (Roquetas de Mar)",
+    "ID": "407904",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Los Barquicos/Los Cocones (Carboneras)",
+    "ID": "403204",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Mar Serena (Pulp√≠)",
+    "ID": "407506",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Marina de la Torre (Moj√°car)",
+    "ID": "406401",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Poniente (Adra)",
+    "ID": "400308",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Pozo del Esparto (Cuevas del Almanzora)",
+    "ID": "403501",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Puerto del Rey (Vera)",
+    "ID": "410002",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Retamar (Almer√≠a)",
+    "ID": "401310",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "San Jos√© (N√≠jar)",
+    "ID": "406614",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "San Miguel de Cabo de Gata (Almer√≠a)",
+    "ID": "401313",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "San Miguel/Las Conchas/Zapillo (Almer√≠a)",
+    "ID": "401304",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "San Nicol√°s (Adra)",
+    "ID": "400309",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Urbanizaci√≥n Roquetas del Mar (Roquetas de Mar)",
+    "ID": "407906",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Villaricos (Cuevas del Almanzora)",
+    "ID": "403510",
+    "COD_PROVINCIA": "04"
+  },
+  {
+    "NOMBRE": "Aguilar (Muros de Nal√≥n)",
+    "ID": "3303902",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Anguileiro, La Grande / Los Campos (Tapia de Casariego)",
+    "ID": "3307007",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Arenal de Moris (Caravia)",
+    "ID": "3301303",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Arnielles (Coa√±a)",
+    "ID": "3301804",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Cand√°s - La Palmera (Carre√±o)",
+    "ID": "3301403",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "La Concha de Artedo (Cudillero)",
+    "ID": "3302120",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "La Franca (Ribadedeva)",
+    "ID": "3305501",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "La Isla (Colunga)",
+    "ID": "3301903",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Los Quebrantos (Soto del Barco)",
+    "ID": "3306901",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Navia (Navia)",
+    "ID": "3304101",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Niembro, Toranda (Llanes)",
+    "ID": "3303612",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Otur (Vald√©s)",
+    "ID": "3303402",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Palombina - Las Camaras, Los Frailes (Llanes)",
+    "ID": "3303618",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Pe√±arronda (Castropol)",
+    "ID": "3301704",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Pormenande (Franco, El)",
+    "ID": "3302302",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Primera y Segunda de Luarca (Vald√©s)",
+    "ID": "3303407",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Rodiles (Villaviciosa)",
+    "ID": "3307606",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Salinas - San Juan, El Espartal (Castrill√≥n)",
+    "ID": "3301608",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "San Lorenzo (Gij√≥n)",
+    "ID": "3302403",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "San Pedro de Bocamar (Cudillero)",
+    "ID": "3302117",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Santa Marina (Ribadesella)",
+    "ID": "3305602",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Santa Marina de Luanco (Goz√≥n)",
+    "ID": "3302509",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Tor√≥ (Llanes)",
+    "ID": "3303626",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Vega (Ribadesella)",
+    "ID": "3305601",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Xiglu - Barro - Sorraos (Llanes)",
+    "ID": "3303614",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Xivares (Carre√±o)",
+    "ID": "3301406",
+    "COD_PROVINCIA": "33"
+  },
+  {
+    "NOMBRE": "Alc√∫dia (Alc√∫dia)",
+    "ID": "700307",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Arenal d'en Castell (Mercadal, Es)",
+    "ID": "703710",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Agulla (Capdepera)",
+    "ID": "701403",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Barques (Pollen√ßa)",
+    "ID": "704202",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Bassa (Sant Josep de sa Talaia)",
+    "ID": "704806",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Blanca (Ciutadella de Menorca)",
+    "ID": "701507",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala d'Hort (Sant Josep de sa Talaia)",
+    "ID": "704821",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Estany (Manacor)",
+    "ID": "703307",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Formentor (Pollen√ßa)",
+    "ID": "704208",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Galdana (Ferreries)",
+    "ID": "702302",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Grasi√≥ (Sant Antoni de Portmany)",
+    "ID": "704605",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Llonga (Santa Eul√†ria des Riu)",
+    "ID": "705418",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Major (Palma de Mallorca)",
+    "ID": "704001",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Mar√ßal (Felanitx)",
+    "ID": "702201",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Mesquida (Capdepera)",
+    "ID": "701401",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Mesquida (Ma√≥-Mah√≥n)",
+    "ID": "703211",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Millor (Sant Lloren√ß des Cardassar)",
+    "ID": "705101",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Mondrag√≥ (Santany√≠)",
+    "ID": "705706",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala San Vicente (Sant Joan de Labritja)",
+    "ID": "705019",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Santa Pon√ßa (Calvi√†)",
+    "ID": "701103",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Santandria (Ciutadella de Menorca)",
+    "ID": "701506",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Santany√≠ (Santany√≠)",
+    "ID": "705707",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Saona (Formentera)",
+    "ID": "702414",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cala Vedella (Sant Josep de sa Talaia)",
+    "ID": "704817",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Camp de Mar (Andratx)",
+    "ID": "700513",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "C'An Picafort (Santa Margalida)",
+    "ID": "705501",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Colonia de Sant Jordi / Ees Dol√ß (Salines, Ses)",
+    "ID": "705904",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "En Bossa (Sant Josep de sa Talaia)",
+    "ID": "704836",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Es Domingos Gran (Manacor)",
+    "ID": "703316",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Es Grau (Ma√≥-Mah√≥n)",
+    "ID": "703209",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Es Ribell (Son Servera)",
+    "ID": "706202",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Es Trenc (Campos)",
+    "ID": "701303",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Magalluf (Calvi√†)",
+    "ID": "701105",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Muro (Muro)",
+    "ID": "703901",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Palmira (Calvi√†)",
+    "ID": "701102",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Playa de Llevant (Formentera)",
+    "ID": "702402",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Playa de Migjorn (Formentera)",
+    "ID": "702413",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Playa de Palma (Palma de Mallorca)",
+    "ID": "704007",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Pollen√ßa / Llenaire (Pollen√ßa)",
+    "ID": "704210",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Port Sant Miquel (Sant Joan de Labritja)",
+    "ID": "705005",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Portinatx (Sant Joan de Labritja)",
+    "ID": "705016",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Puerto de S√≥ller (S√≥ller)",
+    "ID": "706101",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Punta Prima (Sant Llu√≠s)",
+    "ID": "705202",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Sa Calobra (Escorca)",
+    "ID": "701906",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Sa Coma (Sant Lloren√ß des Cardassar)",
+    "ID": "705104",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Sa Font de Sa Cala (Capdepera)",
+    "ID": "701406",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "San Antonio / Es Reguer√≥ (Sant Antoni de Portmany)",
+    "ID": "704608",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Sant Elm (Andratx)",
+    "ID": "700506",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Sant Tomas (Migjorn Gran, Es)",
+    "ID": "790202",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Santa Eul√†ria (Santa Eul√†ria des Riu)",
+    "ID": "705416",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Ses Figueretes (Eivissa)",
+    "ID": "702603",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Ses Salines / Mitjon (Sant Josep de sa Talaia)",
+    "ID": "704834",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "S'Illot / Cala Moreira (Manacor)",
+    "ID": "703301",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Son Bou (Alaior)",
+    "ID": "700201",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Son Xoriguer (Ciutadella de Menorca)",
+    "ID": "701509",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Talamanca (Eivissa)",
+    "ID": "702601",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Tirant (Mercadal, Es)",
+    "ID": "703706",
+    "COD_PROVINCIA": "07"
+  },
+  {
+    "NOMBRE": "Cabrera (Cabrera de Mar)",
+    "ID": "802901",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Canet (Canet de Mar)",
+    "ID": "804001",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Castelldefels (Castelldefels)",
+    "ID": "805601",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "D'Arenys (Arenys de Mar)",
+    "ID": "800601",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Del Bogatell (Barcelona)",
+    "ID": "801903",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Del Centre (Badalona)",
+    "ID": "801502",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Gav√† (Gav√†)",
+    "ID": "808901",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Gran - Garb√≠ (Calella)",
+    "ID": "803501",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "La Barceloneta (Barcelona)",
+    "ID": "801905",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "La Riera - Els Tres Micos (Caldes d'Estrac)",
+    "ID": "803201",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "L'Estanyol (Sitges)",
+    "ID": "827009",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Llarga (Cubelles)",
+    "ID": "807401",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Malgrat (Malgrat de Mar)",
+    "ID": "811002",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Montgat (Montgat)",
+    "ID": "812602",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Ocata (Masnou, El)",
+    "ID": "811801",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Pineda de Mar (Pineda de Mar)",
+    "ID": "816301",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Pla de l'Os (Premi√† de Mar)",
+    "ID": "817203",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Ribes Roges (Vilanova i la Geltr√∫)",
+    "ID": "830702",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Sant Andreu de Llavaneres (Sant Andreu de Llavaneres)",
+    "ID": "819703",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Sant Pol (Sant Pol de Mar)",
+    "ID": "823504",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Sant Vicen√ß de Montalt (Sant Vicen√ß de Montalt)",
+    "ID": "826401",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Santa Susanna (Santa Susanna)",
+    "ID": "826101",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Varador (Matar√≥)",
+    "ID": "812103",
+    "COD_PROVINCIA": "08"
+  },
+  {
+    "NOMBRE": "Armintxekoalde (Lemoiz)",
+    "ID": "4805601",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Arrigorri (Ondarroa)",
+    "ID": "4807301",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Atxabiribil-Arrietara (Sopela)",
+    "ID": "4808502",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Azkorri-Gorrondatxe (Getxo)",
+    "ID": "4804401",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Barinatxe-Salvaje (Getxo)",
+    "ID": "4804402",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Ea (Ea)",
+    "ID": "4802802",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Gorlitz-Gorliz (Gorliz)",
+    "ID": "4804301",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Isuntza (Lekeitio)",
+    "ID": "4805701",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Karraspio (Mendexa)",
+    "ID": "4806302",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Laga (Ibarrangelu)",
+    "ID": "4804802",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Laida (Ibarrangelu)",
+    "ID": "4804801",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Laidatxu (Mundaka)",
+    "ID": "4806801",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Muriola- La Cantera (Barrika)",
+    "ID": "4801401",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Muskiz-La Arena (Muskiz)",
+    "ID": "4807101",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Ogeia-Ispaster (Ispaster)",
+    "ID": "4804901",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Plentzia-Plencia (Plentzia)",
+    "ID": "4807701",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "San Antonio De Abi√±a (Sukarrieta)",
+    "ID": "4807603",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "To√±a (Sukarrieta)",
+    "ID": "4807602",
+    "COD_PROVINCIA": "48"
+  },
+  {
+    "NOMBRE": "Bolonia (Tarifa)",
+    "ID": "1103504",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Camposoto - El Castillo (San Fernando)",
+    "ID": "1103101",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Ca√±os de Meca (Barbate)",
+    "ID": "1100702",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Cruz del Mar (Chipiona)",
+    "ID": "1101602",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "El Carmen (Barbate)",
+    "ID": "1100703",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "El Palmar (Vejer de la Frontera)",
+    "ID": "1103901",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "El Rinconcillo (Algeciras)",
+    "ID": "1100401",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "El Rompidillo - El Chorrillo (Rota)",
+    "ID": "1103006",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Fuentebrav√≠a - Santa Catalina (Puerto de Santa Mar√≠a, El)",
+    "ID": "1102701",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Getares / San Garc√≠a (Algeciras)",
+    "ID": "1100402",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "La Ballena (Rota)",
+    "ID": "1103001",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "La Barrosa (Chiclana de la Frontera)",
+    "ID": "1101503",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "La Caleta (C√°diz)",
+    "ID": "1101201",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "La Calzada - Piletas (Sanl√∫car de Barrameda)",
+    "ID": "1103203",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "La Costilla (Rota)",
+    "ID": "1103005",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "La Fontanilla (Conil de la Frontera)",
+    "ID": "1101406",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "La Puntilla (Puerto de Santa Mar√≠a, El)",
+    "ID": "1102704",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "La Victoria (C√°diz)",
+    "ID": "1101203",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Levante - La Atunara (L√≠nea de la Concepci√≥n, La)",
+    "ID": "1102205",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Los Lances (Tarifa)",
+    "ID": "1103506",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Palmones (Barrios, Los)",
+    "ID": "1100801",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Poniente (L√≠nea de la Concepci√≥n, La)",
+    "ID": "1102207",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Punta Candor (Rota)",
+    "ID": "1103003",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Regla (Chipiona)",
+    "ID": "1101604",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Roche (Conil de la Frontera)",
+    "ID": "1101401",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Torreguadiaro (San Roque)",
+    "ID": "1103302",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Valdelagrana (Puerto de Santa Mar√≠a, El)",
+    "ID": "1102705",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Zahara de los Atunes (Barbate)",
+    "ID": "1100706",
+    "COD_PROVINCIA": "41"
+  },
+  {
+    "NOMBRE": "Amio (Val de San Vicente)",
+    "ID": "3909504",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "Comillas (Comillas)",
+    "ID": "3902401",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "Cuberris (Bareyo)",
+    "ID": "3901102",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "Cuchia-Marzan (Miengo)",
+    "ID": "3904401",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "El Sable de Mer√≥n (San Vicente de la Barquera)",
+    "ID": "3908004",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "La Arena (Arnuero)",
+    "ID": "3900602",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "La Concha (Suances)",
+    "ID": "3908503",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "La Magdalena (Santander)",
+    "ID": "3907511",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "La Salve (Laredo)",
+    "ID": "3903502",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "Lua√±a-Cobreces (Alfoz de Lloredo)",
+    "ID": "3900101",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "Mogro-Usil (Miengo)",
+    "ID": "3904405",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "Ori√±on (Castro-Urdiales)",
+    "ID": "3902002",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "Ostende (Castro-Urdiales)",
+    "ID": "3902004",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "Oyambre (Vald√°liga)",
+    "ID": "3909101",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "Ris (Noja)",
+    "ID": "3904701",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "San Juan de la Canal (Santa Cruz de Bezana)",
+    "ID": "3907302",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "San Mart√≠n (Santo√±a)",
+    "ID": "3907902",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "Sardinero (Santander)",
+    "ID": "3907506",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "Somo-Loredo (Ribamont√°n al Mar)",
+    "ID": "3906102",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "Valdearenas (Pi√©lagos)",
+    "ID": "3905201",
+    "COD_PROVINCIA": "39"
+  },
+  {
+    "NOMBRE": "Casa Blanca (Almenara)",
+    "ID": "1201101",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "El Arenal (Borriana/Burriana)",
+    "ID": "1203201",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "El Carregador (Alcal√† de Xivert)",
+    "ID": "1200403",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "El Morrongo (Benicarl√≥)",
+    "ID": "1202702",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "El Pinar (Castell√≥n de la Plana/Castell√≥ de la Plana)",
+    "ID": "1204003",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "Forti (Vinar√≤s)",
+    "ID": "1213810",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "Heliopolis (Benicasim/Benic√†ssim)",
+    "ID": "1202805",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "La Concha (Oropesa del Mar/Orpesa)",
+    "ID": "1208503",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "La Torre (Almazora/Almassora)",
+    "ID": "1200902",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "L'Almadrava (Benicasim/Benic√†ssim)",
+    "ID": "1202802",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "Las Casas / Les Cases (Chilches/Xilxes)",
+    "ID": "1205301",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "Las Fuentes (Alcal√† de Xivert)",
+    "ID": "1200402",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "Masbo (Moncofa)",
+    "ID": "1207703",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "Morro de Gos (Oropesa del Mar/Orpesa)",
+    "ID": "1208502",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "Norte de Torreblanca (Torreblanca)",
+    "ID": "1211701",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "Nules (Nules)",
+    "ID": "1208201",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "Playa Norte (Pen√≠scola/Pe√±√≠scola)",
+    "ID": "1208901",
+    "COD_PROVINCIA": "12"
+  },
+  {
+    "NOMBRE": "A Concha, Cari√±o (Cari√±o)",
+    "ID": "1590101",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Aguieira (Porto do Son)",
+    "ID": "1507101",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Areal (Pobra do Carami√±al, A)",
+    "ID": "1506701",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Ares (Ares)",
+    "ID": "1500401",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Arou (Camari√±as)",
+    "ID": "1501602",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "As Furnas (Porto do Son)",
+    "ID": "1507110",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Balar√©s (Ponteceso)",
+    "ID": "1506802",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Bares (Ma√±√≥n)",
+    "ID": "1504402",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Barizo (Malpica de Berganti√±os)",
+    "ID": "1504303",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Baro√±a (Porto do Son)",
+    "ID": "1507111",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Barra√±a (Boiro)",
+    "ID": "1501101",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Barra√±√°n (Arteixo)",
+    "ID": "1500501",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Bastiagueiro (Oleiros)",
+    "ID": "1505801",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Ber (Pontedeume)",
+    "ID": "1506901",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Boa Grande (Noia)",
+    "ID": "1505701",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Bro√±a (Outes)",
+    "ID": "1506201",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Cab√≠o-Lombi√±a (Pobra do Carami√±al, A)",
+    "ID": "1506702",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Cai√≥n (Laracha, A)",
+    "ID": "1504101",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Carnota (Carnota)",
+    "ID": "1502001",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Coira (Porto do Son)",
+    "ID": "1507104",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Coroso (Ribeira)",
+    "ID": "1507304",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Corrubedo (Ribeira)",
+    "ID": "1507305",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Doni√±os (Ferrol)",
+    "ID": "1503603",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Espasante (Ortigueira)",
+    "ID": "1506101",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Esteiro (Muros)",
+    "ID": "1505303",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Estorde (Cee)",
+    "ID": "1502301",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Ezaro (Dumbr√≠a)",
+    "ID": "1503401",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Frouxeira (Valdovi√±o)",
+    "ID": "1508701",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Gandar√≠o (Bergondo)",
+    "ID": "1500801",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Grande de Mi√±o (Mi√±o)",
+    "ID": "1504801",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Hermida (Ponteceso)",
+    "ID": "1506803",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Lago (Mux√≠a)",
+    "ID": "1505202",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Langosteira (Fisterra)",
+    "ID": "1503701",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Laxe (Laxe)",
+    "ID": "1504001",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Lourido (Mux√≠a)",
+    "ID": "1505205",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Magdalena (Cedeira)",
+    "ID": "1502202",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Magdalena, Cabanas (Cabanas)",
+    "ID": "1501501",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Maior, Malpica (Malpica de Berganti√±os)",
+    "ID": "1504302",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Ma√±√≥ns (Boiro)",
+    "ID": "1501103",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Mera (Oleiros)",
+    "ID": "1505802",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Morouzos (Ortigueira)",
+    "ID": "1506102",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "O Castro, Agui√±o (Ribeira)",
+    "ID": "1507302",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Os Mui√±os, Area Maior (Mux√≠a)",
+    "ID": "1505204",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Perbes (Mi√±o)",
+    "ID": "1504803",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Queiruga (Porto do Son)",
+    "ID": "1507109",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Quenxe (Corcubi√≥n)",
+    "ID": "1502802",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Razo-Baldaio (Carballo)",
+    "ID": "1501902",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Riazor-Orz√°n (Coru√±a, A)",
+    "ID": "1503005",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Sada (Sada)",
+    "ID": "1507507",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "San Francisco (Muros)",
+    "ID": "1505301",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "San Pedro (Sada)",
+    "ID": "1507506",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "San Xurxo (Ferrol)",
+    "ID": "1503608",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Santa Cristina (Oleiros)",
+    "ID": "1505803",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Sardi√±eiro (Fisterra)",
+    "ID": "1503707",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Seselle (Ares)",
+    "ID": "1500403",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Tanxil (Rianxo)",
+    "ID": "1507202",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Testal (Noia)",
+    "ID": "1505703",
+    "COD_PROVINCIA": "15"
+  },
+  {
+    "NOMBRE": "Ben√≠tez (Ceuta)",
+    "ID": "5100104",
+    "COD_PROVINCIA": "51"
+  },
+  {
+    "NOMBRE": "La Ribera - El Chorrillo (Ceuta)",
+    "ID": "5100108",
+    "COD_PROVINCIA": "51"
+  },
+  {
+    "NOMBRE": "Blanes (Blanes)",
+    "ID": "1702303",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "De la Fosca (Palam√≥s)",
+    "ID": "1711804",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "De Roses (Roses)",
+    "ID": "1715203",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "El Port (Llan√ß√†)",
+    "ID": "1709203",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Emp√∫riabrava (Castell√≥ d'Emp√∫ries)",
+    "ID": "1704702",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "En Goixa (Colera)",
+    "ID": "1705402",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Fenals (Lloret de Mar)",
+    "ID": "1709509",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Gran de Cadaqu√©s (Cadaqu√©s)",
+    "ID": "1703209",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Gran de Tossa (Tossa de Mar)",
+    "ID": "1720207",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "L'Estartit (Torroella de Montgr√≠)",
+    "ID": "1719902",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Llafranc (Palafrugell)",
+    "ID": "1711703",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Lloret (Lloret de Mar)",
+    "ID": "1709507",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Pals (Pals)",
+    "ID": "1712401",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Platja d'Aro (Castell-Platja d'Aro)",
+    "ID": "1704805",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Port de la Selva (Port de la Selva, El)",
+    "ID": "1714003",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Portbou (Portbou)",
+    "ID": "1713803",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Riells (Escala, L')",
+    "ID": "1706209",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Sa Riera (Begur)",
+    "ID": "1701303",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "S'Abanell (Blanes)",
+    "ID": "1702304",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Sant Feliu de Gu√≠xols (Sant Feliu de Gu√≠xols)",
+    "ID": "1716002",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Sant Pere Pescador (Sant Pere Pescador)",
+    "ID": "1717801",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Sant Pol (Sant Feliu de Gu√≠xols)",
+    "ID": "1716001",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Torre Valentina - Sant Antoni (Calonge)",
+    "ID": "1703402",
+    "COD_PROVINCIA": "17"
+  },
+  {
+    "NOMBRE": "Calahonda (Motril)",
+    "ID": "1814008",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "Cambriles (L√∫jar)",
+    "ID": "1812401",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "Cantarrij√°n (Almu√±√©car)",
+    "ID": "1801701",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "El Lance (Rubite)",
+    "ID": "1817001",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "La Charca-Solamar (Salobre√±a)",
+    "ID": "1817304",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "La Herradura (Almu√±√©car)",
+    "ID": "1801703",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "La Mamola (Polopos)",
+    "ID": "1816201",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "La R√°bita (Albu√±ol)",
+    "ID": "1800606",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "Melicena (Sorvil√°n)",
+    "ID": "1817704",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "Pelaillo-Poniente (Motril)",
+    "ID": "1814002",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "Puerta del Mar-Fuentepiedra (Almu√±√©car)",
+    "ID": "1801709",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "San Cristobal-La China (Almu√±√©car)",
+    "ID": "1801707",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "Sotillo-Castell de Ferro (Gualchos)",
+    "ID": "1809302",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "Torrenueva (Motril)",
+    "ID": "1814004",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "Velilla (Almu√±√©car)",
+    "ID": "1801710",
+    "COD_PROVINCIA": "18"
+  },
+  {
+    "NOMBRE": "Deba-Deva (Deba)",
+    "ID": "2002901",
+    "COD_PROVINCIA": "20"
+  },
+  {
+    "NOMBRE": "Gaztetape-Gastetape (Getaria)",
+    "ID": "2003903",
+    "COD_PROVINCIA": "20"
+  },
+  {
+    "NOMBRE": "Hondarribia-Fuenterrab√≠a (Hondarribia)",
+    "ID": "2003602",
+    "COD_PROVINCIA": "20"
+  },
+  {
+    "NOMBRE": "Itzurun-San Telmo (Zumaia)",
+    "ID": "2008102",
+    "COD_PROVINCIA": "20"
+  },
+  {
+    "NOMBRE": "La Antilla-San Juan (Orio)",
+    "ID": "2006102",
+    "COD_PROVINCIA": "20"
+  },
+  {
+    "NOMBRE": "La Kontxa-La Concha (Donostia/San Sebasti√°n)",
+    "ID": "2006904",
+    "COD_PROVINCIA": "20"
+  },
+  {
+    "NOMBRE": "La Zurriola (Donostia/San Sebasti√°n)",
+    "ID": "2006905",
+    "COD_PROVINCIA": "20"
+  },
+  {
+    "NOMBRE": "Malkorbe-Marcorbe (Getaria)",
+    "ID": "2003904",
+    "COD_PROVINCIA": "20"
+  },
+  {
+    "NOMBRE": "Mutriku- Motrico (Mutriku)",
+    "ID": "2005604",
+    "COD_PROVINCIA": "20"
+  },
+  {
+    "NOMBRE": "Ondarreta-Ondarreta (Donostia/San Sebasti√°n)",
+    "ID": "2006902",
+    "COD_PROVINCIA": "20"
+  },
+  {
+    "NOMBRE": "Santixo-Santiago (Zumaia)",
+    "ID": "2008103",
+    "COD_PROVINCIA": "20"
+  },
+  {
+    "NOMBRE": "Saturraran (Mutriku)",
+    "ID": "2005601",
+    "COD_PROVINCIA": "20"
+  },
+  {
+    "NOMBRE": "Zarautz-Zarauz (Zarautz)",
+    "ID": "2007901",
+    "COD_PROVINCIA": "20"
+  },
+  {
+    "NOMBRE": "Antilla (Lepe)",
+    "ID": "2104402",
+    "COD_PROVINCIA": "21"
+  },
+  {
+    "NOMBRE": "Central (Isla Cristina)",
+    "ID": "2104202",
+    "COD_PROVINCIA": "21"
+  },
+  {
+    "NOMBRE": "De Mazag√≥n (Palos de la Frontera)",
+    "ID": "2105501",
+    "COD_PROVINCIA": "21"
+  },
+  {
+    "NOMBRE": "Del Hoyo (Isla Cristina)",
+    "ID": "2104203",
+    "COD_PROVINCIA": "21"
+  },
+  {
+    "NOMBRE": "El Espig√≥n (Huelva)",
+    "ID": "2104101",
+    "COD_PROVINCIA": "21"
+  },
+  {
+    "NOMBRE": "El Parador (Moguer)",
+    "ID": "2105001",
+    "COD_PROVINCIA": "21"
+  },
+  {
+    "NOMBRE": "El Portil (Cartaya)",
+    "ID": "2102102",
+    "COD_PROVINCIA": "21"
+  },
+  {
+    "NOMBRE": "Isla Canela (Ayamonte)",
+    "ID": "2101001",
+    "COD_PROVINCIA": "21"
+  },
+  {
+    "NOMBRE": "Islantilla (Isla Cristina)",
+    "ID": "2104205",
+    "COD_PROVINCIA": "21"
+  },
+  {
+    "NOMBRE": "La Bota (Punta Umbr√≠a)",
+    "ID": "2106002",
+    "COD_PROVINCIA": "21"
+  },
+  {
+    "NOMBRE": "Matalasca√±as (Almonte)",
+    "ID": "2100502",
+    "COD_PROVINCIA": "21"
+  },
+  {
+    "NOMBRE": "Punta Umbr√≠a (Punta Umbr√≠a)",
+    "ID": "2106004",
+    "COD_PROVINCIA": "21"
+  },
+  {
+    "NOMBRE": "A Marosa (Burela)",
+    "ID": "2790201",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "A Rapadoira (Foz)",
+    "ID": "2701901",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "Abrela (Vicedo, O)",
+    "ID": "2706401",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "Altar, San Cosme (Barreiros)",
+    "ID": "2700501",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "Area (Viveiro)",
+    "ID": "2706601",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "Area Longa (Foz)",
+    "ID": "2701902",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "Area Longa (Vicedo, O)",
+    "ID": "2706402",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "Areagrande, San Roman (Vicedo, O)",
+    "ID": "2706403",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "As Catedrais (Ribadeo)",
+    "ID": "2705101",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "Covas (Viveiro)",
+    "ID": "2706602",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "Esteiro (Xove)",
+    "ID": "2702501",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "Lago (Xove)",
+    "ID": "2702503",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "O Torno (Cervo)",
+    "ID": "2701302",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "Os Castros (Ribadeo)",
+    "ID": "2705005",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "San Miguel Reinante/Area Longa (Barreiros)",
+    "ID": "2700503",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "Valea, Benquerencia (Barreiros)",
+    "ID": "2700504",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "Xilloi (Vicedo, O)",
+    "ID": "2706405",
+    "COD_PROVINCIA": "27"
+  },
+  {
+    "NOMBRE": "Alicate - Costa Bella - Pinomar (Marbella)",
+    "ID": "2906921",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "Ancha (Casares)",
+    "ID": "2904101",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "Bil-Bil y Arroyo de la Miel (Benalm√°dena)",
+    "ID": "2902503",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "Burriana (Nerja)",
+    "ID": "2907509",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "Carvajal (Benalm√°dena)",
+    "ID": "2902514",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "El Dedo - El Chanquete (M√°laga)",
+    "ID": "2906712",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "Ferrara - Las Lindes (Torrox)",
+    "ID": "2909103",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "La Bajadilla (Marbella)",
+    "ID": "2906912",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "La Butibamba (Mijas)",
+    "ID": "2907002",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "La Carihuela - El Bajondillo - Playamar (Torremolinos)",
+    "ID": "2990102",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "La Malagueta (M√°laga)",
+    "ID": "2906707",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "La Rada (Estepona)",
+    "ID": "2905106",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "Los Boliches - Las Gaviotas (Fuengirola)",
+    "ID": "2905402",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "Rinc√≥n de la Victoria (Rinc√≥n de la Victoria)",
+    "ID": "2908202",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "Rio Verde - Puerto Ban√∫s (Marbella)",
+    "ID": "2906906",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "Sabinillas (Manilva)",
+    "ID": "2906801",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "Torre del Mar (V√©lez-M√°laga)",
+    "ID": "2909406",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "Torrecilla (Nerja)",
+    "ID": "2907502",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "El Hip√≥dromo (Melilla)",
+    "ID": "5200103",
+    "COD_PROVINCIA": "29"
+  },
+  {
+    "NOMBRE": "Banco del Tabal (San Javier)",
+    "ID": "3003531",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Barco Perdido, Gal√∫a (Cartagena)",
+    "ID": "3001655",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Bolnuevo (Mazarr√≥n)",
+    "ID": "3002618",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Cala Cortina (Cartagena)",
+    "ID": "3001624",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Calabardina (√Åguilas)",
+    "ID": "3000327",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "De Calblanque (Cartagena)",
+    "ID": "3001634",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "De Col√≥n (San Javier)",
+    "ID": "3003503",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Del Lastre (Uni√≥n, La)",
+    "ID": "3004102",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Del Moj√≥n (Mazarr√≥n)",
+    "ID": "3002633",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "El Alamillo (Mazarr√≥n)",
+    "ID": "3002630",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "El Arenal (San Javier)",
+    "ID": "3003526",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "El Espejo (Alc√°zares, Los)",
+    "ID": "3090205",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "El Port√∫s (Cartagena)",
+    "ID": "3001619",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "La Azoh√≠a (Cartagena)",
+    "ID": "3001610",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "La Carolina (√Åguilas)",
+    "ID": "3000301",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "La Colonia (√Åguilas)",
+    "ID": "3000312",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "La Isla (Mazarr√≥n)",
+    "ID": "3002626",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "La Reya (Mazarr√≥n)",
+    "ID": "3002623",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "La Torre Derribada (San Pedro del Pinatar)",
+    "ID": "3003605",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Las Amoladeras (Cartagena)",
+    "ID": "3001653",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Las Delicias (√Åguilas)",
+    "ID": "3000315",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Las Salinas (San Pedro del Pinatar)",
+    "ID": "3003606",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Levante (√Åguilas)",
+    "ID": "3000314",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Los Urrutias (Cartagena)",
+    "ID": "3001676",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Manzanares (Alc√°zares, Los)",
+    "ID": "3090206",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Mistral (San Javier)",
+    "ID": "3003509",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Poniente (√Åguilas)",
+    "ID": "3000313",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Punta Calera (Alc√°zares, Los)",
+    "ID": "3090202",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Puntas de Calnegre (Lorca)",
+    "ID": "3002414",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Villananitos (San Pedro del Pinatar)",
+    "ID": "3003602",
+    "COD_PROVINCIA": "30"
+  },
+  {
+    "NOMBRE": "Aju√≠ (P√°jara)",
+    "ID": "3501501",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Amadores (Mog√°n)",
+    "ID": "3501202",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Arinaga (Ag√ºimes)",
+    "ID": "3500201",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Blanca (Puerto del Rosario)",
+    "ID": "3501702",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Butihondo y El Matorral (P√°jara)",
+    "ID": "3501506",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Caleta de Fuste (Antigua)",
+    "ID": "3500301",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Charco de San Lorenzo (Moya)",
+    "ID": "3501301",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Corralejo (Oliva, La)",
+    "ID": "3501402",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Costa Calma y Sotavento de Jand√≠a (P√°jara)",
+    "ID": "3501507",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "El Burrero (Ingenio)",
+    "ID": "3501101",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "El Cofete (P√°jara)",
+    "ID": "3501503",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "El Ingl√©s (San Bartolom√© de Tirajana)",
+    "ID": "3501902",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "El Puertillo (Arucas)",
+    "ID": "3500601",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "El Puertito (P√°jara)",
+    "ID": "3501504",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "El Puertito, Los Molinos (Puerto del Rosario)",
+    "ID": "3501701",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "El Reducto (Arrecife)",
+    "ID": "3500403",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Gran Tarajal (Tuineje)",
+    "ID": "3503001",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Grandes Playas-El Caser√≥n (Oliva, La)",
+    "ID": "3501403",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Guacimeta (T√≠as)",
+    "ID": "3502811",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Honda (San Bartolom√©)",
+    "ID": "3501801",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "La Garita (Har√≠a)",
+    "ID": "3501017",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "La Pared (P√°jara)",
+    "ID": "3501502",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Las Canteras (Palmas de Gran Canaria, Las)",
+    "ID": "3501601",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Las Cucharas (Teguise)",
+    "ID": "3502425",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Las Nieves (Agaete)",
+    "ID": "3500101",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Los Pocillos (T√≠as)",
+    "ID": "3502808",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Marfol√≠n (Oliva, La)",
+    "ID": "3501401",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Maspalomas (San Bartolom√© de Tirajana)",
+    "ID": "3501901",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Matagorda (T√≠as)",
+    "ID": "3502809",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Melenara (Telde)",
+    "ID": "3502601",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Morro Jable (P√°jara)",
+    "ID": "3501505",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Playa Blanca (Yaiza)",
+    "ID": "3503410",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Pozo Izquierdo, El Arenal (Santa Luc√≠a de Tirajana)",
+    "ID": "3502201",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Puerto La Aldea y La Aldea (Aldea de San Nicol√°s, La)",
+    "ID": "3502001",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "R√≠a de la Santa (Tinajo)",
+    "ID": "3502904",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "San Agust√≠n (San Bartolom√© de Tirajana)",
+    "ID": "3501903",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "San Felipe (Santa Mar√≠a de Gu√≠a de Gran Canaria)",
+    "ID": "3502301",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Sardina (G√°ldar)",
+    "ID": "3500901",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Tasarte (Aldea de San Nicol√°s, La)",
+    "ID": "3502002",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "Taurito (Mog√°n)",
+    "ID": "3501201",
+    "COD_PROVINCIA": "35"
+  },
+  {
+    "NOMBRE": "A Fonte (Vigo)",
+    "ID": "3605701",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "A Lanzada (Grove, O)",
+    "ID": "3602201",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Aguete (Mar√≠n)",
+    "ID": "3602601",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Area Brava (Cangas)",
+    "ID": "3600805",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Area da Cruz (Grove, O)",
+    "ID": "3602202",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Area de Bon (Bueu)",
+    "ID": "3600402",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Area Grande (Cangas)",
+    "ID": "3600806",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Area Grande (Grove, O)",
+    "ID": "3602208",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Areas (Sanxenxo)",
+    "ID": "3605102",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "As Sinas (Vilanova de Arousa)",
+    "ID": "3606102",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Bao (Vigo)",
+    "ID": "3605702",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Barra-Nerga (Cangas)",
+    "ID": "3600802",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Camaxe (Illa de Arousa, A)",
+    "ID": "3690102",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Camposancos (Guarda, A)",
+    "ID": "3602305",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Canelas (Sanxenxo)",
+    "ID": "3605105",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Canido (Vigo)",
+    "ID": "3605711",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Cesantes (Redondela)",
+    "ID": "3604501",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Chancelas (Poio)",
+    "ID": "3604103",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Compostela (Vilagarc√≠a de Arousa)",
+    "ID": "3606001",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Ladeira, Ramallosa (Baiona)",
+    "ID": "3600303",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Lapam√°n (Mar√≠n)",
+    "ID": "3602606",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Limens (Cangas)",
+    "ID": "3600807",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Maxor (Sanxenxo)",
+    "ID": "3605110",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Melide, Ons (Bueu)",
+    "ID": "3600419",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Mexilloeira (Grove, O)",
+    "ID": "3602209",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Mogor (Mar√≠n)",
+    "ID": "3602603",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Montalvo (Sanxenxo)",
+    "ID": "3605111",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Mourisca (Bueu)",
+    "ID": "3600408",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "O Terr√≥n (Vilanova de Arousa)",
+    "ID": "3606103",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Panx√≥n-Am√©rica (Nigr√°n)",
+    "ID": "3603501",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Patos (Nigr√°n)",
+    "ID": "3603504",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Portomaior-Agrelo (Bueu)",
+    "ID": "3600411",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Portonovo-Baltar (Sanxenxo)",
+    "ID": "3605103",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Rodas, C√≠es (Vigo)",
+    "ID": "3605703",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Rodeira (Cangas)",
+    "ID": "3600803",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Samil (Vigo)",
+    "ID": "3605706",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Silgar (Sanxenxo)",
+    "ID": "3605117",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Tir√°n (Moa√±a)",
+    "ID": "3602902",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Vilari√±o-Arnelas, Hio (Cangas)",
+    "ID": "3600808",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Xunqueira, Moa√±a (Moa√±a)",
+    "ID": "3602903",
+    "COD_PROVINCIA": "36"
+  },
+  {
+    "NOMBRE": "Bajamar (Bre√±a Alta)",
+    "ID": "3800801",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Calet√≥n De Garachico (Garachico)",
+    "ID": "3801503",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Charco Azul (San Andr√©s y Sauces)",
+    "ID": "3803302",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "El Arenisco (San Crist√≥bal de La Laguna)",
+    "ID": "3802305",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "El Bollullo (Orotava, La)",
+    "ID": "3802601",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "El Calet√≥n (Matanza de Acentejo, La)",
+    "ID": "3802501",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "El Faro (Fuencaliente de la Palma)",
+    "ID": "3801404",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "El Gomero (Silos, Los)",
+    "ID": "3804203",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "El M√©dano (Granadilla de Abona)",
+    "ID": "3801705",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "El Puertito (G√º√≠mar)",
+    "ID": "3802002",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "El Socorro (Realejos, Los)",
+    "ID": "3803101",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "El Tamaduste (Valverde)",
+    "ID": "3804803",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Fa√±abe (Adeje)",
+    "ID": "3800112",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Hermigua (Hermigua)",
+    "ID": "3802101",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Jard√≠n (Puerto de la Cruz)",
+    "ID": "3802801",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "La Arena (Santiago del Teide)",
+    "ID": "3804004",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "La Arena/Mesa del Mar (Tacoronte)",
+    "ID": "3804302",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "La Ballenita (Buenavista del Norte)",
+    "ID": "3801005",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "La Gara√±ona (Sauzal, El)",
+    "ID": "3804101",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "La Hornilla - Los Guanches (Candelaria)",
+    "ID": "3801103",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "La Nea (Santa Cruz de Tenerife)",
+    "ID": "3803801",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "La Restinga (Frontera)",
+    "ID": "3801311",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Las Aguas (San Juan de la Rambla)",
+    "ID": "3803401",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Las Am√©ricas (Adeje)",
+    "ID": "3800116",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Las Teresitas (Santa Cruz de Tenerife)",
+    "ID": "3803806",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Las Vistas (Arona)",
+    "ID": "3800603",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Los Cancajos (Bre√±a Baja)",
+    "ID": "3800901",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Marti√°nez (Puerto de la Cruz)",
+    "ID": "3802804",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Nogales (Puntallana)",
+    "ID": "3800302",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Poris (Arico)",
+    "ID": "3800504",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Puerto de Tazacorte (Tazacorte)",
+    "ID": "3804502",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Puerto Naos (Llanos de Aridane, Los)",
+    "ID": "3802403",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "San Juan (Gu√≠a de Isora)",
+    "ID": "3801905",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "San Juan/Castillo (San Crist√≥bal de La Laguna)",
+    "ID": "3802302",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "San Marcos (Icod de los Vinos)",
+    "ID": "3802201",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "San Sebastian (San Sebasti√°n de la Gomera)",
+    "ID": "3803605",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Santiago (Alajer√≥)",
+    "ID": "3800301",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Santo Domingo (Guancha, La)",
+    "ID": "3801801",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Valle Gran Rey (Valle Gran Rey)",
+    "ID": "3804902",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Vallehermoso (Vallehermoso)",
+    "ID": "3805004",
+    "COD_PROVINCIA": "38"
+  },
+  {
+    "NOMBRE": "Altafulla (Altafulla)",
+    "ID": "4301202",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Barrio Maritimo/La Paella (Torredembarra)",
+    "ID": "4315302",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Calafell (Calafell)",
+    "ID": "4303703",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Cap Roig (Ampolla, L')",
+    "ID": "4390602",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Coma Ruga (Vendrell, El)",
+    "ID": "4316303",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Creixell (Creixell)",
+    "ID": "4305001",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Cristall (Mont-roig del Camp)",
+    "ID": "4309211",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Cunit (Cunit)",
+    "ID": "4305101",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "D'Avellaners (Ampolla, L')",
+    "ID": "4390606",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "El Garbi (Sant Carles de la R√†pita)",
+    "ID": "4313601",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Els Eucaliptus (Amposta)",
+    "ID": "4301401",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "La Mora (Tarragona)",
+    "ID": "4314808",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "La Pineda (Vila-seca)",
+    "ID": "4317101",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "L'Alguer (Ametlla de Mar, L')",
+    "ID": "4301313",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "L'Arenal (Vandell√≤s i l'Hospitalet de l'Infant)",
+    "ID": "4316203",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "L'Arrabassada (Tarragona)",
+    "ID": "4314802",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Llevant (Salou)",
+    "ID": "4390502",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Peixerota (Mont-roig del Camp)",
+    "ID": "4309201",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Prat d'en Fores i Regueral (Cambrils)",
+    "ID": "4303804",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Riomar (Deltebre)",
+    "ID": "4390103",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Roda de Bara (Roda de Ber√†)",
+    "ID": "4313105",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Vilafortuny-L'Esquirol (Cambrils)",
+    "ID": "4303806",
+    "COD_PROVINCIA": "43"
+  },
+  {
+    "NOMBRE": "Bellreguard (Bellreguard)",
+    "ID": "4604801",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "Corint / Malvarrosa (Sagunto/Sagunt)",
+    "ID": "4622001",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "Daim√∫s (Daim√∫s)",
+    "ID": "4611302",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "El Dossel (Cullera)",
+    "ID": "4610502",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "El Port / Saplaya (Alboraya)",
+    "ID": "4601301",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "El Raco (Cullera)",
+    "ID": "4610506",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "La Devesa (Valencia)",
+    "ID": "4625004",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "La Pobla de Farnals (Pobla de Farnals, la)",
+    "ID": "4619901",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "L'Aigua Blanca (Oliva)",
+    "ID": "4618103",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "Mareny Blau (Sueca)",
+    "ID": "4623505",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "Norte de Gandia (Gandia)",
+    "ID": "4613102",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "Pau-Pi (Oliva)",
+    "ID": "4618102",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "Piles (Piles)",
+    "ID": "4619501",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "Playa de Levante / Malvarrosa (Valencia)",
+    "ID": "4625001",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "Port de Sagunt / Sagunt (Sagunto/Sagunt)",
+    "ID": "4622003",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "Raco de Mar (Canet d'En Berenguer)",
+    "ID": "4608201",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "Sant Antoni (Cullera)",
+    "ID": "4610507",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "Tavernes (Tavernes de la Valldigna)",
+    "ID": "4623801",
+    "COD_PROVINCIA": "46"
+  },
+  {
+    "NOMBRE": "Xeraco (Xeraco)",
+    "ID": "4614301",
+    "COD_PROVINCIA": "46"
+  }
+]

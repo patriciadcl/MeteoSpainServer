@@ -1,11 +1,44 @@
+# -*- coding: utf-8 -*-
+
 import network.aemetapi as api
 import network.jsonamodelo as amodelo
+import os
+import json
 
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
 aemet_api = api.AemetAPI()
+
+base_dir = os.path.dirname(os.path.realpath('__file__'))
+
+
+@app.route('/datos/areas_altamar', methods=['GET'])
+@app.route('/datos/areas_costeras', methods=['GET'])
+@app.route('/datos/areas_montaña', methods=['GET'])
+@app.route('/datos/estado_cielo', methods=['GET'])
+@app.route('/datos/estados_playa', methods=['GET'])
+@app.route('/datos/cc_aa', methods=['GET'])
+@app.route('/datos/municipios', methods=['GET'])
+@app.route('/datos/playas', methods=['GET'])
+@app.route('/datos/provincias_costas', methods=['GET'])
+@app.route('/datos/provincias', methods=['GET'])
+@app.route('/datos/subzonas_costas', methods=['GET'])
+def get_datos():
+
+    file = os.path.split(request.path)
+    json_file = os.path.join(base_dir, "json", file[1] + ".json")
+    try:
+        f_open = open(json_file, "r", encoding='utf-8')
+        contenido = f_open.read()
+        js = json.loads(contenido)
+        response = dict(estado=aemet_api.COD_RESPONSE_OK, datos=js)
+        return str(response)
+    except Exception as ex:
+        response = dict(estado=aemet_api.COD_RESPONSE_ERROR["incorrecta"][0],
+                        datos=format(ex))
+        return str(response)
 
 
 @app.route('/predicciones/altamar/<int:area>', methods=['GET'])
@@ -29,7 +62,6 @@ def get_altamar(area):
 
 @app.route('/predicciones/costa/<int:area>', methods=['GET'])
 def get_costa(area):
-
     if area not in aemet_api.AREAS_COSTA:
         response = dict(estado=aemet_api.COD_RESPONSE_ERROR["incorrecta"][0],
                         datos=aemet_api.COD_RESPONSE_ERROR["incorrecta"][1])
@@ -58,7 +90,7 @@ def get_montaña(area, dia):
         url = aemet_api.url_montaña(area, str(dia))
         response_estado, response_datos = aemet_api.get_prediccion(url)
         if response_estado == aemet_api.COD_RESPONSE_OK:
-            montaña = amodelo.JsonAModelo.json_a_montaña(response_datos,dia)
+            montaña = amodelo.JsonAModelo.json_a_montaña(response_datos, dia)
             datos = montaña.to_dict
         else:
             datos = response_datos
