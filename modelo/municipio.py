@@ -54,11 +54,11 @@ class PredicionDia:
 
     @property
     def to_dict(self):
-        diccionario = dict()
+        propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
-            diccionario[key] = v
-        return diccionario
+            propiedades[key] = v
+        return propiedades
 
 
 class PrediccionHoras(PredicionDia):
@@ -99,11 +99,11 @@ class PrediccionHoras(PredicionDia):
 
     @property
     def to_dict(self):
-        diccionario = dict()
+        propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
-            diccionario[key] = v
-        return diccionario
+            propiedades[key] = v
+        return propiedades
 
 
 class Municipio:
@@ -126,14 +126,14 @@ class Municipio:
 
     @property
     def to_dict(self):
-        diccionario = dict()
+        propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
             if key == "prediccion":
                 predicciones = list()
                 for prediccion in v:
                     predicciones.append(prediccion.to_dict)
-                diccionario[key] = predicciones
+                propiedades[key] = predicciones
             else:
-                diccionario[key] = v
-        return diccionario
+                propiedades[key] = v
+        return propiedades

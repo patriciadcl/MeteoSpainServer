@@ -10,6 +10,7 @@ class Prediccion:
         self.__t_agua = t_agua
         self.__uv_max = uv_max
 
+    @property
     def fecha_validez(self):
         return self.__f_validez
 
@@ -43,11 +44,11 @@ class Prediccion:
 
     @property
     def to_dict(self):
-        diccionario = dict()
+        propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
-            diccionario[key] = v
-        return diccionario
+            propiedades[key] = v
+        return propiedades
 
 
 class Playa:
@@ -70,14 +71,14 @@ class Playa:
 
     @property
     def to_dict(self):
-        diccionario = dict()
+        propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
             if key == "prediccion":
                 predicciones = list()
                 for prediccion in v:
                     predicciones.append(prediccion.to_dict)
-                diccionario[key] = predicciones
+                propiedades[key] = predicciones
             else:
-                diccionario[key] = v
-        return diccionario
+                propiedades[key] = v
+        return propiedades

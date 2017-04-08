@@ -48,17 +48,17 @@ class Zona:
 
     @property
     def to_dict(self):
-        diccionario = dict()
+        propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
             if key == "sub_zonas":
                 sub_zonas = list()
                 for sub_zona in v:
                     sub_zonas.append(sub_zona.to_dict)
-                diccionario[key] = sub_zonas
+                propiedades[key] = sub_zonas
             else:
-                diccionario[key] = v
-        return diccionario
+                propiedades[key] = v
+        return propiedades
 
 
 class SubZona:
@@ -76,8 +76,8 @@ class SubZona:
 
     @property
     def to_dict(self):
-        diccionario = dict()
+        propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
-            diccionario[key] = v
-        return diccionario
+            propiedades[key] = v
+        return propiedades

@@ -1,5 +1,5 @@
 class Zona:
-    def __init__(self,id_aemet,id_api,f_elaboracion,f_inicio,f_fin,texto,subzonas):
+    def __init__(self, id_aemet, id_api, f_elaboracion, f_inicio, f_fin, texto, subzonas):
         self.__id_aemet = id_aemet
         self.__id_api = id_api
         self.__texto = texto
@@ -38,22 +38,22 @@ class Zona:
 
     @property
     def to_dict(self):
-        diccionario = dict()
+        propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
             if key == "sub_zonas":
                 subzonas = list()
                 for subzona in v:
                     subzonas.append(subzona.to_dict)
-                diccionario[key] = subzonas
+                propiedades[key] = subzonas
             else:
-                diccionario[key] = v
-        return diccionario
+                propiedades[key] = v
+        return propiedades
 
 
 class SubZona:
 
-    def __init__(self,id_aemet,texto):
+    def __init__(self, id_aemet, texto):
         self.__id_aemet = id_aemet
         self.__texto = texto
 
@@ -67,10 +67,8 @@ class SubZona:
 
     @property
     def to_dict(self):
-        diccionario = dict()
+        propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
-            diccionario[key] = v
-        return diccionario
-
-
+            propiedades[key] = v
+        return propiedades

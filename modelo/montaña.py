@@ -33,15 +33,16 @@ class Zona:
 
     @property
     def to_dict(self):
-        diccionario = dict()
+        propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
-            diccionario[key] = v
-        return diccionario
+            propiedades[key] = v
+        return propiedades
 
 
 class Montaña:
-    def __init__(self,id_api,f_elaborado, f_pronostico, estado_cielo, precipitaciones, tormentas, temperaturas, viento, zonas):
+    def __init__(self, id_api, f_elaborado, f_pronostico, estado_cielo, precipitaciones, tormentas,
+                 temperaturas, viento, zonas):
         self.__id_api = id_api
         self.__f_elaborado = f_elaborado
         self.__f_pronostico = f_pronostico
@@ -90,16 +91,14 @@ class Montaña:
 
     @property
     def to_dict(self):
-        diccionario = dict()
+        propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
             if key == "zonas":
                 zonas = list()
                 for zona in v:
                     zonas.append(zona.to_dict)
-                diccionario[key] = zonas
+                propiedades[key] = zonas
             else:
-                diccionario[key] = v
-        return diccionario
-
-
+                propiedades[key] = v
+        return propiedades
