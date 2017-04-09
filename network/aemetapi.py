@@ -24,11 +24,24 @@ class AemetAPI:
     PATH_COSTERA = "/costera/costa"
 
     COD_RESPONSE_OK = 200
-    COD_RESPONSE_ERROR = dict(no_autorizado=["401", "No Autorizado"], incorrecta=["404", "Peticion incorrecta"],
-                              conexiones=["429", "Demasiadas conexiones"])
+    COD_PET_INCORRECTA = 404
+    COD_NO_AUTORIZADO = 401
+    COD_CONEXIONES = 429
+    COD_RESPONSE_ERROR_MESSAGE = {COD_NO_AUTORIZADO:"No Autorizado",
+                                  COD_PET_INCORRECTA:"Peticion incorrecta",
+                                  COD_CONEXIONES:"Demasiadas conexiones"}
     AREAS_ALTAMAR = (0, 1, 2)
     DIAS_MONTAÑA = (0, 1, 2, 3)
     AREAS_COSTA = (40, 41, 42, 43, 44, 45, 46, 47)
+
+    @classmethod
+    def get_response_error(cls, cod_error, texto=None):
+        response = None
+        print(cls.COD_RESPONSE_ERROR_MESSAGE)
+        if cod_error in cls.COD_RESPONSE_ERROR_MESSAGE.keys():
+            mensaje = texto if texto else cls.COD_RESPONSE_ERROR_MESSAGE[cod_error]
+            response = dict(estado=cod_error, datos=mensaje)
+        return response
 
     @classmethod
     def get_prediccion(cls, url):

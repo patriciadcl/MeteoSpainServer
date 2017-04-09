@@ -1,4 +1,4 @@
-class Zona:
+class Costa:
     def __init__(self, id_aemet, id_api, f_elaboracion, f_inicio, f_fin, situacion, aviso, tendencia, subzonas):
         self.__id_aemet = id_aemet
         self.__id_api = id_api

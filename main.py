@@ -1,9 +1,9 @@
 import network.aemetapi as api
 import network.servidorutils as servidor
+from data.basedatos import BaseDatos
 import os
 
 from flask import Flask, request
-from data.basedatos import connect
 
 app = Flask(__name__)
 
@@ -11,9 +11,9 @@ aemet_api = api.AemetAPI()
 
 base_dir = os.path.dirname(os.path.realpath('__file__'))
 
-utils = servidor.ServidorUtils(base_dir)
+util = None
 
-meteospain_db = None
+meteoserver_ddbb = None
 
 
 @app.route('/datos/areas_altamar')
@@ -37,8 +37,8 @@ def datos():
 @app.route('/predicciones/altamar/<int:area>')
 def altamar(area):
     if area not in aemet_api.AREAS_ALTAMAR:
-        response = str(dict(estado=aemet_api.COD_RESPONSE_ERROR["incorrecta"][0],
-                            datos=aemet_api.COD_RESPONSE_ERROR["incorrecta"][1]))
+        response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
+        print(response)
     else:
         response = utils.get_altamar(area)
     return response
@@ -47,8 +47,7 @@ def altamar(area):
 @app.route('/predicciones/costa/<int:area>')
 def costa(area):
     if area not in aemet_api.AREAS_COSTA:
-        response = str(dict(estado=aemet_api.COD_RESPONSE_ERROR["incorrecta"][0],
-                            datos=aemet_api.COD_RESPONSE_ERROR["incorrecta"][1]))
+        response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
     else:
         response = utils.get_costa(area)
     return response
@@ -57,8 +56,7 @@ def costa(area):
 @app.route('/predicciones/montaña/<area>/dia/<int:dia>')
 def montaña(area, dia):
     if dia not in aemet_api.DIAS_MONTAÑA:
-        response = str(dict(estado=aemet_api.COD_RESPONSE_ERROR["incorrecta"][0],
-                            datos=aemet_api.COD_RESPONSE_ERROR["incorrecta"][1]))
+        response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
     else:
         response = utils.get_montaña(area,dia)
     return response
@@ -83,5 +81,8 @@ def playa(id_playa):
 
 
 if __name__ == '__main__':
-    connect()
+
+    meteoserver_ddbb = BaseDatos(update=True)
+    utils = servidor.ServidorUtils(base_dir, meteoserver_ddbb)
+
     app.run(debug=True)

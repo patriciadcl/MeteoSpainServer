@@ -1,67 +1,96 @@
 import network.aemetapi as api
-import network.jsonamodelo as amodelo
 import json
+from network.jsonamodelo import JsonAModelo
+from datetime import date, timedelta
 
 
 class ServidorUtils:
-    
     base_dir = None
     aemet_api = None
-        
+    meteo_ddbb = None
+
     @classmethod
-    def __init__(cls,  base_dir):
+    def __init__(cls, base_dir, dd_bb):
         cls.base_dir = base_dir
         cls.aemet_api = api.AemetAPI()
+        cls.meteo_ddbb = dd_bb
 
     @classmethod
     def get_datos(cls, json_file):
+        response = None
         try:
-            f_open = open(json_file, "r", encoding='utf-8')
-            contenido = f_open.read()
-            js = json.loads(contenido)
-            response = dict(estado=cls.aemet_api.COD_RESPONSE_OK, datos=js)
-            return str(response)
+            with open(json_file, "r", encoding='utf-8') as f_open:
+                contenido = f_open.read()
+                js = json.loads(contenido)
+                response = dict(estado=cls.aemet_api.COD_RESPONSE_OK, datos=js)
         except Exception as ex:
-            response = dict(estado=cls.aemet_api.COD_RESPONSE_ERROR["incorrecta"][0],
-                            datos=format(ex))
+            response = cls.aemet_api.get_response_error(cls.aemet_api.COD_PET_INCORRECTA,
+                                                        datos=format(ex))
+        finally:
             return str(response)
 
     @classmethod
     def get_altamar(cls, area):
-        # TODO: Comprobar si esta en la base de datos
-        url = cls.aemet_api.url_altamar(str(area))
-        response_estado, response_datos = cls.aemet_api.get_prediccion(url)
-        if response_estado == cls.aemet_api.COD_RESPONSE_OK:
-            altamar = amodelo.JsonAModelo.json_a_altamar(response_datos)
-            datos = altamar.to_dict
+        # comprobamos si la tenemos en la base de datos
+        f_insercion = cls.rotar_fecha(date.today())
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_altamar(area, f_insercion)
+        if en_ddbb:
+            response_estado = cls.aemet_api.COD_RESPONSE_OK
+            datos = response_ddbb
         else:
-            datos = response_datos
+            url = cls.aemet_api.url_altamar(str(area))
+            response_estado, response_datos = cls.aemet_api.get_prediccion(url)
+            if response_estado == cls.aemet_api.COD_RESPONSE_OK:
+                altamar = JsonAModelo.json_a_altamar(area, response_datos)
+                datos = altamar.to_dict
+                print("Insertado ", cls.meteo_ddbb.insert_altamar(area, f_insercion, altamar.f_elaboracion,
+                                                                  json.dumps(datos)))
+            else:
+                datos = cls.aemet_api.e
         response = dict(estado=response_estado, datos=datos)
         return str(response)
 
     @classmethod
     def get_costa(cls, area):
-        # TODO: Comprobar si esta en la base de datos
-        url = cls.aemet_api.url_costa(str(area))
-        response_estado, response_datos = cls.aemet_api.get_prediccion(url)
-        if response_estado == cls.aemet_api.COD_RESPONSE_OK:
-            costa = amodelo.JsonAModelo.json_a_costas(response_datos)
-            datos = costa.to_dict
+        # comprobamos si la tenemos en la base de datos
+        f_insercion = cls.rotar_fecha(date.today())
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_costa(area, f_insercion)
+        if en_ddbb:
+            response_estado = cls.aemet_api.COD_RESPONSE_OK
+            datos = response_ddbb
         else:
-            datos = response_datos
+            url = cls.aemet_api.url_costa(str(area))
+            response_estado, response_datos = cls.aemet_api.get_prediccion(url)
+            if response_estado == cls.aemet_api.COD_RESPONSE_OK:
+                costa = JsonAModelo.json_a_costa(area, response_datos)
+                datos = costa.to_dict
+                print("Insertado ", cls.meteo_ddbb.insert_costa(area, f_insercion, costa.f_elaboracion,
+                                                                  json.dumps(datos)))
+            else:
+                datos = response_datos
         response = dict(estado=response_estado, datos=datos)
         return str(response)
 
     @classmethod
     def get_montaña(cls, area, dia):
-        # TODO: Comprobar si esta en la base de datos
-        url = cls.aemet_api.url_montaña(area, str(dia))
-        response_estado, response_datos = cls.aemet_api.get_prediccion(url)
-        if response_estado == cls.aemet_api.COD_RESPONSE_OK:
-            montaña = amodelo.JsonAModelo.json_a_montaña(response_datos, dia)
-            datos = montaña.to_dict
+        # comprobamos si la tenemos en la base de datos
+        f_insercion = cls.rotar_fecha(date.today())
+        f_pronostico = dia + timedelta(days=dia)
+        f_pronostico = cls.rotar_fecha(str(f_pronostico))
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_costa(area, f_insercion, f_pronostico)
+        if en_ddbb:
+            response_estado = cls.aemet_api.COD_RESPONSE_OK
+            datos = response_ddbb
         else:
-            datos = response_datos
+            url = cls.aemet_api.url_montaña(area, str(dia))
+            response_estado, response_datos = cls.aemet_api.get_prediccion(url)
+            if response_estado == cls.aemet_api.COD_RESPONSE_OK:
+                montaña = JsonAModelo.json_a_montaña(response_datos, dia)
+                datos = montaña.to_dict
+                print("Insertado ", cls.meteo_ddbb.insert_montaña(area, f_insercion, montaña.f_elaboracion,
+                                                                  f_pronostico, json.dumps(datos)))
+            else:
+                datos = response_datos
         response = dict(estado=response_estado, datos=datos)
         return str(response)
 
@@ -71,7 +100,7 @@ class ServidorUtils:
         url = cls.aemet_api.url_municipio_dia(str(id_municipio))
         response_estado, response_datos = cls.aemet_api.get_prediccion(url)
         if response_estado == cls.aemet_api.COD_RESPONSE_OK:
-            municipio = amodelo.JsonAModelo.json_a_municipio(response_datos, True)
+            municipio = JsonAModelo.json_a_municipio(response_datos, True)
             datos = municipio.to_dict
         else:
             datos = response_datos
@@ -84,7 +113,7 @@ class ServidorUtils:
         url = cls.aemet_api.url_municipio_horas(str(id_municipio))
         response_estado, response_datos = cls.aemet_api.get_prediccion(url)
         if response_estado == cls.aemet_api.COD_RESPONSE_OK:
-            municipio = amodelo.JsonAModelo.json_a_municipio(response_datos, False)
+            municipio = JsonAModelo.json_a_municipio(response_datos, False)
             datos = municipio.to_dict
         else:
             datos = response_datos
@@ -97,9 +126,15 @@ class ServidorUtils:
         url = cls.aemet_api.url_playa(str(id_playa).zfill(7))
         response_estado, response_datos = cls.aemet_api.get_prediccion(url)
         if response_estado == cls.aemet_api.COD_RESPONSE_OK:
-            playa = amodelo.JsonAModelo.json_a_playa(response_datos)
+            playa = JsonAModelo.json_a_playa(response_datos)
             datos = playa.to_dict
         else:
             datos = response_datos
         response = dict(estado=response_estado, datos=datos)
         return str(response)
+
+    @staticmethod
+    def rotar_fecha(fecha):
+        new_fecha = str(fecha).split("-")
+        new_fecha.reverse()
+        return new_fecha[0] + "-" + new_fecha[1] + "-" + new_fecha[2]
