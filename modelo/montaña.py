@@ -41,10 +41,10 @@ class Zona:
 
 
 class Montaña:
-    def __init__(self, id_api, f_elaborado, f_pronostico, estado_cielo, precipitaciones, tormentas,
+    def __init__(self, id_api, f_elaboracion, f_pronostico, estado_cielo, precipitaciones, tormentas,
                  temperaturas, viento, zonas):
         self.__id_api = id_api
-        self.__f_elaborado = f_elaborado
+        self.__f_elaboracion = f_elaboracion
         self.__f_pronostico = f_pronostico
         self.__estado_cielo = estado_cielo
         self.__precipitaciones = precipitaciones
@@ -58,8 +58,8 @@ class Montaña:
         return self.__id_api
 
     @property
-    def f_elaborado(self):
-        return self.__f_elaborado
+    def f_elaboracion(self):
+        return self.__f_elaboracion
 
     @property
     def f_pronostico(self):

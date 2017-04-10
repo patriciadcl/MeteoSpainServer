@@ -75,9 +75,9 @@ class ServidorUtils:
     def get_montaña(cls, area, dia):
         # comprobamos si la tenemos en la base de datos
         f_insercion = cls.rotar_fecha(date.today())
-        f_pronostico = dia + timedelta(days=dia)
+        f_pronostico = date.today() + timedelta(days=dia)
         f_pronostico = cls.rotar_fecha(str(f_pronostico))
-        en_ddbb, response_ddbb = cls.meteo_ddbb.get_costa(area, f_insercion, f_pronostico)
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_montaña(area, f_insercion, f_pronostico)
         if en_ddbb:
             response_estado = cls.aemet_api.COD_RESPONSE_OK
             datos = response_ddbb
