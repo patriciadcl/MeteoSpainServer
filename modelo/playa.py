@@ -11,7 +11,7 @@ class Prediccion:
         self.__uv_max = uv_max
 
     @property
-    def fecha_validez(self):
+    def f_validez(self):
         return self.__f_validez
 
     @property
@@ -62,7 +62,7 @@ class Playa:
         return self.__id_aemet
 
     @property
-    def fecha_elaboracion(self):
+    def f_elaboracion(self):
         return self.__f_elaboracion
 
     @property

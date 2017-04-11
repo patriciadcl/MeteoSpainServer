@@ -82,7 +82,7 @@ def playa(id_playa):
 
 if __name__ == '__main__':
 
-    meteoserver_ddbb = BaseDatos(update=False)
+    meteoserver_ddbb = BaseDatos(update=True)
     utils = servidor.ServidorUtils(base_dir, meteoserver_ddbb)
 
     app.run(debug=True)

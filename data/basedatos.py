@@ -5,7 +5,8 @@ from configparser import ConfigParser
 
 class BaseDatos:
     base_dir = os.path.dirname(os.path.realpath('__file__'))
-    tablas = ["areas_altamar", "areas_costa", "areas_montaña", "municipios", "playas"]
+    tablas = ["areas_altamar", "areas_costa", "areas_montaña", "playas"]
+    tabla_municipios = "municipios"
     param_db = None
 
     @classmethod
@@ -13,7 +14,8 @@ class BaseDatos:
         cls.param_db = cls.config()
         if update:
             print("Actualizando las base de datos")
-            cls.create_tables()
+            cls.drop_tables()
+        cls.create_tables()
 
     @classmethod
     def config(cls, filename='basedatos.ini', section='postgresql'):
@@ -36,30 +38,30 @@ class BaseDatos:
         return db
 
     @classmethod
-    def connect(cls):
-        """ Connect to the PostgreSQL database server """
-        conn = None
+    def drop_tables(cls):
+        """ drop tables in the PostgreSQL database"""
+        drop_table = """
+                        DROP TABLE IF EXISTS {0}
+                        """
+        conexion = None
         try:
-            # read connection parameters
-            params = cls.config()
-            # connect to the PostgreSQL server
-            print('Connecting to the PostgreSQL database...')
-            conn = psycopg2.connect(**params)
-            # create a cursor
-            cur = conn.cursor()
-            # execute a statement
-            print('PostgreSQL database version:')
-            cur.execute('SELECT version();')
-            # display the PostgreSQL database server version
-            db_version = cur.fetchone()
-            print(db_version)
-            # close the communication with the PostgreSQL
-            cur.close()
+            with psycopg2.connect(**cls.param_db) as conexion:
+                cur = conexion.cursor()
+                for tabla in cls.tablas:
+                    print("Eliminando la tabla ", tabla)
+                    command = drop_table.format(tabla)
+                    cur.execute(command)
+                print("Eliminando la tabla ", cls.tabla_municipios)
+                command = drop_table.format(cls.tabla_municipios)
+                cur.execute(command)
+                # close communication with the PostgreSQL database server
+                cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
-        except Exception as exc:
-            print("Error ", format(exc))
-        return conn
+            print(format(error))
+        finally:
+            if conexion:
+                conexion.close()
+                print("Conexion cerrada")
 
     @classmethod
     def create_tables(cls):
@@ -68,73 +70,74 @@ class BaseDatos:
         create_table = """
                 CREATE TABLE {0} (
                 id VARCHAR(255) NOT NULL,
-                f_insercion VARCHAR(255) NOT NULL,
                 f_elaboracion VARCHAR(255) NOT NULL,
-                f_pronostico VARCHAR(255),
+                f_pronostico VARCHAR(255) NOT NULL,
                 prediccion JSON NOT NULL
             )"""
-        conn = None
+        create_table_municipios = """
+                        CREATE TABLE {0} (
+                        id VARCHAR(255) NOT NULL,
+                        f_elaboracion VARCHAR(255) NOT NULL,
+                        f_pronostico VARCHAR(255),
+                        es_horaria BOOLEAN NOT NULL,
+                        prediccion JSON NOT NULL
+                    )"""
+        conexion = None
         try:
-            conn = psycopg2.connect(**cls.param_db)
-            # conn = psycopg2.connect(**params)
-            cur = conn.cursor()
-            # # create table one by one
-            # for tabla in cls.tablas:
-            #     print("Eliminando la tabla ", tabla)
-            #     command = drop_table.format(tabla)
-            #     print(command)
-            #     cur.execute(command)
-            # # close communication with the PostgreSQL database server
-            # #cur.close()
-            # # commit the changes
-            # conn.commit()
-            # create table one by one
-            for tabla in cls.tablas:
-                print("Creando la tabla ", tabla)
-                command = create_table.format(tabla)
-                print(command)
+            with psycopg2.connect(**cls.param_db) as conexion:
+                cur = conexion.cursor()
+                # create table one by one
+                for tabla in cls.tablas:
+                    print("Creando la tabla ", tabla)
+                    command = create_table.format(tabla)
+                    cur.execute(command)
+                print("Creando la tabla ", cls.tabla_municipios)
+                command = create_table_municipios.format(cls.tabla_municipios)
                 cur.execute(command)
-                # print(cur.fetchone())
-            # close communication with the PostgreSQL database server
-            cur.close()
-            # commit the changes
-            conn.commit()
+                # close communication with the PostgreSQL database server
+                cur.close()
+                # commit the changes
         except (Exception, psycopg2.DatabaseError) as error:
             print(format(error))
         finally:
-            if conn:
-                conn.close()
+            if conexion:
+                conexion.close()
                 print("Conexion cerrada")
 
-    def get_altamar(self, area, fecha):
+    def get_altamar(self, area_altamar, f_elaboracion, f_pronostico):
         """ query data from the vendors table """
+        print("Peticion a base de datos de altamar ", area_altamar, f_elaboracion, f_pronostico)
+        sql = "SELECT * FROM areas_altamar WHERE id = %s and " +\
+              "f_elaboracion  = %s and f_pronostico = %s"
         esta_ddbb = False
         resultado = None
         try:
             with psycopg2.connect(**self.param_db) as conn:
                 cur = conn.cursor()
-                cur.execute("SELECT * FROM areas_altamar WHERE id = %s and f_elaboracion  = %s",
-                            (str(area), str(fecha)))
+                cur.execute(sql, (str(area_altamar), str(f_elaboracion), str(f_pronostico)))
                 row = cur.fetchone()
+                print(row)
                 if row:
-                    print(row)
                     esta_ddbb = True
-                    resultado = row[4]
+                    resultado = row[3]
+                else:
+                    # limpiamos las tabla de registros que no sean del dia actual
+                    pass
                 cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)
         finally:
             return esta_ddbb, resultado
 
-    def insert_altamar(self, area, f_insercion, f_elaboracion, prediccion):
+    def insert_altamar(self, area_altamar, f_elaboracion, f_pronostico, prediccion):
         """ query data from the vendors table """
-        sql = """INSERT INTO areas_altamar(id,f_insercion,f_elaboracion,prediccion)
+        sql = """INSERT INTO areas_altamar(id,f_pronostico, f_elaboracion,prediccion)
                      VALUES(%s,%s,%s,%s) RETURNING id;"""
         id_altamar = None
         try:
             with psycopg2.connect(**self.param_db) as conn:
                 cur = conn.cursor()
-                cur.execute(sql, (area, f_insercion, f_elaboracion, prediccion))
+                cur.execute(sql, (area_altamar, f_pronostico, f_elaboracion, prediccion))
                 id_altamar = cur.fetchone()[0]
                 # commit the changes to the database
                 conn.commit()
@@ -144,35 +147,38 @@ class BaseDatos:
         finally:
             return id_altamar
 
-    def get_costa(self, area, fecha):
+    def get_costa(self, area_costa, f_elaboracion, f_pronostico):
         """ query data from the vendors table """
-        sql = "SELECT * FROM areas_costa WHERE id = %s and f_elaboracion = %s"
+        sql = "SELECT * FROM areas_costa WHERE id = %s and f_elaboracion = %s and " +\
+              "f_pronostico = %s"
         esta_ddbb = False
         resultado = None
         try:
             with psycopg2.connect(**self.param_db) as conn:
                 cur = conn.cursor()
-                cur.execute(sql,
-                            (str(area), str(fecha)))
+                cur.execute(sql, (str(area_costa), f_pronostico, f_elaboracion))
                 row = cur.fetchone()
                 if row:
                     esta_ddbb = True
                     resultado = row[3]
+                else:
+                    # limpiamos las tabla de registros que no sean del dia actual
+                    pass
                 cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)
         finally:
             return esta_ddbb, resultado
 
-    def insert_costa(self, area, f_insercion, f_elaboracion, prediccion):
+    def insert_costa(self, area_costa, f_elaboracion, f_pronostico, prediccion):
         """ query data from the vendors table """
-        sql = """INSERT INTO areas_costa(id,f_insercion,f_elaboracion,prediccion)
+        sql = """INSERT INTO areas_costa(id,f_elaboracion,f_pronostico,prediccion)
                      VALUES(%s,%s,%s,%s) RETURNING id;"""
         id_costa = None
         try:
             with psycopg2.connect(**self.param_db) as conn:
                 cur = conn.cursor()
-                cur.execute(sql, (area, f_insercion, f_elaboracion, prediccion))
+                cur.execute(sql, (area_costa, f_elaboracion, f_pronostico, prediccion))
                 id_costa = cur.fetchone()[0]
                 # commit the changes to the database
                 conn.commit()
@@ -182,35 +188,38 @@ class BaseDatos:
         finally:
             return id_costa
 
-    def get_montaña(self, area, f_elaboracion, f_pronostico):
+    def get_montaña(self, area_montaña, f_elaboracion, f_pronostico):
         """ query data from the vendors table """
-        sql = "SELECT * FROM areas_montaña WHERE id = %s and f_elaboracion = %s and f_pronostico = %s"
+        sql = "SELECT * FROM areas_montaña WHERE id = %s and f_elaboracion = %s and " + \
+              " f_pronostico = %s"
         esta_ddbb = False
         resultado = None
         try:
             with psycopg2.connect(**self.param_db) as conn:
                 cur = conn.cursor()
-                cur.execute(sql,
-                            (str(area), str(f_elaboracion), str(f_pronostico)))
+                cur.execute(sql, (str(area_montaña), f_elaboracion, f_pronostico))
                 row = cur.fetchone()
                 if row:
                     esta_ddbb = True
-                    resultado = row[4]
+                    resultado = row[3]
+                else:
+                    # limpiamos las tabla de registros que no sean del dia actual
+                    pass
                 cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)
         finally:
             return esta_ddbb, resultado
 
-    def insert_montaña(self, area, f_insercion, f_elaboracion, f_prediccion, prediccion):
+    def insert_montaña(self, area_montaña, f_elaboracion, f_pronostico, prediccion):
         """ query data from the vendors table """
-        sql = """INSERT INTO areas_montaña(id,f_insercion,f_elaboracion,f_pronostico,prediccion)
-                     VALUES(%s,%s,%s,%s,%s) RETURNING id;"""
+        sql = """INSERT INTO areas_montaña(id,f_elaboracion, f_pronostico,prediccion)
+                     VALUES(%s,%s,%s,%s) RETURNING id;"""
         id_montaña = None
         try:
             with psycopg2.connect(**self.param_db) as conn:
                 cur = conn.cursor()
-                cur.execute(sql, (area, f_insercion, f_elaboracion, f_prediccion, prediccion))
+                cur.execute(sql, (area_montaña, f_elaboracion, f_pronostico, prediccion))
                 id_montaña = cur.fetchone()[0]
                 # commit the changes to the database
                 conn.commit()
@@ -219,3 +228,97 @@ class BaseDatos:
             print(error)
         finally:
             return id_montaña
+
+    def get_municipio(self, id_municipio, fecha, es_horaria=False):
+        """ query data from the vendors table """
+        sql = "SELECT * FROM municipios WHERE id = %s and f_elaboracion = %s and " +\
+              "f_pronostico = %s and es_horaria = %s"
+        esta_ddbb = False
+        resultado = None
+        try:
+            with psycopg2.connect(**self.param_db) as conn:
+                cur = conn.cursor()
+                cur.execute(sql, (str(id_municipio), fecha, fecha, es_horaria))
+                row = cur.fetchone()
+                if row:
+                    esta_ddbb = True
+                    resultado = row[4]
+                else:
+                    # limpiamos las tabla de registros que no sean del dia actual
+                    pass
+                cur.close()
+        except (Exception, psycopg2.DatabaseError) as error:
+            print(error)
+        finally:
+            return esta_ddbb, resultado
+
+    def get_muni_diaria(self, id_municipio, fecha):
+        return self.get_municipio(id_municipio, fecha, False)
+
+    def get_muni_horaria(self, id_municipio, fecha):
+        return self.get_municipio(id_municipio, fecha, True)
+
+    def ins_municipio(self, id_municipio, f_elaboracion, f_pronostico, prediccion, es_horaria=False):
+        sql = """INSERT INTO municipios(id,f_elaboracion,f_pronostico,es_horaria,prediccion)
+                             VALUES(%s,%s,%s,%s,%s) RETURNING id;"""
+        id_muni = None
+        try:
+            with psycopg2.connect(**self.param_db) as conn:
+                cur = conn.cursor()
+                cur.execute(sql, (id_municipio, f_elaboracion, f_pronostico, es_horaria, prediccion))
+                id_muni = cur.fetchone()[0]
+                # commit the changes to the database
+                conn.commit()
+                cur.close()
+        except (Exception, psycopg2.DatabaseError) as error:
+            print(error)
+        finally:
+            return id_muni
+
+    def ins_muni_diaria(self, id_municipio, f_elaboracion, f_pronostico, prediccion):
+        return self.ins_municipio(id_municipio, f_elaboracion, f_pronostico, prediccion, False)
+
+    def ins_muni_horaria(self, id_municipio, f_elaboracion, f_pronostico, prediccion):
+        return self.ins_municipio(id_municipio, f_elaboracion, f_pronostico, prediccion, True)
+
+    def get_playa(self, id_playa, f_elaboracion, f_pronostico):
+        """ query data from the vendors table """
+        sql = "SELECT * FROM playas WHERE id = %s and f_elaboracion = %s and " + \
+              "f_pronostico = %s"
+        esta_ddbb = False
+        resultado = None
+        try:
+            with psycopg2.connect(**self.param_db) as conn:
+                cur = conn.cursor()
+                cur.execute(sql, (str(id_playa), f_elaboracion, f_pronostico))
+                row = cur.fetchone()
+                if row:
+                    esta_ddbb = True
+                    resultado = row[3]
+                else:
+                    # limpiamos la tabla de pronosticos con este id
+                    pass
+                cur.close()
+        except (Exception, psycopg2.DatabaseError) as error:
+            print(error)
+        finally:
+            return esta_ddbb, resultado
+
+    def insert_playa(self, id_playa, f_elaboracion, f_pronostico, prediccion):
+        sql = """INSERT INTO playas(id,f_elaboracion, f_pronostico,prediccion)
+                     VALUES(%s,%s,%s,%s) RETURNING id;"""
+        idplaya = None
+        try:
+            with psycopg2.connect(**self.param_db) as conn:
+                cur = conn.cursor()
+                cur.execute(sql, (id_playa, f_elaboracion, f_pronostico, prediccion))
+                idplaya = cur.fetchone()[0]
+                # commit the changes to the database
+                conn.commit()
+                cur.close()
+        except (Exception, psycopg2.DatabaseError) as error:
+            print(error)
+        finally:
+            return idplaya
+
+
