@@ -1,13 +1,14 @@
 import network.aemetapi as api
+import network.utils as utils
 import json
 from network.jsonamodelo import JsonAModelo
-from datetime import date, timedelta
 
 
 class ServidorUtils:
     base_dir = None
     aemet_api = None
     meteo_ddbb = None
+    incremento_horas = 2
 
     @classmethod
     def __init__(cls, base_dir, dd_bb):
@@ -31,13 +32,17 @@ class ServidorUtils:
 
     @classmethod
     def get_altamar(cls, area):
+        # Predicción para un periodo de 24 horas de las condiciones meteorológicas para el área
+        # marítima pasada por parámetro. Actualizacion una vez 24h
         # comprobamos si la tenemos en la base de datos
-        hoy = cls.rotar_fecha(date.today())
+        hoy = utils.get_hoy()
         en_ddbb, response_ddbb = cls.meteo_ddbb.get_altamar(area, hoy, hoy)
         if en_ddbb:
+            print("altamar from db")
             response_estado = cls.aemet_api.COD_RESPONSE_OK
             datos = response_ddbb
         else:
+            print("altamar from aemet")
             url = cls.aemet_api.url_altamar(str(area))
             response_estado, response_datos = cls.aemet_api.get_prediccion(url)
             if response_estado == cls.aemet_api.COD_RESPONSE_OK:
@@ -46,26 +51,30 @@ class ServidorUtils:
                 print("Insertado ", cls.meteo_ddbb.insert_altamar(area, altamar.f_elaboracion, altamar.f_inicio,
                                                                   json.dumps(datos)))
             else:
-                datos = cls.aemet_api.e
+                datos = response_datos
         response = dict(estado=response_estado, datos=datos)
         return str(response)
 
     @classmethod
     def get_costa(cls, area):
+        # Predicción para un periodo de 24 horas de las condiciones meteorológicas para la zona
+        # costera pasada por parámetro. Actualizacion una vez 24h
         # comprobamos si la tenemos en la base de datos
-        hoy = cls.rotar_fecha(date.today())
+        hoy = utils.get_hoy()
         en_ddbb, response_ddbb = cls.meteo_ddbb.get_costa(area, hoy, hoy)
         if en_ddbb:
+            print("costa from db")
             response_estado = cls.aemet_api.COD_RESPONSE_OK
             datos = response_ddbb
         else:
+            print("costa from aemet")
             url = cls.aemet_api.url_costa(str(area))
             response_estado, response_datos = cls.aemet_api.get_prediccion(url)
             if response_estado == cls.aemet_api.COD_RESPONSE_OK:
                 costa = JsonAModelo.json_a_costa(area, response_datos)
                 datos = costa.to_dict
-                print("Insertado ", cls.meteo_ddbb.insert_costa(area, costa.f_elaboracion, costa.f_inicio,
-                                                                  json.dumps(datos)))
+                print("Insertado ",
+                      cls.meteo_ddbb.insert_costa(area, costa.f_elaboracion, costa.f_inicio, json.dumps(datos)))
             else:
                 datos = response_datos
         response = dict(estado=response_estado, datos=datos)
@@ -73,15 +82,18 @@ class ServidorUtils:
 
     @classmethod
     def get_montaña(cls, area, dia):
+        # Predicción meteorológica para la zona montañosa que se pasa como parámetro (area) con
+        # validez para el día (día). Periodicidad de actualización: continuamente
         # comprobamos si la tenemos en la base de datos
-        hoy = cls.rotar_fecha(date.today())
-        f_pronostico = date.today() + timedelta(days=dia)
-        f_pronostico = cls.rotar_fecha(str(f_pronostico))
-        en_ddbb, response_ddbb = cls.meteo_ddbb.get_montaña(area, hoy, f_pronostico)
+        hoy = utils.get_hoy()
+        f_pronostico = utils.get_proximo_dia(dia)
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_montaña(area, hoy, f_pronostico, cls.incremento_horas)
         if en_ddbb:
+            print("montaña from db")
             response_estado = cls.aemet_api.COD_RESPONSE_OK
             datos = response_ddbb
         else:
+            print("montaña from aemet")
             url = cls.aemet_api.url_montaña(area, str(dia))
             response_estado, response_datos = cls.aemet_api.get_prediccion(url)
             if response_estado == cls.aemet_api.COD_RESPONSE_OK:
@@ -96,40 +108,22 @@ class ServidorUtils:
 
     @classmethod
     def get_municipo_diaria(cls, id_municipio):
-        # comprobamos si la tenemos en la base de datos
-        hoy = cls.rotar_fecha(date.today())
-        en_ddbb, response_ddbb = cls.meteo_ddbb.get_muni_diaria(id_municipio, hoy)
+        # Predicción diaria válida para 7 días para todos los municipios de España.
+        # Actualizacion una vez 24h
+        hoy = utils.get_hoy()
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_muni_diaria(id_municipio, hoy, cls.incremento_horas)
         if en_ddbb:
+            print("municipio from db")
             response_estado = cls.aemet_api.COD_RESPONSE_OK
             datos = response_ddbb
         else:
+            print("municipio from aemet")
             url = cls.aemet_api.url_municipio_dia(str(id_municipio))
             response_estado, response_datos = cls.aemet_api.get_prediccion(url)
             if response_estado == cls.aemet_api.COD_RESPONSE_OK:
                 municipio = JsonAModelo.json_a_municipio(response_datos, True)
                 datos = municipio.to_dict
                 print("Insertado ", cls.meteo_ddbb.ins_muni_diaria(id_municipio, municipio.f_elaboracion,
-                                                                  hoy, json.dumps(datos)))
-            else:
-                datos = response_datos
-        response = dict(estado=response_estado, datos=datos)
-        return str(response)
-
-    @classmethod
-    def get_municipo_horaria(cls, id_municipio):
-        # comprobamos si la tenemos en la base de datos
-        hoy = cls.rotar_fecha(date.today())
-        en_ddbb, response_ddbb = cls.meteo_ddbb.get_muni_horaria(id_municipio, hoy)
-        if en_ddbb:
-            response_estado = cls.aemet_api.COD_RESPONSE_OK
-            datos = response_ddbb
-        else:
-            url = cls.aemet_api.url_municipio_horas(str(id_municipio))
-            response_estado, response_datos = cls.aemet_api.get_prediccion(url)
-            if response_estado == cls.aemet_api.COD_RESPONSE_OK:
-                municipio = JsonAModelo.json_a_municipio(response_datos, False)
-                datos = municipio.to_dict
-                print("Insertado ", cls.meteo_ddbb.ins_muni_horaria(id_municipio, municipio.f_elaboracion,
                                                                    hoy, json.dumps(datos)))
             else:
                 datos = response_datos
@@ -137,28 +131,53 @@ class ServidorUtils:
         return str(response)
 
     @classmethod
-    def get_playa(cls, id_playa):
+    def get_municipo_horaria(cls, id_municipio):
+        # Predicción para el municipio que se pasa como parámetro (municipio). Periodicidad de
+        # actualización: continuamente
         # comprobamos si la tenemos en la base de datos
-        hoy = cls.rotar_fecha(date.today())
-        en_ddbb, response_ddbb = cls.meteo_ddbb.get_playa(id_playa, hoy, hoy)
+        hoy = utils.get_hoy()
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_muni_horaria(id_municipio, hoy, cls.incremento_horas)
         if en_ddbb:
+            print("municipio from db")
             response_estado = cls.aemet_api.COD_RESPONSE_OK
             datos = response_ddbb
         else:
-            url = cls.aemet_api.url_playa(str(id_playa).zfill(7))
+            print("municipio from aemet")
+            url = cls.aemet_api.url_municipio_horas(str(id_municipio))
             response_estado, response_datos = cls.aemet_api.get_prediccion(url)
             if response_estado == cls.aemet_api.COD_RESPONSE_OK:
-                playa = JsonAModelo.json_a_playa(response_datos)
-                datos = playa.to_dict
-                print("Insertado ", cls.meteo_ddbb.insert_playa(id_playa, playa.f_elaboracion,
+                municipio = JsonAModelo.json_a_municipio(response_datos, False)
+                datos = municipio.to_dict
+                print("Insertado ", cls.meteo_ddbb.ins_muni_horaria(id_municipio, municipio.f_elaboracion,
                                                                     hoy, json.dumps(datos)))
             else:
                 datos = response_datos
         response = dict(estado=response_estado, datos=datos)
         return str(response)
 
-    @staticmethod
-    def rotar_fecha(fecha):
-        new_fecha = str(fecha).split("-")
-        new_fecha.reverse()
-        return new_fecha[0] + "-" + new_fecha[1] + "-" + new_fecha[2]
+    @classmethod
+    def get_playa(cls, id_playa):
+        """ La predicción diaria de la playa que se pasa como parámetro. Establece el estado de 
+        nubosidad para unas horas determinadas, las 11 y las 17 hora oficial. 
+        Se analiza también si se espera precipitación en el entorno de esas horas, 
+        entre las 08 y las 14 horas y entre las 14 y 20 horas. Actualizacion una vez 24h"""
+        # comprobamos si la tenemos en la base de datos
+        hoy = utils.get_hoy()
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_playa(id_playa, hoy, hoy)
+        if en_ddbb:
+            print("playa from bbdd")
+            response_estado = cls.aemet_api.COD_RESPONSE_OK
+            datos = response_ddbb
+        else:
+            print("playa from aemet")
+            url = cls.aemet_api.url_playa(str(id_playa).zfill(7))
+            response_estado, response_datos = cls.aemet_api.get_prediccion(url)
+            if response_estado == cls.aemet_api.COD_RESPONSE_OK:
+                playa = JsonAModelo.json_a_playa(response_datos)
+                datos = playa.to_dict
+                print("Insertado ", cls.meteo_ddbb.insert_playa(id_playa, playa.f_elaboracion,
+                                                                hoy, json.dumps(datos)))
+            else:
+                datos = response_datos
+        response = dict(estado=response_estado, datos=datos)
+        return str(response)

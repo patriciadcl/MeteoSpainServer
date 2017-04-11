@@ -1,7 +1,8 @@
 import network.aemetapi as api
 import network.servidorutils as servidor
-from data.basedatos import BaseDatos
 import os
+from data.basedatos import BaseDatos
+
 
 from flask import Flask, request
 
@@ -14,6 +15,10 @@ base_dir = os.path.dirname(os.path.realpath('__file__'))
 util = None
 
 meteoserver_ddbb = None
+
+@app.route('/')
+def home():
+    return "Bienvenido al servidor API de la aplicacion Meteo España para plataforma Android"
 
 
 @app.route('/datos/areas_altamar')
@@ -58,7 +63,7 @@ def montaña(area, dia):
     if dia not in aemet_api.DIAS_MONTAÑA:
         response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
     else:
-        response = utils.get_montaña(area,dia)
+        response = utils.get_montaña(area, dia)
     return response
 
 
@@ -81,8 +86,6 @@ def playa(id_playa):
 
 
 if __name__ == '__main__':
-
     meteoserver_ddbb = BaseDatos(update=True)
     utils = servidor.ServidorUtils(base_dir, meteoserver_ddbb)
-
     app.run(debug=True)

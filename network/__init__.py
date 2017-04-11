@@ -1,2 +1,2 @@
-from . import  aemetapi,jsonamodelo,servidorutils
-__all__ = ['aemetapi', 'jsonamodelo', 'servidorutils', 'json']
+from . import  aemetapi, jsonamodelo, servidorutils, utils
+__all__ = ['aemetapi', 'jsonamodelo', 'servidorutils', 'json', 'utils']
