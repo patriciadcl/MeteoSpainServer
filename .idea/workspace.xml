@@ -356,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491946948860</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add utils for dates">
+      <created>1491947059548</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1491947059548</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -422,7 +429,8 @@
     <MESSAGE value="updating base de datos montaña" />
     <MESSAGE value="updating base de datos inserts are finished" />
     <MESSAGE value="only rest to document and check del from tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="only rest to document and check del from tables" />
+    <MESSAGE value="add utils for dates" />
+    <option name="LAST_COMMIT_MESSAGE" value="add utils for dates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
