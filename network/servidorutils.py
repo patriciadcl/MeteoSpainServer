@@ -1,6 +1,10 @@
-import network.aemetapi as api
-import network.utils as utils
+# -*- coding: utf-8 -*-
 import json
+
+import network.aemetapi as api
+
+import network.utils as utils
+
 from network.jsonamodelo import JsonAModelo
 
 
@@ -9,21 +13,29 @@ class ServidorUtils:
     aemet_api = None
     meteo_ddbb = None
     incremento_horas = 2
+    ficheros_json = ("areas_altamar", "areas_costa", "areas_montañas", "cc_aa", "estado_cielo", "estados_playa",
+                     "municipios", "playas", "provincias", "provincias_costas", "subzonas_costas")
 
     @classmethod
-    def __init__(cls, base_dir, dd_bb):
+    def __init__(cls, base_dir, dd_bb, horas):
         cls.base_dir = base_dir
         cls.aemet_api = api.AemetAPI()
         cls.meteo_ddbb = dd_bb
+        cls.incremento_horas = horas
 
     @classmethod
     def get_datos(cls, json_file):
         response = None
         try:
-            with open(json_file, "r", encoding='utf-8') as f_open:
-                contenido = f_open.read()
-                js = json.loads(contenido)
-                response = dict(estado=cls.aemet_api.COD_RESPONSE_OK, datos=js)
+            if json_file in cls.ficheros_json:
+                with open(json_file, "r", encoding='utf-8') as f_open:
+                    contenido = f_open.read()
+                    js = json.loads(contenido)
+                    response = dict(estado=cls.aemet_api.COD_RESPONSE_OK, datos=js)
+            else:
+                mensaje_error = "Los datos que se pueden obtener son : ".join(cls.ficheros_json)
+                response = cls.aemet_api.get_response_error(cls.aemet_api.COD_PET_INCORRECTA,
+                                                            datos=mensaje_error)
         except Exception as ex:
             response = cls.aemet_api.get_response_error(cls.aemet_api.COD_PET_INCORRECTA,
                                                         datos=format(ex))
@@ -181,3 +193,7 @@ class ServidorUtils:
                 datos = response_datos
         response = dict(estado=response_estado, datos=datos)
         return str(response)
+
+    @classmethod
+    def in_ficheros(cls, fichero):
+        return fichero in cls.ficheros_json

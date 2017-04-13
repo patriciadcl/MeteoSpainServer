@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Prediccion:
 
     def __init__(self, f_validez, estado_cielo, viento, oleaje, t_maxima, s_termica, t_agua, uv_max):

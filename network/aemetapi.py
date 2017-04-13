@@ -1,5 +1,9 @@
-import requests
+# -*- coding: utf-8 -*-
 import json
+
+import requests
+
+"""Clase que contiene los datos de conexion con el API de AEMET"""
 
 
 class AemetAPI:
@@ -27,15 +31,16 @@ class AemetAPI:
     COD_PET_INCORRECTA = 404
     COD_NO_AUTORIZADO = 401
     COD_CONEXIONES = 429
-    COD_RESPONSE_ERROR_MESSAGE = {COD_NO_AUTORIZADO:"No Autorizado",
-                                  COD_PET_INCORRECTA:"Peticion incorrecta",
-                                  COD_CONEXIONES:"Demasiadas conexiones"}
+    COD_RESPONSE_ERROR_MESSAGE = {COD_NO_AUTORIZADO: "No Autorizado",
+                                  COD_PET_INCORRECTA: "Peticion incorrecta",
+                                  COD_CONEXIONES: "Demasiadas conexiones"}
     AREAS_ALTAMAR = (0, 1, 2)
     DIAS_MONTAÑA = (0, 1, 2, 3)
     AREAS_COSTA = (40, 41, 42, 43, 44, 45, 46, 47)
 
     @classmethod
     def get_response_error(cls, cod_error, texto=None):
+        """Metodo que retorna el codigo de error y el mensaje de error asociado"""
         response = None
         if cod_error in cls.COD_RESPONSE_ERROR_MESSAGE.keys():
             mensaje = texto if texto else cls.COD_RESPONSE_ERROR_MESSAGE[cod_error]

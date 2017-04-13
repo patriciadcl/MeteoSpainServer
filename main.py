@@ -1,10 +1,13 @@
-import network.aemetapi as api
-import network.servidorutils as servidor
+# -*- coding: utf-8 -*-
 import os
+
+import network.aemetapi as api
+
+import network.servidorutils as servidor
+
 from data.basedatos import BaseDatos
 
-
-from flask import Flask, request
+from flask import Flask
 
 app = Flask(__name__)
 
@@ -13,27 +16,18 @@ aemet_api = api.AemetAPI()
 base_dir = os.path.dirname(os.path.realpath('__file__'))
 
 meteoserver_ddbb = BaseDatos(update=False)
-utils = servidor.ServidorUtils(base_dir, meteoserver_ddbb)
+
+utils = servidor.ServidorUtils(base_dir, meteoserver_ddbb, 2)
+
 
 @app.route('/')
 def index():
     return "Bienvenido al servidor API de la aplicacion Meteo España para plataforma Android"
 
 
-@app.route('/datos/areas_altamar')
-@app.route('/datos/areas_costeras')
-@app.route('/datos/areas_montaña')
-@app.route('/datos/estado_cielo')
-@app.route('/datos/estados_playa')
-@app.route('/datos/cc_aa')
-@app.route('/datos/municipios')
-@app.route('/datos/playas')
-@app.route('/datos/provincias_costas')
-@app.route('/datos/provincias')
-@app.route('/datos/subzonas_costas')
-def datos():
-    file = os.path.split(request.path)
-    json_file = os.path.join(base_dir, "json", file[1] + ".json")
+@app.route('/datos/<dato>')
+def datos(fichero_json):
+    json_file = os.path.join(base_dir, "json", fichero_json + ".json")
     response = utils.get_datos(json_file)
     return response
 

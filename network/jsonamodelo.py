@@ -1,7 +1,12 @@
+# -*- coding: utf-8 -*-
 import json
+
 from datetime import date, timedelta
+
 from modelo import *
+
 from network.utils import format_fecha
+
 
 
 class JsonAModelo:

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Zona:
     def __init__(self, minima, st_minima, maxima, st_maxima, nombre, altitud):
         self.__minima = minima

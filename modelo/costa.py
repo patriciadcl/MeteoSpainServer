@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Costa:
     def __init__(self, id_aemet, id_api, f_elaboracion, f_inicio, f_fin, situacion, aviso, tendencia, subzonas):
         self.__id_aemet = id_aemet

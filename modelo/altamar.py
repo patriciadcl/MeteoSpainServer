@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Zona:
     def __init__(self, id_aemet, id_api, f_elaboracion, f_inicio, f_fin, texto, subzonas):
         self.__id_aemet = id_aemet

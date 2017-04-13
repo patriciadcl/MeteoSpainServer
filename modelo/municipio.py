@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class PredicionDia:
     def __init__(self, f_validez, prob_precipitacion, cota_nieve, estado_cielo, viento, racha_max, temperatura,
                  s_termica, humedad_rel, uv_max):
