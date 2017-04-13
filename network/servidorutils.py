@@ -30,6 +30,7 @@ class ServidorUtils:
         response = None
         try:
             if dato in cls.ficheros_json:
+                print("dato: ", dato)
                 json_file = os.path.join(cls.base_dir, "json", dato + ".json")
                 with open(json_file, "r", encoding='utf-8') as f_open:
                     contenido = f_open.read()
