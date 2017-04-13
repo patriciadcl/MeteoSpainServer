@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import json
 
+import os
+
 import network.aemetapi as api
 
 import network.utils as utils
@@ -24,10 +26,11 @@ class ServidorUtils:
         cls.incremento_horas = horas
 
     @classmethod
-    def get_datos(cls, json_file):
+    def get_datos(cls, dato):
         response = None
         try:
-            if json_file in cls.ficheros_json:
+            if dato in cls.ficheros_json:
+                json_file = os.path.join(cls.base_dir, "json", dato + ".json")
                 with open(json_file, "r", encoding='utf-8') as f_open:
                     contenido = f_open.read()
                     js = json.loads(contenido)

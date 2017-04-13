@@ -26,9 +26,8 @@ def index():
 
 
 @app.route('/datos/<dato>')
-def datos(fichero_json):
-    json_file = os.path.join(base_dir, "json", fichero_json + ".json")
-    response = utils.get_datos(json_file)
+def datos(dato):
+    response = utils.get_datos(dato)
     return response
 
 
