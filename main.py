@@ -12,7 +12,7 @@ aemet_api = api.AemetAPI()
 
 base_dir = os.path.dirname(os.path.realpath('__file__'))
 
-util = None
+utils = None
 
 meteoserver_ddbb = None
 
@@ -86,6 +86,6 @@ def playa(id_playa):
 
 
 if __name__ == '__main__':
-    meteoserver_ddbb = BaseDatos(update=True)
+    meteoserver_ddbb = BaseDatos(update=False)
     utils = servidor.ServidorUtils(base_dir, meteoserver_ddbb)
     app.run(debug=True)
