@@ -15,7 +15,7 @@ class ServidorUtils:
     aemet_api = None
     meteo_ddbb = None
     incremento_horas = 2
-    ficheros_json = ("areas_altamar", "areas_costa", "areas_montañas", "cc_aa", "estado_cielo", "estados_playa",
+    FICHEROS_JSON = ("areas_altamar", "areas_costa", "areas_montañas", "cc_aa", "estado_cielo", "estados_playa",
                      "municipios", "playas", "provincias", "provincias_costas", "subzonas_costas")
 
     @classmethod
@@ -29,20 +29,19 @@ class ServidorUtils:
     def get_datos(cls, dato):
         response = None
         try:
-            if dato in cls.ficheros_json:
+
+            if dato in cls.FICHEROS_JSON:
                 json_file = os.path.join(cls.base_dir, "json", dato + ".json")
                 with open(json_file, "r", encoding='utf-8') as f_open:
                     contenido = f_open.read()
                     js = json.loads(contenido)
                     response = dict(estado=cls.aemet_api.COD_RESPONSE_OK, datos=js)
             else:
-                mensaje_error = "Los datos que se pueden obtener son : ".join(cls.ficheros_json)
-                print(mensaje_error)
-                response = cls.aemet_api.get_response_error(cls.aemet_api.COD_PET_INCORRECTA,
-                                                            datos=mensaje_error)
+                mensaje_error = "Los datos que se pueden obtener son : " + ", ".join(cls.FICHEROS_JSON)
+                response = cls.aemet_api.get_response_error(cls.aemet_api.COD_PET_INCORRECTA, texto=mensaje_error)
+
         except Exception as ex:
-            response = cls.aemet_api.get_response_error(cls.aemet_api.COD_PET_INCORRECTA,
-                                                        datos=format(ex))
+            response = cls.aemet_api.get_response_error(cls.aemet_api.COD_PET_INCORRECTA, texto=format(ex))
         finally:
             return str(response)
 
@@ -200,4 +199,4 @@ class ServidorUtils:
 
     @classmethod
     def in_ficheros(cls, fichero):
-        return fichero in cls.ficheros_json
+        return fichero in cls.FICHEROS_JSON

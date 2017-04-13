@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="137514a8-e438-44ce-abe0-1572ad0609c8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network/aemetapi.py" afterPath="$PROJECT_DIR$/network/aemetapi.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network/servidorutils.py" afterPath="$PROJECT_DIR$/network/servidorutils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +22,7 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
+            <state relative-caret-position="774">
               <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
@@ -29,11 +31,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="servidorutils.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aemetapi.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/network/aemetapi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-306">
+              <caret line="42" column="45" lean-forward="false" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+              <folding>
+                <element signature="e#24#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="servidorutils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/servidorutils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="680">
-              <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+              <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
@@ -69,6 +83,7 @@
       <find>dia_hora_format</find>
       <find>BASE_DIR</find>
       <find>PARAMS_DB</find>
+      <find>ficheros_json</find>
     </findStrings>
     <replaceStrings>
       <replace>DATOS_AEMET[&quot;URL_BASE&quot;]</replace>
@@ -85,6 +100,7 @@
       <replace>TABLAS_DB</replace>
       <replace>PARAMS_DB</replace>
       <replace>params_db</replace>
+      <replace>FICHEROS_JSON</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -134,12 +150,12 @@
         <option value="$PROJECT_DIR$/data/basedatos.py" />
         <option value="$PROJECT_DIR$/network/utils.py" />
         <option value="$PROJECT_DIR$/network/jsonamodelo.py" />
-        <option value="$PROJECT_DIR$/network/aemetapi.py" />
         <option value="$PROJECT_DIR$/modelo/costa.py" />
         <option value="$PROJECT_DIR$/modelo/montaña.py" />
         <option value="$PROJECT_DIR$/modelo/municipio.py" />
         <option value="$PROJECT_DIR$/modelo/playa.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/network/aemetapi.py" />
         <option value="$PROJECT_DIR$/network/servidorutils.py" />
       </list>
     </option>
@@ -669,16 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/aemetapi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-          <folding>
-            <element signature="e#24#35#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/network/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -705,7 +711,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
+        <state relative-caret-position="774">
           <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
@@ -716,7 +722,17 @@
     <entry file="file://$PROJECT_DIR$/network/servidorutils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
-          <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+          <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/aemetapi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="42" column="45" lean-forward="false" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>

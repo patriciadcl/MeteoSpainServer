@@ -3,8 +3,6 @@ import json
 
 import requests
 
-"""Clase que contiene los datos de conexion con el API de AEMET"""
-
 
 class AemetAPI:
 
@@ -40,7 +38,6 @@ class AemetAPI:
 
     @classmethod
     def get_response_error(cls, cod_error, texto=None):
-        """Metodo que retorna el codigo de error y el mensaje de error asociado"""
         response = None
         if cod_error in cls.COD_RESPONSE_ERROR_MESSAGE.keys():
             mensaje = texto if texto else cls.COD_RESPONSE_ERROR_MESSAGE[cod_error]
