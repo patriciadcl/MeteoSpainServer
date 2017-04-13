@@ -249,7 +249,6 @@ class JsonAModelo:
                         for contador in [i for i in range(size) if i % 2 == 0]:
                             periodo = dias_json[num_dia]["vientoAndRachaMax"][contador]["periodo"] + ":00"
                             viento_json = dias_json[num_dia]["vientoAndRachaMax"][contador]
-                            print(contador)
                             viento[periodo] = {'velocidad': viento_json['velocidad'][0],
                                                'dir': viento_json["direccion"][0]}
                             racha_json = dias_json[num_dia]["vientoAndRachaMax"][contador + 1]

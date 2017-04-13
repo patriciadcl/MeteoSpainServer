@@ -42,7 +42,6 @@ def datos():
 def altamar(area):
     if area not in aemet_api.AREAS_ALTAMAR:
         response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
-        print(response)
     else:
         response = utils.get_altamar(area)
     return response

@@ -37,7 +37,6 @@ class AemetAPI:
     @classmethod
     def get_response_error(cls, cod_error, texto=None):
         response = None
-        print(cls.COD_RESPONSE_ERROR_MESSAGE)
         if cod_error in cls.COD_RESPONSE_ERROR_MESSAGE.keys():
             mensaje = texto if texto else cls.COD_RESPONSE_ERROR_MESSAGE[cod_error]
             response = dict(estado=cod_error, datos=mensaje)
