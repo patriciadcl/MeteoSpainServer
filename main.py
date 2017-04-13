@@ -27,7 +27,10 @@ def index():
 
 @app.route('/datos/<dato>')
 def datos(dato):
-    response = utils.get_datos(dato)
+    if dato not in utils.FICHEROS_JSON:
+        response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA, utils.MENSAJE_ERROR_FICHEROS))
+    else:
+        response = utils.get_datos(dato)
     return response
 
 

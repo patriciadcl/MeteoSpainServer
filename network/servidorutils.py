@@ -17,6 +17,7 @@ class ServidorUtils:
     incremento_horas = 2
     FICHEROS_JSON = ("areas_altamar", "areas_costa", "areas_montañas", "cc_aa", "estado_cielo", "estados_playa",
                      "municipios", "playas", "provincias", "provincias_costas", "subzonas_costas")
+    MENSAJE_ERROR_FICHEROS = "Los datos que se pueden obtener son : " + ", ".join(FICHEROS_JSON)
 
     @classmethod
     def __init__(cls, base_dir, dd_bb, horas):
@@ -29,17 +30,11 @@ class ServidorUtils:
     def get_datos(cls, dato):
         response = None
         try:
-
-            if dato in cls.FICHEROS_JSON:
-                json_file = os.path.join(cls.base_dir, "json", dato + ".json")
-                with open(json_file, "r", encoding='utf-8') as f_open:
-                    contenido = f_open.read()
-                    js = json.loads(contenido)
-                    response = dict(estado=cls.aemet_api.COD_RESPONSE_OK, datos=js)
-            else:
-                mensaje_error = "Los datos que se pueden obtener son : " + ", ".join(cls.FICHEROS_JSON)
-                response = cls.aemet_api.get_response_error(cls.aemet_api.COD_PET_INCORRECTA, texto=mensaje_error)
-
+            json_file = os.path.join(cls.base_dir, "json", dato + ".json")
+            with open(json_file, "r", encoding='utf-8') as f_open:
+                contenido = f_open.read()
+                js = json.loads(contenido)
+                response = dict(estado=cls.aemet_api.COD_RESPONSE_OK, datos=js)
         except Exception as ex:
             response = cls.aemet_api.get_response_error(cls.aemet_api.COD_PET_INCORRECTA, texto=format(ex))
         finally:
