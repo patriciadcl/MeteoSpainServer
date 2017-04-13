@@ -17,7 +17,7 @@ util = None
 meteoserver_ddbb = None
 
 @app.route('/')
-def home():
+def index():
     return "Bienvenido al servidor API de la aplicacion Meteo España para plataforma Android"
 
 
