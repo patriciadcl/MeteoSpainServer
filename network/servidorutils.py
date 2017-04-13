@@ -30,7 +30,6 @@ class ServidorUtils:
         response = None
         try:
             if dato in cls.ficheros_json:
-                print("dato: ", dato)
                 json_file = os.path.join(cls.base_dir, "json", dato + ".json")
                 with open(json_file, "r", encoding='utf-8') as f_open:
                     contenido = f_open.read()
@@ -38,6 +37,7 @@ class ServidorUtils:
                     response = dict(estado=cls.aemet_api.COD_RESPONSE_OK, datos=js)
             else:
                 mensaje_error = "Los datos que se pueden obtener son : ".join(cls.ficheros_json)
+                print(mensaje_error)
                 response = cls.aemet_api.get_response_error(cls.aemet_api.COD_PET_INCORRECTA,
                                                             datos=mensaje_error)
         except Exception as ex:
