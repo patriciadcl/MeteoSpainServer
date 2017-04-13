@@ -15,7 +15,7 @@ class BaseDatos:
         if update:
             print("Actualizando las base de datos")
             cls.drop_tables()
-        cls.create_tables()
+            cls.create_tables()
 
     @classmethod
     def config(cls, filename='basedatos.ini', section='postgresql'):
