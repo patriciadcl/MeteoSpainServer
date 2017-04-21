@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 class Costa:
-    def __init__(self, id_aemet, id_api, f_elaboracion, f_inicio, f_fin, situacion, aviso, tendencia, subzonas):
+    def __init__(self, id_aemet, id_api, f_elaboracion, f_inicio, f_fin, situacion, aviso, tendencia, zonas):
         self.__id_aemet = id_aemet
         self.__id_api = id_api
         self.__situacion = situacion
@@ -9,7 +9,7 @@ class Costa:
         self.__f_elaboracion = f_elaboracion
         self.__f_inicio = f_inicio
         self.__f_fin = f_fin
-        self.__sub_zonas = subzonas
+        self.__zonas = zonas
 
     @property
     def id_aemet(self):
@@ -44,8 +44,8 @@ class Costa:
         return self.__f_fin
 
     @property
-    def sub_zonas(self):
-        return self.__sub_zonas
+    def zonas(self):
+        return self.__zonas
 
     @property
     def to_dict(self):
@@ -62,7 +62,7 @@ class Costa:
         return propiedades
 
 
-class SubZona:
+class Zona:
     def __init__(self, id_aemet, texto):
         self.__id_aemet = id_aemet
         self.__texto = texto

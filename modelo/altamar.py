@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-class Zona:
+class Altamar:
     def __init__(self, id_aemet, id_api, f_elaboracion, f_inicio, f_fin, texto, subzonas):
         self.__id_aemet = id_aemet
         self.__id_api = id_api
@@ -7,7 +7,7 @@ class Zona:
         self.__f_elaboracion = f_elaboracion
         self.__f_inicio = f_inicio
         self.__f_fin = f_fin
-        self.__sub_zonas = subzonas
+        self.__zonas = subzonas
 
     @property
     def id_aemet(self):
@@ -34,8 +34,8 @@ class Zona:
         return self.__f_fin
 
     @property
-    def sub_zonas(self):
-        return self.__sub_zonas
+    def zonas(self):
+        return self.__zonas
 
     @property
     def to_dict(self):
@@ -52,7 +52,7 @@ class Zona:
         return propiedades
 
 
-class SubZona:
+class Zona:
 
     def __init__(self, id_aemet, texto):
         self.__id_aemet = id_aemet

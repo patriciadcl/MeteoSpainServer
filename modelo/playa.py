@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-class Prediccion:
+class Dia:
 
     def __init__(self, f_validez, estado_cielo, viento, oleaje, t_maxima, s_termica, t_agua, uv_max):
         self.__f_validez = f_validez
@@ -53,10 +53,10 @@ class Prediccion:
 
 
 class Playa:
-    def __init__(self, id_aemet, f_elaboracion, prediccion):
+    def __init__(self, id_aemet, f_elaboracion, dias):
         self.__id_aemet = id_aemet
         self.__f_elaboracion = f_elaboracion
-        self.__prediccion = prediccion
+        self.__dias = dias
 
     @property
     def id_aemet(self):
@@ -68,7 +68,7 @@ class Playa:
 
     @property
     def prediccion(self):
-        return self.__prediccion
+        return self.__dias
 
     @property
     def to_dict(self):

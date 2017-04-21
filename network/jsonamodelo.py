@@ -8,10 +8,11 @@ from modelo import *
 from network.utils import format_fecha
 
 
-
 class JsonAModelo:
+
     PERIODO_HORAS = ["00-24", "00-12", "12-24", "00-06", "06-12", "12-18", '18-24']
     PERIODO_HORAS_6 = ["6", "12", "18", "24"]
+    PERIODO_HORAS_6_CONVERSION = ["00-06", "06-12", "12-18", "18-24"]
     PERIODO_HORAS_12 = ["00-24", "00-12", "12-24"]
 
     @classmethod
@@ -21,17 +22,16 @@ class JsonAModelo:
             js = json.loads(cadena_json)
             f_elaboracion = format_fecha(str(js[0]['origen']['elaborado']))
             situacion = js[0]["situacion"]
-            json_subzonas = js[0]["prediccion"]["zona"]
-            subzonas = list()
-            for json_subzona in json_subzonas:
-                subzona = altamar.SubZona(str(json_subzona['id']), json_subzona['texto'])
-                subzonas.append(subzona)
+            json_zonas = js[0]["prediccion"]["zona"]
+            zonas = list()
+            for json_zona in json_zonas:
+                zona = altamar.Zona(str(json_zona['id']), json_zona['texto'])
+                zonas.append(zona)
             id_aemet = situacion['id']
             f_inicio = format_fecha(situacion['inicio'])
             f_fin = format_fecha(situacion['fin'])
             texto = str(situacion["texto"])
-            pred_altamar = altamar.Zona(id_aemet, str(area), f_elaboracion, f_inicio,
-                                        f_fin, texto, subzonas)
+            pred_altamar = altamar.Altamar(id_aemet, str(area), f_elaboracion, f_inicio, f_fin, texto, zonas)
         except Exception as exc:
             print("Exception ", format(exc))
         finally:
@@ -51,14 +51,13 @@ class JsonAModelo:
             situacion = situacion["texto"]
             aviso = js[0]["aviso"]["texto"]
             tendencia = js[0]["tendencia"]["texto"]
-            json_subzonas = js[0]["prediccion"]["zona"]
-            subzonas = list()
-            for json_subzona in json_subzonas:
-                subzona = costa.SubZona(str(json_subzona["subzona"]['id']),
-                                        json_subzona["subzona"]['texto'])
-                subzonas.append(subzona)
+            json_zonas = js[0]["prediccion"]["zona"]
+            zonas = list()
+            for json_zona in json_zonas:
+                zona = costa.Zona(str(json_zona["subzona"]['id']), json_zona["subzona"]['texto'])
+                zonas.append(zona)
             pred_costa = costa.Costa(id_aemet, area, f_elaboracion, f_inicio, f_fin, situacion,
-                                     aviso, tendencia, subzonas)
+                                     aviso, tendencia, zonas)
         except Exception as exc:
             print("Exception ", format(exc))
         return pred_costa
@@ -134,18 +133,20 @@ class JsonAModelo:
         return h_max, h_minima
 
     @classmethod
-    def get_campos_tsh(cls, dia_json, periodo):
+    def get_campos_tsh(cls, dia_json):
         temperatura = dict()
         sens_termica = dict()
         humedad = dict()
         temperatura["maxima"], temperatura["minima"] = cls.get_maxmin_temp(dia_json)
         sens_termica["maxima"], sens_termica["minima"] = cls.get_maxmin_sensa(dia_json)
         humedad["maxima"], humedad["minima"] = cls.get_maxmin_hum(dia_json)
+        periodo = cls.PERIODO_HORAS_6
         for valor in periodo:
             index = periodo.index(valor)
-            temperatura[valor] = dia_json["temperatura"]["dato"][index]["value"]
-            sens_termica[valor] = dia_json["sensTermica"]["dato"][index]["value"]
-            humedad[valor] = dia_json["humedadRelativa"]["dato"][index]["value"]
+            valor_convertido = cls.PERIODO_HORAS_6_CONVERSION[index]
+            temperatura[valor_convertido] = dia_json["temperatura"]["dato"][index]["value"]
+            sens_termica[valor_convertido] = dia_json["sensTermica"]["dato"][index]["value"]
+            humedad[valor_convertido] = dia_json["humedadRelativa"]["dato"][index]["value"]
 
         return temperatura, sens_termica, humedad
 
@@ -166,7 +167,7 @@ class JsonAModelo:
                         f_validez = format_fecha(dias_json[num_dia]["fecha"])
                         prob_precipitacion, cota_nieve, estado_cielo, viento, racha_max = cls.get_campos_pcev(
                             dias_json[num_dia], cls.PERIODO_HORAS)
-                        temperatura, sens_termica, humedad = cls.get_campos_tsh(dias_json[num_dia], cls.PERIODO_HORAS_6)
+                        temperatura, sens_termica, humedad = cls.get_campos_tsh(dias_json[num_dia])
                         dia = municipio.PredicionDia(f_validez, prob_precipitacion, cota_nieve, estado_cielo, viento,
                                                      racha_max, temperatura, sens_termica, humedad, uv_max)
                         dias.append(dia)
@@ -295,7 +296,7 @@ class JsonAModelo:
                     s_termica = dia["sTermica"]["valor1"]
                     t_agua = dia["tAgua"]["valor1"]
                     uv_max = dia["uvMax"]["valor1"]
-                    dia = playa.Prediccion(f_validez, estado_cielo, viento, oleaje, t_maxima, s_termica, t_agua, uv_max)
+                    dia = playa.Dia(f_validez, estado_cielo, viento, oleaje, t_maxima, s_termica, t_agua, uv_max)
                     dias.append(dia)
             pred_playa = playa.Playa(id_aemet, f_elaboracion, dias)
         except Exception as exc:
