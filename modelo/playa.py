@@ -75,11 +75,11 @@ class Playa:
         propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
-            if key == "prediccion":
-                predicciones = list()
-                for prediccion in v:
-                    predicciones.append(prediccion.to_dict)
-                propiedades[key] = predicciones
+            if key == "dias":
+                dias = list()
+                for dia in v:
+                    dias.append(dia.to_dict)
+                propiedades[key] = dias
             else:
                 propiedades[key] = v
         return propiedades
