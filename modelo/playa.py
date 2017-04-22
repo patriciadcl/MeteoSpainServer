@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 class Dia:
 
-    def __init__(self, f_validez, estado_cielo, viento, oleaje, t_maxima, s_termica, t_agua, uv_max):
-        self.__f_validez = f_validez
+    def __init__(self, f_pronostico, estado_cielo, viento, oleaje, t_maxima, s_termica, t_agua, uv_max):
+        self.__f_pronostico = f_pronostico
         self.__estado_cielo = estado_cielo
         self.__viento = viento
         self.__oleaje = oleaje
@@ -12,8 +12,8 @@ class Dia:
         self.__uv_max = uv_max
 
     @property
-    def f_validez(self):
-        return self.__f_validez
+    def f_pronostico(self):
+        return self.__f_pronostico
 
     @property
     def estado_cielo(self):

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 class Altamar:
-    def __init__(self, id_aemet, id_api, f_elaboracion, f_inicio, f_fin, texto, subzonas):
+    def __init__(self, id_aemet, id_api, f_elaboracion, f_inicio, f_fin, texto, zonas):
         self.__id_aemet = id_aemet
         self.__id_api = id_api
         self.__texto = texto
         self.__f_elaboracion = f_elaboracion
         self.__f_inicio = f_inicio
         self.__f_fin = f_fin
-        self.__zonas = subzonas
+        self.__zonas = zonas
 
     @property
     def id_aemet(self):
@@ -42,11 +42,11 @@ class Altamar:
         propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
-            if key == "sub_zonas":
-                subzonas = list()
-                for subzona in v:
-                    subzonas.append(subzona.to_dict)
-                propiedades[key] = subzonas
+            if key == "zonas":
+                zonas = list()
+                for zona in v:
+                    zonas.append(zona.to_dict)
+                propiedades[key] = zonas
             else:
                 propiedades[key] = v
         return propiedades

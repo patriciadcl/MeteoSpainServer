@@ -52,11 +52,11 @@ class Costa:
         propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
-            if key == "sub_zonas":
-                sub_zonas = list()
-                for sub_zona in v:
-                    sub_zonas.append(sub_zona.to_dict)
-                propiedades[key] = sub_zonas
+            if key == "zonas":
+                zonas = list()
+                for zona in v:
+                    zonas.append(zona.to_dict)
+                propiedades[key] = zonas
             else:
                 propiedades[key] = v
         return propiedades

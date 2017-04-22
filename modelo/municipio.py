@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 class PredicionDia:
-    def __init__(self, f_validez, prob_precipitacion, cota_nieve, estado_cielo, viento, racha_max, temperatura,
+    def __init__(self, f_pronostico, prob_precipitacion, cota_nieve, estado_cielo, viento, racha_max, temperatura,
                  s_termica, humedad_rel, uv_max):
         self.__prob_precipitacion = prob_precipitacion
         self.__cota_nieve = cota_nieve
-        self.__f_validez = f_validez
+        self.__f_pronostico = f_pronostico
         self.__estado_cielo = estado_cielo
         self.__viento = viento
         self.__racha_max = racha_max
@@ -30,8 +30,8 @@ class PredicionDia:
         return self.__viento
 
     @property
-    def f_validez(self):
-        return self.__f_validez
+    def f_pronostico(self):
+        return self.__f_pronostico
 
     @property
     def temperatura(self):

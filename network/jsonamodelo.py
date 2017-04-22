@@ -164,16 +164,16 @@ class JsonAModelo:
                 if es_diaria:
                     for num_dia in range(2):
                         uv_max = dias_json[num_dia]["uvMax"]
-                        f_validez = format_fecha(dias_json[num_dia]["fecha"])
+                        f_pronostico = format_fecha(dias_json[num_dia]["fecha"])
                         prob_precipitacion, cota_nieve, estado_cielo, viento, racha_max = cls.get_campos_pcev(
                             dias_json[num_dia], cls.PERIODO_HORAS)
                         temperatura, sens_termica, humedad = cls.get_campos_tsh(dias_json[num_dia])
-                        dia = municipio.PredicionDia(f_validez, prob_precipitacion, cota_nieve, estado_cielo, viento,
+                        dia = municipio.PredicionDia(f_pronostico, prob_precipitacion, cota_nieve, estado_cielo, viento,
                                                      racha_max, temperatura, sens_termica, humedad, uv_max)
                         dias.append(dia)
                     for num_dia in range(2, 4):
                         uv_max = dias_json[num_dia]["uvMax"]
-                        f_validez = format_fecha(dias_json[num_dia]["fecha"])
+                        f_pronostico = format_fecha(dias_json[num_dia]["fecha"])
                         prob_precipitacion, cota_nieve, estado_cielo, viento, racha_max = cls.get_campos_pcev(
                             dias_json[num_dia], cls.PERIODO_HORAS_12)
                         temperatura = dict()
@@ -182,7 +182,7 @@ class JsonAModelo:
                         temperatura["maxima"], temperatura["minima"] = cls.get_maxmin_temp(dias_json[num_dia])
                         sens_termica["maxima"], sens_termica["minima"] = cls.get_maxmin_sensa(dias_json[num_dia])
                         humedad["maxima"], humedad["minima"] = cls.get_maxmin_hum(dias_json[num_dia])
-                        dia = municipio.PredicionDia(f_validez, prob_precipitacion, cota_nieve,
+                        dia = municipio.PredicionDia(f_pronostico, prob_precipitacion, cota_nieve,
                                                      estado_cielo, viento, racha_max, temperatura,
                                                      sens_termica, humedad, uv_max)
 
@@ -191,7 +191,7 @@ class JsonAModelo:
                         uv_max = ""
                         if "uvMax" in dias_json[num_dia]:
                             uv_max = dias_json[num_dia]["uvMax"]
-                        f_validez = format_fecha(dias_json[num_dia]["fecha"])
+                        f_pronostico = format_fecha(dias_json[num_dia]["fecha"])
                         prob_precipitacion = dict()
                         cota_nieve = dict()
                         estado_cielo = dict()
@@ -211,14 +211,14 @@ class JsonAModelo:
                         temperatura["maxima"], temperatura["minima"] = cls.get_maxmin_temp(dias_json[num_dia])
                         sens_termica["maxima"], sens_termica["minima"] = cls.get_maxmin_sensa(dias_json[num_dia])
                         humedad["maxima"], humedad["minima"] = cls.get_maxmin_hum(dias_json[num_dia])
-                        dia = municipio.PredicionDia(f_validez, prob_precipitacion, cota_nieve, estado_cielo, viento,
+                        dia = municipio.PredicionDia(f_pronostico, prob_precipitacion, cota_nieve, estado_cielo, viento,
                                                      racha_max,
                                                      temperatura, sens_termica, humedad, uv_max)
                         dias.append(dia)
 
                 else:
                     for num_dia in range(len(dias_json)):
-                        f_validez = format_fecha(dias_json[num_dia]["fecha"])
+                        f_pronostico = format_fecha(dias_json[num_dia]["fecha"])
                         orto = dias_json[num_dia]["orto"]
                         ocaso = dias_json[num_dia]["ocaso"]
                         precipitacion = dict()
@@ -260,7 +260,7 @@ class JsonAModelo:
                             racha_json = dias_json[num_dia]["vientoAndRachaMax"][contador + 1]
                             racha_max[periodo] = racha_json["value"]
 
-                        dia = municipio.PrediccionHoras(f_validez, orto, ocaso, estado_cielo, precipitacion,
+                        dia = municipio.PrediccionHoras(f_pronostico, orto, ocaso, estado_cielo, precipitacion,
                                                         prob_precipitacion, prob_tormenta, nieve,
                                                         prob_nieve, viento, racha_max, temperatura, sens_termica,
                                                         humedad_relativa)
@@ -288,7 +288,7 @@ class JsonAModelo:
                     dia = dias_json[num_dia]
                     fecha = str(dias_json[num_dia]["fecha"])
                     fecha = fecha[0:4] + "-" + fecha[4:6] + "-" + fecha[6:]
-                    f_validez = format_fecha(fecha)
+                    f_pronostico = format_fecha(fecha)
                     estado_cielo = {f1: dia["estadoCielo"]["f1"], f2: dia["estadoCielo"]["f2"]}
                     viento = {f1: dia["viento"]["f1"], f2: dia["viento"]["f2"]}
                     oleaje = {f1: dia["oleaje"]["f1"], f2: dia["oleaje"]["f2"]}
@@ -296,7 +296,7 @@ class JsonAModelo:
                     s_termica = dia["sTermica"]["valor1"]
                     t_agua = dia["tAgua"]["valor1"]
                     uv_max = dia["uvMax"]["valor1"]
-                    dia = playa.Dia(f_validez, estado_cielo, viento, oleaje, t_maxima, s_termica, t_agua, uv_max)
+                    dia = playa.Dia(f_pronostico, estado_cielo, viento, oleaje, t_maxima, s_termica, t_agua, uv_max)
                     dias.append(dia)
             pred_playa = playa.Playa(id_aemet, f_elaboracion, dias)
         except Exception as exc:
