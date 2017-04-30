@@ -135,7 +135,7 @@ class BaseDatos:
             return cod_municipio
 
     def get_datos_municipios(self, cod_provincia):
-        sql = "SELECT cod, nombre, cod_provincia, latitud, longitud FROM datos_municipios WHERE cod_provincia = %s " + \
+        sql = "SELECT cod, nombre, cod_provincia, latitud, longitud FROM datos_municipio WHERE cod_provincia = %s " + \
               "ORDER BY nombre DESC;"
         esta_ddbb = False
         resultado = None

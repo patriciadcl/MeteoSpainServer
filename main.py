@@ -15,7 +15,7 @@ aemet_api = api.AemetAPI()
 
 base_dir = os.path.dirname(os.path.realpath('__file__'))
 
-meteoserver_ddbb = BaseDatos(update=False)
+meteoserver_ddbb = BaseDatos(update=True)
 
 utils = servidor.ServidorUtils(base_dir, meteoserver_ddbb, 2)
 
@@ -25,13 +25,12 @@ def index():
     return "Bienvenido al servidor API de la aplicacion Meteo España para plataforma Android"
 
 
-
 @app.route('/datos/municipios/<int:cod_provincia>')
 def datos_municipios(cod_provincia):
     if 1 < cod_provincia < 53:
-        response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
-    else:
         response = utils.get_datos_municipios(str(cod_provincia))
+    else:
+        response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
     return response
 
 
