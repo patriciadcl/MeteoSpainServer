@@ -28,7 +28,7 @@ def index():
 @app.route('/datos/municipios/<int:cod_provincia>')
 def datos_municipios(cod_provincia):
     if 1 < cod_provincia < 53:
-        response = utils.get_datos_municipios(str(cod_provincia))
+        response = utils.get_datos_municipios(cod_provincia)
     else:
         response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
     return response

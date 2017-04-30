@@ -379,19 +379,3 @@ class BaseDatos:
             print(error)
         finally:
             return idplaya
-
-    def insert_datos_municipio(self, cod, nombre, cod_provincia, latitud, longitud):
-        sql = "INSERT INTO datos_municipio(cod, nombre, cod_provincia, latitud, longitud) VALUES(%s,%s,%s,%s,%s) RETURNING id;"
-        idplaya = None
-        try:
-            with psycopg2.connect(**self.params_db) as conn:
-                cur = conn.cursor()
-                cur.execute(sql, (cod, nombre, cod_provincia, latitud, longitud))
-                idplaya = cur.fetchone()[0]
-                # commit the changes to the database
-                conn.commit()
-                cur.close()
-        except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
-        finally:
-            return idplaya
