@@ -108,10 +108,10 @@ class PrediccionHoras(PredicionDia):
 
 
 class Municipio:
-    def __init__(self, id_aemet, f_elaboracion, prediccion):
+    def __init__(self, id_aemet, f_elaboracion, dias):
         self.__id_aemet = id_aemet
         self.__f_elaboracion = f_elaboracion
-        self.__prediccion = prediccion
+        self.__dias = dias
 
     @property
     def id_aemet(self):
@@ -122,19 +122,19 @@ class Municipio:
         return self.__f_elaboracion
 
     @property
-    def prediccion(self):
-        return self.__prediccion
+    def dias(self):
+        return self.__dias
 
     @property
     def to_dict(self):
         propiedades = dict()
         for k, v in self.__dict__.items():
             key = k.split("__")[1]
-            if key == "prediccion":
-                predicciones = list()
-                for prediccion in v:
-                    predicciones.append(prediccion.to_dict)
-                propiedades[key] = predicciones
+            if key == "dias":
+                dias = list()
+                for dia in v:
+                    dias.append(dia.to_dict)
+                propiedades[key] = dias
             else:
                 propiedades[key] = v
         return propiedades

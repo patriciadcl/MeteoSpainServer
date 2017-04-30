@@ -31,7 +31,7 @@ class JsonAModelo:
             f_inicio = format_fecha(situacion['inicio'])
             f_fin = format_fecha(situacion['fin'])
             texto = str(situacion["texto"])
-            pred_altamar = altamar.Altamar(id_aemet, str(area), f_elaboracion, f_inicio, f_fin, texto, zonas)
+            pred_altamar = altamar.Altamar(str(id_aemet), str(area), f_elaboracion, f_inicio, f_fin, texto, zonas)
         except Exception as exc:
             print("Exception ", format(exc))
         finally:
@@ -56,7 +56,7 @@ class JsonAModelo:
             for json_zona in json_zonas:
                 zona = costa.Zona(str(json_zona["subzona"]['id']), json_zona["subzona"]['texto'])
                 zonas.append(zona)
-            pred_costa = costa.Costa(id_aemet, area, f_elaboracion, f_inicio, f_fin, situacion,
+            pred_costa = costa.Costa(str(id_aemet), str(area), f_elaboracion, f_inicio, f_fin, situacion,
                                      aviso, tendencia, zonas)
         except Exception as exc:
             print("Exception ", format(exc))
@@ -90,7 +90,7 @@ class JsonAModelo:
             f_pronostico = dia + timedelta(days=a_dia)
             dia = format_fecha(str(dia))
             f_pronostico = format_fecha(f_pronostico)
-            pred_montaña = montaña.Montaña(id_api, dia, f_pronostico, estado_cielo, precipitaciones, tormentas,
+            pred_montaña = montaña.Montaña(str(id_api), dia, f_pronostico, estado_cielo, precipitaciones, tormentas,
                                            temperaturas, viento, zonas)
         except Exception as exc:
             print("Exception ", format(exc))
@@ -212,8 +212,7 @@ class JsonAModelo:
                         sens_termica["maxima"], sens_termica["minima"] = cls.get_maxmin_sensa(dias_json[num_dia])
                         humedad["maxima"], humedad["minima"] = cls.get_maxmin_hum(dias_json[num_dia])
                         dia = municipio.PredicionDia(f_pronostico, prob_precipitacion, cota_nieve, estado_cielo, viento,
-                                                     racha_max,
-                                                     temperatura, sens_termica, humedad, uv_max)
+                                                     racha_max, temperatura, sens_termica, humedad, uv_max)
                         dias.append(dia)
 
                 else:
@@ -265,7 +264,7 @@ class JsonAModelo:
                                                         prob_nieve, viento, racha_max, temperatura, sens_termica,
                                                         humedad_relativa)
                         dias.append(dia)
-            pred_municipio = municipio.Municipio(id_aemet, f_elaboracion, dias)
+            pred_municipio = municipio.Municipio(str(id_aemet), f_elaboracion, dias)
         except Exception as exc:
             print("Exception ", format(exc))
         finally:
@@ -298,7 +297,7 @@ class JsonAModelo:
                     uv_max = dia["uvMax"]["valor1"]
                     dia = playa.Dia(f_pronostico, estado_cielo, viento, oleaje, t_maxima, s_termica, t_agua, uv_max)
                     dias.append(dia)
-            pred_playa = playa.Playa(id_aemet, f_elaboracion, dias)
+            pred_playa = playa.Playa(str(id_aemet), f_elaboracion, dias)
         except Exception as exc:
             print("Exception ", format(exc))
         finally:
