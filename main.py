@@ -25,6 +25,16 @@ def index():
     return "Bienvenido al servidor API de la aplicacion Meteo España para plataforma Android"
 
 
+
+@app.route('/datos/municipios/<int:cod_provincia>')
+def datos_municipios(cod_provincia):
+    if 1 < cod_provincia < 53:
+        response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
+    else:
+        response = utils.get_datos_municipios(str(cod_provincia))
+    return response
+
+
 @app.route('/datos/<dato>')
 def datos(dato):
     if dato not in utils.FICHEROS_JSON:

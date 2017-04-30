@@ -10,7 +10,8 @@ from configparser import ConfigParser
 
 class BaseDatos:
     
-    TABLAS_DB = ["areas_altamar", "areas_costa", "areas_montaña", "municipios", "playas"]
+    TABLAS_DB = ["pred_altamar", "pred_costa", "pred_montaña", "pred_municipio", "pred_playa"]
+    TABLA_MUNICIPIOS = "datos_municipio"
     base_dir = os.path.dirname(os.path.realpath('__file__'))
     params_db = None
 
@@ -21,6 +22,7 @@ class BaseDatos:
             print("Actualizando las base de datos")
             cls.drop_tables()
             cls.create_tables()
+            cls.fill_municipios_table()
 
     @classmethod
     def config(cls, filename='basedatos.ini', section='postgresql'):
@@ -54,6 +56,10 @@ class BaseDatos:
                     command = drop_table.format(tabla)
                     cur.execute(command)
                 # close communication with the PostgreSQL database server
+                # Eliminamos los datos municipios
+                print("Eliminando la tabla ", cls.TABLA_MUNICIPIOS)
+                command = drop_table.format(cls.TABLA_MUNICIPIOS)
+                cur.execute(command)
                 cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
             print(format(error))
@@ -74,6 +80,13 @@ class BaseDatos:
                 pred_horaria BOOLEAN,
                 prediccion JSON NOT NULL
             );"""
+        create_table_muni = """ CREATE TABLE {0} ( 
+                cod VARCHAR(255) NOT NULL,
+                nombre VARCHAR(255) NOT NULL,
+                cod_provincia VARCHAR(255) NOT NULL,
+                latitud VARCHAR(255) NOT NULL,
+                longitud VARCHAR(255) NOT NULL
+                );"""
         conexion = None
         try:
             with psycopg2.connect(**cls.params_db) as conexion:
@@ -84,6 +97,8 @@ class BaseDatos:
                     command = create_table.format(tabla)
                     cur.execute(command)
                 # close communication with the PostgreSQL database server
+                command = create_table_muni.format(cls.TABLA_MUNICIPIOS)
+                cur.execute(command)
                 cur.close()
                 # commit the changes
         except (Exception, psycopg2.DatabaseError) as error:
@@ -93,10 +108,63 @@ class BaseDatos:
                 conexion.close()
                 print("Conexion cerrada")
 
+    @classmethod
+    def fill_municipios_table(cls, filename='municipios.csv'):
+        archivo = os.path.join(cls.base_dir, "data", filename)
+        with open(archivo, "r", encoding='utf-8') as f_open:
+            for linea in f_open:
+                cod, nombre, cod_provincia, latitud, longitud = linea.split(";")
+                cls.ins_datos_municipio(cod, nombre, cod_provincia, latitud, longitud)
+
+    @classmethod
+    def ins_datos_municipio(cls, cod, nombre, cod_provincia, latitud, longitud):
+        sql = "INSERT INTO datos_municipio(cod,nombre,cod_provincia,latitud,longitud) " + \
+              "VALUES(%s,%s,%s,%s,%s) RETURNING cod;"
+        cod_municipio = None
+        try:
+            with psycopg2.connect(**cls.params_db) as conn:
+                cur = conn.cursor()
+                cur.execute(sql, (str(cod), str(nombre), str(cod_provincia), str(latitud), str(longitud)))
+                cod_municipio = cur.fetchone()[0]
+                # commit the changes to the database
+                conn.commit()
+                cur.close()
+        except (Exception, psycopg2.DatabaseError) as error:
+            print(error)
+        finally:
+            return cod_municipio
+
+    def get_datos_municipios(self, cod_provincia):
+        sql = "SELECT cod, nombre, cod_provincia, latitud, longitud FROM datos_municipios WHERE cod_provincia = %s " + \
+              "ORDER BY nombre DESC;"
+        esta_ddbb = False
+        resultado = None
+        try:
+            with psycopg2.connect(**self.params_db) as conn:
+                cur = conn.cursor()
+                cur.execute(sql, (str(cod_provincia)))
+                rows = cur.fetchall()
+                contador = 0
+                cadena = None
+                for row in rows:
+                    cadena = cadena + "{ cod:" + str(row[0]) + ", nombre:" + str(row[1]) + ", cod_provincia:" + \
+                             str(row[2]) + ", latitud:" + str(row[3]) + ", longitud:" + str(row[3]) + "}"
+                    contador += 1
+                    if 0 < contador < len(rows):
+                        cadena += ","
+                cur.close()
+                if len(cadena) > 0:
+                    esta_ddbb = True
+                    resultado = "[" + cadena + "]"
+        except (Exception, psycopg2.DatabaseError) as error:
+            print(error)
+        finally:
+            return esta_ddbb, resultado
+
     def get_altamar(self, area_altamar, f_elaboracion, f_pronostico):
-        sql = "SELECT prediccion FROM areas_altamar WHERE id = %s and " + \
+        sql = "SELECT prediccion FROM pred_altamar WHERE id = %s and " + \
               "f_elaboracion  = %s and f_pronostico = %s;"
-        sql_delete = "DELETE FROM areas_altamar WHERE id = %s;"
+        sql_delete = "DELETE FROM pred_altamar WHERE id = %s;"
         esta_ddbb = False
         resultado = None
         try:
@@ -118,7 +186,7 @@ class BaseDatos:
             return esta_ddbb, resultado
 
     def insert_altamar(self, area_altamar, f_elaboracion, f_pronostico, prediccion):
-        sql = "INSERT INTO areas_altamar(id,f_pronostico, f_elaboracion,prediccion) " + \
+        sql = "INSERT INTO pred_altamar(id,f_pronostico, f_elaboracion,prediccion) " + \
               "VALUES(%s,%s,%s,%s) RETURNING id;"
         id_altamar = None
         try:
@@ -135,9 +203,9 @@ class BaseDatos:
             return id_altamar
 
     def get_costa(self, area_costa, f_elaboracion, f_pronostico):
-        sql = "SELECT prediccion FROM areas_costa WHERE id = %s and f_elaboracion = %s and " + \
+        sql = "SELECT prediccion FROM pred_costa WHERE id = %s and f_elaboracion = %s and " + \
               "f_pronostico = %s;"
-        sql_delete = "DELETE FROM areas_costa WHERE id = %s;"
+        sql_delete = "DELETE FROM pred_costa WHERE id = %s;"
         esta_ddbb = False
         resultado = None
         try:
@@ -159,7 +227,7 @@ class BaseDatos:
             return esta_ddbb, resultado
 
     def insert_costa(self, area_costa, f_elaboracion, f_pronostico, prediccion):
-        sql = "INSERT INTO areas_costa(id,f_elaboracion,f_pronostico,prediccion) " + \
+        sql = "INSERT INTO pred_costa(id,f_elaboracion,f_pronostico,prediccion) " + \
               "VALUES(%s,%s,%s,%s) RETURNING id;"
         id_costa = None
         try:
@@ -176,9 +244,9 @@ class BaseDatos:
             return id_costa
 
     def get_montaña(self, area_montaña, f_elaboracion, f_pronostico, horas):
-        sql = "SELECT f_insercion,prediccion FROM areas_montaña WHERE id = %s and f_elaboracion = %s and " + \
+        sql = "SELECT f_insercion,prediccion FROM pred_montaña WHERE id = %s and f_elaboracion = %s and " + \
               " f_pronostico = %s;"
-        sql_delete = "DELETE FROM areas_montaña WHERE id = %s;"
+        sql_delete = "DELETE FROM pred_montaña WHERE id = %s;"
         esta_ddbb = False
         resultado = None
         try:
@@ -201,7 +269,7 @@ class BaseDatos:
 
     def insert_montaña(self, area_montaña, f_elaboracion, f_pronostico, prediccion):
         """ query data from the vendors table """
-        sql = "INSERT INTO areas_montaña(id,f_insercion, f_elaboracion, f_pronostico,prediccion) " + \
+        sql = "INSERT INTO pred_montaña(id,f_insercion, f_elaboracion, f_pronostico,prediccion) " + \
               "VALUES(%s,%s,%s,%s,%s) RETURNING id;"
         id_montaña = None
         try:
@@ -218,9 +286,9 @@ class BaseDatos:
             return id_montaña
 
     def get_municipio(self, id_municipio, fecha, horas, es_horaria=False):
-        sql = "SELECT f_insercion, prediccion FROM municipios WHERE id = %s and f_elaboracion = %s and " + \
+        sql = "SELECT f_insercion, prediccion FROM pred_municipio WHERE id = %s and f_elaboracion = %s and " + \
               "f_pronostico = %s and pred_horaria = %s;"
-        sql_delete = "DELETE FROM municipios WHERE id = %s and pred_horaria = %s;"
+        sql_delete = "DELETE FROM pred_municipio WHERE id = %s and pred_horaria = %s;"
         esta_ddbb = False
         resultado = None
         try:
@@ -248,7 +316,7 @@ class BaseDatos:
         return self.get_municipio(id_municipio, fecha, horas, True)
 
     def ins_municipio(self, id_municipio, f_elaboracion, f_pronostico, prediccion, es_horaria=False):
-        sql = "INSERT INTO municipios(id,f_insercion, f_elaboracion,f_pronostico,pred_horaria,prediccion) " + \
+        sql = "INSERT INTO pred_municipio(id,f_insercion, f_elaboracion,f_pronostico,pred_horaria,prediccion) " + \
               "VALUES(%s,%s,%s,%s,%s,%s) RETURNING id;"
         id_muni = None
         try:
@@ -273,9 +341,9 @@ class BaseDatos:
 
     def get_playa(self, id_playa, f_elaboracion, f_pronostico):
         """ query data from the vendors table """
-        sql = "SELECT prediccion FROM playas WHERE id = %s and f_elaboracion = %s and " + \
+        sql = "SELECT prediccion FROM pred_playa WHERE id = %s and f_elaboracion = %s and " + \
               "f_pronostico = %s;"
-        sql_delete = "DELETE FROM playas WHERE id = %s;"
+        sql_delete = "DELETE FROM pred_playa WHERE id = %s;"
         esta_ddbb = False
         resultado = None
         try:
@@ -297,12 +365,28 @@ class BaseDatos:
             return esta_ddbb, resultado
 
     def insert_playa(self, id_playa, f_elaboracion, f_pronostico, prediccion):
-        sql = "INSERT INTO playas(id,f_elaboracion, f_pronostico,prediccion) VALUES(%s,%s,%s,%s) RETURNING id;"
+        sql = "INSERT INTO pred_playa(id,f_elaboracion, f_pronostico,prediccion) VALUES(%s,%s,%s,%s) RETURNING id;"
         idplaya = None
         try:
             with psycopg2.connect(**self.params_db) as conn:
                 cur = conn.cursor()
                 cur.execute(sql, (id_playa, f_elaboracion, f_pronostico, prediccion))
+                idplaya = cur.fetchone()[0]
+                # commit the changes to the database
+                conn.commit()
+                cur.close()
+        except (Exception, psycopg2.DatabaseError) as error:
+            print(error)
+        finally:
+            return idplaya
+
+    def insert_datos_municipio(self, cod, nombre, cod_provincia, latitud, longitud):
+        sql = "INSERT INTO datos_municipio(cod, nombre, cod_provincia, latitud, longitud) VALUES(%s,%s,%s,%s,%s) RETURNING id;"
+        idplaya = None
+        try:
+            with psycopg2.connect(**self.params_db) as conn:
+                cur = conn.cursor()
+                cur.execute(sql, (cod, nombre, cod_provincia, latitud, longitud))
                 idplaya = cur.fetchone()[0]
                 # commit the changes to the database
                 conn.commit()

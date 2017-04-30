@@ -30,15 +30,29 @@ class ServidorUtils:
     def get_datos(cls, dato):
         response = None
         try:
-            json_file = os.path.join(cls.base_dir, "json", dato + ".json")
-            with open(json_file, "r", encoding='utf-8') as f_open:
-                contenido = f_open.read()
-                js = json.loads(contenido)
-                response = dict(estado=cls.aemet_api.COD_RESPONSE_OK, datos=js)
+            if dato is not "municipios":
+                json_file = os.path.join(cls.base_dir, "json", dato + ".json")
+                with open(json_file, "r", encoding='utf-8') as f_open:
+                    contenido = f_open.read()
+                    js = json.loads(contenido)
+                    response = dict(estado=cls.aemet_api.COD_RESPONSE_OK, datos=js)
         except Exception as ex:
             response = cls.aemet_api.get_response_error(cls.aemet_api.COD_PET_INCORRECTA, texto=format(ex))
         finally:
             return str(response)
+
+    @classmethod
+    def get_datos_municipios(cls, cod_provincia):
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_datos_provincias(cod_provincia)
+        if en_ddbb:
+            print("datos municipios from db")
+            response_estado = cls.aemet_api.COD_RESPONSE_OK
+            datos = response_ddbb
+        else:
+            response_estado = cls.aemet_api.COD_PET_INCORRECTA
+        response = dict(estado=response_estado, datos=datos)
+        return str(response)
+
 
     @classmethod
     def get_altamar(cls, area):
