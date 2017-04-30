@@ -80,7 +80,8 @@ class BaseDatos:
                 pred_horaria BOOLEAN,
                 prediccion JSON NOT NULL
             );"""
-        create_table_muni = """ CREATE TABLE {0} ( 
+        create_table_muni = """ 
+                CREATE TABLE {0} ( 
                 cod VARCHAR(255) NOT NULL,
                 nombre VARCHAR(255) NOT NULL,
                 cod_provincia VARCHAR(255) NOT NULL,
@@ -98,6 +99,7 @@ class BaseDatos:
                     cur.execute(command)
                 # close communication with the PostgreSQL database server
                 command = create_table_muni.format(cls.TABLA_MUNICIPIOS)
+                print(command)
                 cur.execute(command)
                 cur.close()
                 # commit the changes
@@ -113,8 +115,9 @@ class BaseDatos:
         archivo = os.path.join(cls.base_dir, "data", filename)
         with open(archivo, "r", encoding='utf-8') as f_open:
             for linea in f_open:
-                cod, nombre, cod_provincia, latitud, longitud = linea.split(";")
-                cls.ins_datos_municipio(cod, nombre, cod_provincia, latitud, longitud)
+                print(linea)
+                campos = linea.split(";")
+                cls.ins_datos_municipio(campos[0], campos[1], campos[2], campos[3], campos[4])
 
     @classmethod
     def ins_datos_municipio(cls, cod, nombre, cod_provincia, latitud, longitud):
