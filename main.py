@@ -25,7 +25,7 @@ def index():
     return "Bienvenido al servidor API de la aplicacion Meteo España para plataforma Android"
 
 
-@app.route('/datos/municipios/<int:cod_provincia>')
+@app.route('/datos/provincia/<int:cod_provincia>/municipios')
 def datos_municipios(cod_provincia):
     if 1 < cod_provincia < 53:
         response = utils.get_datos_municipios(cod_provincia)

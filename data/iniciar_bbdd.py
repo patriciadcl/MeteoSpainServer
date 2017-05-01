@@ -12,7 +12,8 @@ base_dir = os.path.dirname(os.path.realpath('__file__'))
 
 
 def config(filename='basedatos.ini', section='postgresql'):
-    archivo = os.path.join(base_dir, "data", filename)
+    #archivo = os.path.join(base_dir, "data", filename)
+    archivo = filename
     print(archivo)
     # create a parser
     parser = ConfigParser()
@@ -100,12 +101,15 @@ def create_tables():
 def fill_municipios_table(filename='municipios.csv'):
     sql = "INSERT INTO datos_municipio(cod,nombre,cod_provincia,latitud,longitud) " + \
           "VALUES(%s,%s,%s,%s,%s) RETURNING cod;"
-    archivo = os.path.join(base_dir, "data", filename)
+    #archivo = os.path.join(base_dir, "data", filename)
+    archivo = filename
     with open(archivo, "r", encoding='utf-8') as f_open:
         with psycopg2.connect(**params_db) as conn:
             cur = conn.cursor()
+            contador = 0
             for linea in f_open:
-                print(linea)
+                contador += 1
+                print(contador)
                 campos = linea.split(";")
                 try:
                     cur.execute(sql, (str(campos[0]), str(campos[1]), str(campos[2]), str(campos[3]), str(campos[4])))

@@ -132,8 +132,8 @@ class BaseDatos:
                 cur.close()
 
     def get_datos_municipios(self, cod_provincia):
-        sql = "SELECT cod, nombre, cod_provincia, latitud, longitud FROM datos_municipio WHERE cod_provincia = %s "
-              #"ORDER BY nombre DESC;"
+        sql = "SELECT cod, nombre, cod_provincia, latitud, longitud FROM public.datos_municipio WHERE cod_provincia = %s " + \
+              "ORDER BY nombre ASC;"
         print(cod_provincia)
         esta_ddbb = False
         resultado = None
@@ -141,20 +141,19 @@ class BaseDatos:
             with psycopg2.connect(**self.params_db) as conn:
                 cur = conn.cursor()
                 cur.execute(sql, (str(cod_provincia),))
-
                 rows = cur.fetchall()
+                print(len(rows))
                 contador = 0
-                cadena = None
+                municipios = []
                 for row in rows:
-                    cadena = cadena + "{ cod:" + str(row[0]) + ", nombre:" + str(row[1]) + ", cod_provincia:" + \
-                             str(row[2]) + ", latitud:" + str(row[3]) + ", longitud:" + str(row[3]) + "}"
+                    municipio = {'cod': str(row[0]), 'nombre': str(row[1]), 'cod_provincia': str(row[2]),
+                                 'latitud': str(row[3]), 'longitud': str(row[3])}
                     contador += 1
-                    if 0 < contador < len(rows):
-                        cadena += ","
+                    municipios.append(municipio)
+
                 cur.close()
-                if len(cadena) > 0:
-                    esta_ddbb = True
-                    resultado = "[" + cadena + "]"
+                esta_ddbb = True
+                resultado = municipios
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)
         finally:
