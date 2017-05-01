@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="137514a8-e438-44ce-abe0-1572ad0609c8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/basedatos.py" afterPath="$PROJECT_DIR$/data/basedatos.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -506,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493670585107</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add iniciar_bbdd.py">
+      <created>1493671241411</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1493671241411</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -576,7 +581,8 @@
     <MESSAGE value="add utils for dates" />
     <MESSAGE value="add datos_municipios" />
     <MESSAGE value="change fill_municipios" />
-    <option name="LAST_COMMIT_MESSAGE" value="change fill_municipios" />
+    <MESSAGE value="add iniciar_bbdd.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="add iniciar_bbdd.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
