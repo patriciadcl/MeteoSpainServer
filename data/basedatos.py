@@ -135,14 +135,16 @@ class BaseDatos:
                 cur.close()
 
     def get_datos_municipios(self, cod_provincia):
-        sql = "SELECT cod, nombre, cod_provincia, latitud, longitud FROM datos_municipio WHERE cod_provincia = %s " + \
-              "ORDER BY nombre DESC;"
+        sql = "SELECT cod, nombre, cod_provincia, latitud, longitud FROM datos_municipio WHERE cod_provincia = %s "
+              #"ORDER BY nombre DESC;"
+        print(cod_provincia)
         esta_ddbb = False
         resultado = None
         try:
             with psycopg2.connect(**self.params_db) as conn:
                 cur = conn.cursor()
-                cur.execute(sql, (str(cod_provincia)))
+                cur.execute(sql, (str(cod_provincia),))
+
                 rows = cur.fetchall()
                 contador = 0
                 cadena = None

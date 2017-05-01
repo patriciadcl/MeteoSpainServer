@@ -43,7 +43,8 @@ class ServidorUtils:
 
     @classmethod
     def get_datos_municipios(cls, cod_provincia):
-        en_ddbb, response_ddbb = cls.meteo_ddbb.get_datos_provincias(cod_provincia)
+        datos = None
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_datos_municipios(cod_provincia)
         if en_ddbb:
             print("datos municipios from db")
             response_estado = cls.aemet_api.COD_RESPONSE_OK
