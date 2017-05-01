@@ -15,7 +15,7 @@ aemet_api = api.AemetAPI()
 
 base_dir = os.path.dirname(os.path.realpath('__file__'))
 
-meteoserver_ddbb = BaseDatos(update=True)
+meteoserver_ddbb = BaseDatos()
 
 utils = servidor.ServidorUtils(base_dir, meteoserver_ddbb, 2)
 

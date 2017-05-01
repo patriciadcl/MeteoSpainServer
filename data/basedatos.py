@@ -16,13 +16,9 @@ class BaseDatos:
     params_db = None
 
     @classmethod
-    def __init__(cls, update=False):
+    def __init__(cls):
         cls.params_db = cls.config()
-        if update:
-            print("Actualizando las base de datos")
-            cls.drop_tables()
-            cls.create_tables()
-            cls.fill_municipios_table()
+
 
     @classmethod
     def config(cls, filename='basedatos.ini', section='postgresql'):
@@ -122,7 +118,8 @@ class BaseDatos:
                     print(linea)
                     campos = linea.split(";")
                     try:
-                        cur.execute(sql, (str(campos[0]), str(campos[1]), str(campos[2]), str(campos[3]), str(campos[4])))
+                        cur.execute(sql, (str(campos[0]), str(campos[1]), str(campos[2]), str(campos[3]),
+                                          str(campos[4])))
                         cod_municipio = cur.fetchone()[0]
                         if cod_municipio == str(campos[0]):
                             print("Insertado ", str(campos[0]))

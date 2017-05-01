@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="137514a8-e438-44ce-abe0-1572ad0609c8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/basedatos.py" afterPath="$PROJECT_DIR$/data/basedatos.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,14 +38,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basedatos.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="basedatos.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/basedatos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="34" />
+            <state relative-caret-position="714">
+              <caret line="135" column="14" lean-forward="false" selection-start-line="135" selection-start-column="14" selection-end-line="135" selection-end-column="14" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
-                <marker date="1493670108827" expanded="true" signature="15791:16373" ph="..." />
+                <marker date="1493671197267" expanded="true" signature="15647:16229" ph="..." />
               </folding>
             </state>
           </provider>
@@ -59,11 +61,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="40" />
+            <state relative-caret-position="289">
+              <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+              <folding>
+                <element signature="e#24#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="iniciar_bbdd.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/iniciar_bbdd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2159">
+              <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -188,8 +202,9 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/data/basedatos.ini" />
         <option value="$PROJECT_DIR$/network/servidorutils.py" />
-        <option value="$PROJECT_DIR$/data/basedatos.py" />
+        <option value="$PROJECT_DIR$/data/inciar_bbdd.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/data/basedatos.py" />
       </list>
     </option>
   </component>
@@ -484,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493670521878</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="change fill_municipios">
+      <created>1493670585107</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1493670585107</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -563,7 +585,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/checkplayas.py" />
     <entry file="file://$PROJECT_DIR$/json/provincia_playas.json" />
     <entry file="file://$PROJECT_DIR$/checkaltamar.py" />
     <entry file="file://$PROJECT_DIR$/json/municipios.json" />
@@ -784,6 +805,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/iniciar_bbdd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2159">
+          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/basedatos.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -792,23 +823,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/basedatos.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="34" />
+        <state relative-caret-position="289">
+          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
-            <marker date="1493670108827" expanded="true" signature="15791:16373" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/data/basedatos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="40" />
+        <state relative-caret-position="714">
+          <caret line="135" column="14" lean-forward="false" selection-start-line="135" selection-start-column="14" selection-end-line="135" selection-end-column="14" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
+            <marker date="1493671197267" expanded="true" signature="15647:16229" ph="..." />
           </folding>
         </state>
       </provider>
