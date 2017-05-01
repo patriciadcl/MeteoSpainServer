@@ -112,30 +112,27 @@ class BaseDatos:
 
     @classmethod
     def fill_municipios_table(cls, filename='municipios.csv'):
-        archivo = os.path.join(cls.base_dir, "data", filename)
-        with open(archivo, "r", encoding='utf-8') as f_open:
-            for linea in f_open:
-                print(linea)
-                campos = linea.split(";")
-                cls.ins_datos_municipio(campos[0], campos[1], campos[2], campos[3], campos[4])
-
-    @classmethod
-    def ins_datos_municipio(cls, cod, nombre, cod_provincia, latitud, longitud):
         sql = "INSERT INTO datos_municipio(cod,nombre,cod_provincia,latitud,longitud) " + \
               "VALUES(%s,%s,%s,%s,%s) RETURNING cod;"
-        cod_municipio = None
-        try:
+        archivo = os.path.join(cls.base_dir, "data", filename)
+        with open(archivo, "r", encoding='utf-8') as f_open:
             with psycopg2.connect(**cls.params_db) as conn:
                 cur = conn.cursor()
-                cur.execute(sql, (str(cod), str(nombre), str(cod_provincia), str(latitud), str(longitud)))
-                cod_municipio = cur.fetchone()[0]
-                # commit the changes to the database
-                conn.commit()
+                for linea in f_open:
+                    print(linea)
+                    campos = linea.split(";")
+                    try:
+                        cur.execute(sql, (str(campos[0]), str(campos[1]), str(campos[2]), str(campos[3]), str(campos[4])))
+                        cod_municipio = cur.fetchone()[0]
+                        if cod_municipio == str(campos[0]):
+                            print("Insertado ", str(campos[0]))
+                        else:
+                            print("No Insertado ", str(campos[0]))
+                        # commit the changes to the database
+                        conn.commit()
+                    except (Exception, psycopg2.DatabaseError) as error:
+                        print(error)
                 cur.close()
-        except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
-        finally:
-            return cod_municipio
 
     def get_datos_municipios(self, cod_provincia):
         sql = "SELECT cod, nombre, cod_provincia, latitud, longitud FROM datos_municipio WHERE cod_provincia = %s " + \
