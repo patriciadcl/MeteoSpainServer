@@ -42,7 +42,6 @@ def drop_tables():
                 print("Eliminando la tabla ", tabla)
                 command = drop_table.format(tabla)
                 cur.execute(command)
-            # close communication with the PostgreSQL database server
             # Eliminamos los datos municipios
             print("Eliminando la tabla ", TABLA_MUNICIPIOS)
             command = drop_table.format(TABLA_MUNICIPIOS)
@@ -53,7 +52,6 @@ def drop_tables():
     finally:
         if conexion:
             conexion.close()
-            print("Conexion cerrada")
 
 
 def create_tables():
@@ -79,23 +77,19 @@ def create_tables():
     try:
         with psycopg2.connect(**params_db) as conexion:
             cur = conexion.cursor()
-            # create table one by one
             for tabla in TABLAS_DB:
                 print("Creando la tabla ", tabla)
                 command = create_table.format(tabla)
                 cur.execute(command)
-            # close communication with the PostgreSQL database server
+            print("Creando la tabla ", TABLA_MUNICIPIOS)
             command = create_table_muni.format(TABLA_MUNICIPIOS)
-            print(command)
             cur.execute(command)
             cur.close()
-            # commit the changes
     except (Exception, psycopg2.DatabaseError) as error:
         print(format(error))
     finally:
         if conexion:
             conexion.close()
-            print("Conexion cerrada")
 
 
 def fill_municipios_table(filename='municipios.csv'):
