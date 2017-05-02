@@ -1,46 +1,46 @@
 [
   {
-    "COD": "1",
+    "COD": "01",
     "NOMBRE": "Araba/Álava",
     "COD_CCAA": "16"
   },
   {
-    "COD": "2",
+    "COD": "02",
     "NOMBRE": "Albacete",
     "COD_CCAA": "8"
   },
   {
-    "COD": "3",
+    "COD": "03",
     "NOMBRE": "Alacant/Alicante",
     "COD_CCAA": "10"
   },
   {
-    "COD": "4",
+    "COD": "04",
     "NOMBRE": "Almería",
     "COD_CCAA": "1"
   },
   {
-    "COD": "5",
+    "COD": "05",
     "NOMBRE": "Ávila",
     "COD_CCAA": "7"
   },
   {
-    "COD": "6",
+    "COD": "06",
     "NOMBRE": "Badajoz",
     "COD_CCAA": "11"
   },
   {
-    "COD": "7",
+    "COD": "07",
     "NOMBRE": "Illes Balears",
     "COD_CCAA": "4"
   },
   {
-    "COD": "8",
+    "COD": "08",
     "NOMBRE": "Barcelona",
     "COD_CCAA": "9"
   },
   {
-    "COD": "9",
+    "COD": "09",
     "NOMBRE": "Burgos",
     "COD_CCAA": "7"
   },

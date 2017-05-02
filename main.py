@@ -25,9 +25,9 @@ def index():
     return "Bienvenido al servidor API de la aplicacion Meteo España para plataforma Android"
 
 
-@app.route('/datos/provincia/<int:cod_provincia>/municipios')
+@app.route('/datos/provincia/<cod_provincia>/municipios')
 def datos_municipios(cod_provincia):
-    if 1 < cod_provincia < 53:
+    if 1 < int(cod_provincia) < 53:
         response = utils.get_datos_municipios(cod_provincia)
     else:
         response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
@@ -43,18 +43,18 @@ def datos(dato):
     return response
 
 
-@app.route('/predicciones/altamar/<int:area>')
+@app.route('/predicciones/altamar/<area>')
 def altamar(area):
-    if area not in aemet_api.AREAS_ALTAMAR:
+    if int(area) not in aemet_api.AREAS_ALTAMAR:
         response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
     else:
         response = utils.get_altamar(area)
     return response
 
 
-@app.route('/predicciones/costa/<int:area>')
+@app.route('/predicciones/costa/<area>')
 def costa(area):
-    if area not in aemet_api.AREAS_COSTA:
+    if int(area) not in aemet_api.AREAS_COSTA:
         response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
     else:
         response = utils.get_costa(area)
@@ -70,19 +70,19 @@ def montaña(area, dia):
     return response
 
 
-@app.route('/predicciones/municipio/diaria/<int:id_municipio>')
+@app.route('/predicciones/municipio/diaria/<id_municipio>')
 def municipo_diaria(id_municipio):
     response = utils.get_municipo_diaria(id_municipio)
     return response
 
 
-@app.route('/predicciones/municipio/horaria/<int:id_municipio>')
+@app.route('/predicciones/municipio/horaria/<id_municipio>')
 def municipo_horaria(id_municipio):
     response = utils.get_municipo_horaria(id_municipio)
     return response
 
 
-@app.route('/predicciones/playa/<int:id_playa>')
+@app.route('/predicciones/playa/<id_playa>')
 def playa(id_playa):
     response = utils.get_playa(id_playa)
     return response

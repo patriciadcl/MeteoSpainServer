@@ -39,97 +39,6 @@ class BaseDatos:
 
         return db
 
-    @classmethod
-    def drop_tables(cls):
-        """ drop tables in the PostgreSQL database"""
-        drop_table = "DROP TABLE IF EXISTS {0};"
-        conexion = None
-        try:
-            with psycopg2.connect(**cls.params_db) as conexion:
-                cur = conexion.cursor()
-                for tabla in cls.TABLAS_DB:
-                    print("Eliminando la tabla ", tabla)
-                    command = drop_table.format(tabla)
-                    cur.execute(command)
-                # close communication with the PostgreSQL database server
-                # Eliminamos los datos municipios
-                print("Eliminando la tabla ", cls.TABLA_MUNICIPIOS)
-                command = drop_table.format(cls.TABLA_MUNICIPIOS)
-                cur.execute(command)
-                cur.close()
-        except (Exception, psycopg2.DatabaseError) as error:
-            print(format(error))
-        finally:
-            if conexion:
-                conexion.close()
-                print("Conexion cerrada")
-
-    @classmethod
-    def create_tables(cls):
-        """ create tables in the PostgreSQL database"""
-        create_table = """
-                CREATE TABLE {0} (
-                id VARCHAR(255) NOT NULL,
-                f_insercion VARCHAR(255),
-                f_elaboracion VARCHAR(255) NOT NULL,
-                f_pronostico VARCHAR(255) NOT NULL,
-                pred_horaria BOOLEAN,
-                prediccion JSON NOT NULL
-            );"""
-        create_table_muni = """ 
-                CREATE TABLE {0} ( 
-                cod VARCHAR(255) NOT NULL,
-                nombre VARCHAR(255) NOT NULL,
-                cod_provincia VARCHAR(255) NOT NULL,
-                latitud VARCHAR(255) NOT NULL,
-                longitud VARCHAR(255) NOT NULL
-                );"""
-        conexion = None
-        try:
-            with psycopg2.connect(**cls.params_db) as conexion:
-                cur = conexion.cursor()
-                # create table one by one
-                for tabla in cls.TABLAS_DB:
-                    print("Creando la tabla ", tabla)
-                    command = create_table.format(tabla)
-                    cur.execute(command)
-                # close communication with the PostgreSQL database server
-                command = create_table_muni.format(cls.TABLA_MUNICIPIOS)
-                print(command)
-                cur.execute(command)
-                cur.close()
-                # commit the changes
-        except (Exception, psycopg2.DatabaseError) as error:
-            print(format(error))
-        finally:
-            if conexion:
-                conexion.close()
-                print("Conexion cerrada")
-
-    @classmethod
-    def fill_municipios_table(cls, filename='municipios.csv'):
-        sql = "INSERT INTO datos_municipio(cod,nombre,cod_provincia,latitud,longitud) " + \
-              "VALUES(%s,%s,%s,%s,%s) RETURNING cod;"
-        archivo = os.path.join(cls.base_dir, "data", filename)
-        with open(archivo, "r", encoding='utf-8') as f_open:
-            with psycopg2.connect(**cls.params_db) as conn:
-                cur = conn.cursor()
-                for linea in f_open:
-                    print(linea)
-                    campos = linea.split(";")
-                    try:
-                        cur.execute(sql, (str(campos[0]), str(campos[1]), str(campos[2]), str(campos[3]),
-                                          str(campos[4])))
-                        cod_municipio = cur.fetchone()[0]
-                        if cod_municipio == str(campos[0]):
-                            print("Insertado ", str(campos[0]))
-                        else:
-                            print("No Insertado ", str(campos[0]))
-                        # commit the changes to the database
-                        conn.commit()
-                    except (Exception, psycopg2.DatabaseError) as error:
-                        print(error)
-                cur.close()
 
     def get_datos_municipios(self, cod_provincia):
         sql = "SELECT cod, nombre, cod_provincia, latitud, longitud FROM public.datos_municipio WHERE cod_provincia = %s " + \
@@ -140,7 +49,7 @@ class BaseDatos:
         try:
             with psycopg2.connect(**self.params_db) as conn:
                 cur = conn.cursor()
-                cur.execute(sql, (str(cod_provincia),))
+                cur.execute(sql, (cod_provincia,))
                 rows = cur.fetchall()
                 print(len(rows))
                 contador = 0
