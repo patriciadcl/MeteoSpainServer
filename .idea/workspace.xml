@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="137514a8-e438-44ce-abe0-1572ad0609c8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network/jsonamodelo.py" afterPath="$PROJECT_DIR$/network/jsonamodelo.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -552,7 +551,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493728186475</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="cod error corregido">
+      <created>1494110389177</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1494110389177</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
