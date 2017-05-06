@@ -155,7 +155,7 @@ class JsonAModelo:
         pred_municipio = None
         try:
             js = json.loads(cadena_json)
-            id_aemet = js[0]["id"]
+            id_aemet = str(js[0]["id"]).zfill(5)
             f_elaboracion = format_fecha(js[0]["elaborado"])
             prediccion = js[0]["prediccion"]
             dias = list()
@@ -264,7 +264,7 @@ class JsonAModelo:
                                                         prob_nieve, viento, racha_max, temperatura, sens_termica,
                                                         humedad_relativa)
                         dias.append(dia)
-            pred_municipio = municipio.Municipio(str(id_aemet), f_elaboracion, dias)
+            pred_municipio = municipio.Municipio(id_aemet, f_elaboracion, dias)
         except Exception as exc:
             print("Exception ", format(exc))
         finally:
