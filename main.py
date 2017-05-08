@@ -76,12 +76,6 @@ def municipo(id_municipio):
     return response
 
 
-# @app.route('/predicciones/municipio/horaria/<id_municipio>')
-# def municipo_horaria(id_municipio):
-#     response = utils.get_municipo_horaria(id_municipio)
-#     return response
-#
-
 @app.route('/predicciones/playa/<id_playa>')
 def playa(id_playa):
     response = utils.get_playa(id_playa)

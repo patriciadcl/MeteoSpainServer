@@ -11,7 +11,6 @@ from network.jsonamodelo import JsonAModelo
 from modelo.municipio import Municipio
 
 
-
 class ServidorUtils:
     base_dir = None
     aemet_api = None

@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="137514a8-e438-44ce-abe0-1572ad0609c8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/basedatos.py" afterPath="$PROJECT_DIR$/data/basedatos.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/iniciar_bbdd.py" afterPath="$PROJECT_DIR$/data/iniciar_bbdd.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modelo/municipio.py" afterPath="$PROJECT_DIR$/modelo/municipio.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network/jsonamodelo.py" afterPath="$PROJECT_DIR$/network/jsonamodelo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network/servidorutils.py" afterPath="$PROJECT_DIR$/network/servidorutils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,16 +22,16 @@
       <file leaf-file-name="servidorutils.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/network/servidorutils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1887">
-              <caret line="129" column="71" lean-forward="false" selection-start-line="129" selection-start-column="71" selection-end-line="129" selection-end-column="71" />
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
-                <marker date="1494252187092" expanded="true" signature="866:1962" ph="..." />
-                <marker date="1494252187092" expanded="true" signature="903:916" ph="..." />
-                <marker date="1494252187092" expanded="true" signature="2885:3065" ph="..." />
-                <marker date="1494252187092" expanded="true" signature="4119:4249" ph="..." />
-                <marker date="1494252187092" expanded="true" signature="5425:5614" ph="..." />
-                <marker date="1494252187092" expanded="true" signature="8774:8944" ph="..." />
+                <marker date="1494252530500" expanded="true" signature="865:1961" ph="..." />
+                <marker date="1494252530500" expanded="true" signature="902:915" ph="..." />
+                <marker date="1494252530500" expanded="true" signature="2884:3064" ph="..." />
+                <marker date="1494252530500" expanded="true" signature="4118:4248" ph="..." />
+                <marker date="1494252530500" expanded="true" signature="5424:5613" ph="..." />
+                <marker date="1494252530500" expanded="true" signature="8773:8943" ph="..." />
               </folding>
             </state>
           </provider>
@@ -76,8 +73,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="72" column="36" lean-forward="false" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+            <state relative-caret-position="1326">
+              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -189,12 +186,12 @@
         <option value="$PROJECT_DIR$/json/provincias.json" />
         <option value="$PROJECT_DIR$/json/cc_aa.json" />
         <option value="$PROJECT_DIR$/data/municipios.csv" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/modelo/municipio.py" />
         <option value="$PROJECT_DIR$/network/jsonamodelo.py" />
         <option value="$PROJECT_DIR$/data/iniciar_bbdd.py" />
         <option value="$PROJECT_DIR$/data/basedatos.py" />
         <option value="$PROJECT_DIR$/network/servidorutils.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -566,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494244593808</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="change pred municipio">
+      <created>1494252201872</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1494252201872</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -639,7 +643,8 @@
     <MESSAGE value="add iniciar_bbdd.py" />
     <MESSAGE value="cod error corregido" />
     <MESSAGE value="unido la prediccion diaria y horaria" />
-    <option name="LAST_COMMIT_MESSAGE" value="unido la prediccion diaria y horaria" />
+    <MESSAGE value="change pred municipio" />
+    <option name="LAST_COMMIT_MESSAGE" value="change pred municipio" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -837,16 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="72" column="36" lean-forward="false" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/iniciar_bbdd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -890,18 +885,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/network/servidorutils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="129" column="71" lean-forward="false" selection-start-line="129" selection-start-column="71" selection-end-line="129" selection-end-column="71" />
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
-            <marker date="1494252187092" expanded="true" signature="866:1962" ph="..." />
-            <marker date="1494252187092" expanded="true" signature="903:916" ph="..." />
-            <marker date="1494252187092" expanded="true" signature="2885:3065" ph="..." />
-            <marker date="1494252187092" expanded="true" signature="4119:4249" ph="..." />
-            <marker date="1494252187092" expanded="true" signature="5425:5614" ph="..." />
-            <marker date="1494252187092" expanded="true" signature="8774:8944" ph="..." />
+            <marker date="1494252530500" expanded="true" signature="865:1961" ph="..." />
+            <marker date="1494252530500" expanded="true" signature="902:915" ph="..." />
+            <marker date="1494252530500" expanded="true" signature="2884:3064" ph="..." />
+            <marker date="1494252530500" expanded="true" signature="4118:4248" ph="..." />
+            <marker date="1494252530500" expanded="true" signature="5424:5613" ph="..." />
+            <marker date="1494252530500" expanded="true" signature="8773:8943" ph="..." />
           </folding>
         </state>
       </provider>
