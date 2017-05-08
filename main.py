@@ -70,17 +70,17 @@ def montaña(area, dia):
     return response
 
 
-@app.route('/predicciones/municipio/diaria/<id_municipio>')
-def municipo_diaria(id_municipio):
-    response = utils.get_municipo_diaria(id_municipio)
+@app.route('/predicciones/municipio/<id_municipio>')
+def municipo(id_municipio):
+    response = utils.get_municipo(id_municipio)
     return response
 
 
-@app.route('/predicciones/municipio/horaria/<id_municipio>')
-def municipo_horaria(id_municipio):
-    response = utils.get_municipo_horaria(id_municipio)
-    return response
-
+# @app.route('/predicciones/municipio/horaria/<id_municipio>')
+# def municipo_horaria(id_municipio):
+#     response = utils.get_municipo_horaria(id_municipio)
+#     return response
+#
 
 @app.route('/predicciones/playa/<id_playa>')
 def playa(id_playa):
