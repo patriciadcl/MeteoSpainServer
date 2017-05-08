@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="137514a8-e438-44ce-abe0-1572ad0609c8" name="Default" comment="change pred municipio">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/basedatos.py" afterPath="$PROJECT_DIR$/data/basedatos.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modelo/municipio.py" afterPath="$PROJECT_DIR$/modelo/municipio.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network/servidorutils.py" afterPath="$PROJECT_DIR$/network/servidorutils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,16 +24,16 @@
       <file leaf-file-name="servidorutils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/servidorutils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="142" column="59" lean-forward="true" selection-start-line="142" selection-start-column="59" selection-end-line="142" selection-end-column="59" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
-                <marker date="1494252530500" expanded="true" signature="865:1961" ph="..." />
-                <marker date="1494252530500" expanded="true" signature="902:915" ph="..." />
-                <marker date="1494252530500" expanded="true" signature="2884:3064" ph="..." />
-                <marker date="1494252530500" expanded="true" signature="4118:4248" ph="..." />
-                <marker date="1494252530500" expanded="true" signature="5424:5613" ph="..." />
-                <marker date="1494252530500" expanded="true" signature="8773:8943" ph="..." />
+                <marker date="1494254976983" expanded="true" signature="865:1961" ph="..." />
+                <marker date="1494254976983" expanded="true" signature="902:915" ph="..." />
+                <marker date="1494254976983" expanded="true" signature="2884:3064" ph="..." />
+                <marker date="1494254976983" expanded="true" signature="4118:4248" ph="..." />
+                <marker date="1494254976983" expanded="true" signature="5424:5613" ph="..." />
+                <marker date="1494254976983" expanded="true" signature="8719:8889" ph="..." />
               </folding>
             </state>
           </provider>
@@ -39,31 +42,31 @@
       <file leaf-file-name="jsonamodelo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/jsonamodelo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="217" column="20" lean-forward="false" selection-start-line="217" selection-start-column="20" selection-end-line="217" selection-end-column="20" />
+            <state relative-caret-position="604">
+              <caret line="271" column="16" lean-forward="false" selection-start-line="271" selection-start-column="16" selection-end-line="271" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="municipio.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="municipio.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modelo/municipio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="791">
-              <caret line="140" column="4" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
+            <state relative-caret-position="663">
+              <caret line="150" column="16" lean-forward="false" selection-start-line="150" selection-start-column="16" selection-end-line="150" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basedatos.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="basedatos.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/basedatos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4675">
-              <caret line="275" column="0" lean-forward="true" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+            <state relative-caret-position="782">
+              <caret line="172" column="39" lean-forward="true" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
-                <marker date="1494252187138" expanded="true" signature="10917:11499" ph="..." />
+                <marker date="1494255586169" expanded="true" signature="10899:11481" ph="..." />
               </folding>
             </state>
           </provider>
@@ -72,8 +75,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="570">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -185,12 +188,12 @@
         <option value="$PROJECT_DIR$/json/provincias.json" />
         <option value="$PROJECT_DIR$/json/cc_aa.json" />
         <option value="$PROJECT_DIR$/data/municipios.csv" />
-        <option value="$PROJECT_DIR$/network/jsonamodelo.py" />
         <option value="$PROJECT_DIR$/data/iniciar_bbdd.py" />
-        <option value="$PROJECT_DIR$/data/basedatos.py" />
-        <option value="$PROJECT_DIR$/network/servidorutils.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/network/jsonamodelo.py" />
         <option value="$PROJECT_DIR$/modelo/municipio.py" />
+        <option value="$PROJECT_DIR$/network/servidorutils.py" />
+        <option value="$PROJECT_DIR$/data/basedatos.py" />
       </list>
     </option>
   </component>
@@ -583,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494252980750</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="change pred municipio">
+      <created>1494253145794</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1494253145794</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView">
@@ -784,13 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/json/provincias.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
@@ -863,25 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/basedatos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4675">
-          <caret line="275" column="0" lean-forward="true" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-            <marker date="1494252187138" expanded="true" signature="10917:11499" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/jsonamodelo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="217" column="20" lean-forward="false" selection-start-line="217" selection-start-column="20" selection-end-line="217" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/network/aemetapi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
@@ -890,37 +874,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/network/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="570">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/municipio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="150" column="16" lean-forward="false" selection-start-line="150" selection-start-column="16" selection-end-line="150" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/jsonamodelo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="271" column="16" lean-forward="false" selection-start-line="271" selection-start-column="16" selection-end-line="271" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/network/servidorutils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="142" column="59" lean-forward="true" selection-start-line="142" selection-start-column="59" selection-end-line="142" selection-end-column="59" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
-            <marker date="1494252530500" expanded="true" signature="865:1961" ph="..." />
-            <marker date="1494252530500" expanded="true" signature="902:915" ph="..." />
-            <marker date="1494252530500" expanded="true" signature="2884:3064" ph="..." />
-            <marker date="1494252530500" expanded="true" signature="4118:4248" ph="..." />
-            <marker date="1494252530500" expanded="true" signature="5424:5613" ph="..." />
-            <marker date="1494252530500" expanded="true" signature="8773:8943" ph="..." />
+            <marker date="1494254976983" expanded="true" signature="865:1961" ph="..." />
+            <marker date="1494254976983" expanded="true" signature="902:915" ph="..." />
+            <marker date="1494254976983" expanded="true" signature="2884:3064" ph="..." />
+            <marker date="1494254976983" expanded="true" signature="4118:4248" ph="..." />
+            <marker date="1494254976983" expanded="true" signature="5424:5613" ph="..." />
+            <marker date="1494254976983" expanded="true" signature="8719:8889" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modelo/municipio.py">
+    <entry file="file://$PROJECT_DIR$/data/basedatos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
-          <caret line="140" column="4" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="782">
+          <caret line="172" column="39" lean-forward="true" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+            <marker date="1494255586169" expanded="true" signature="10899:11481" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

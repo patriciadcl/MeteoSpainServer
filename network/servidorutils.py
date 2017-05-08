@@ -133,7 +133,7 @@ class ServidorUtils:
         return str(response)
 
     @classmethod
-    def get_municipo(cls, id_municipio):
+    def get_municipio(cls, id_municipio):
         # Predicción diaria válida para 7 días para todos los municipios de España.
         # Actualizacion una vez 24h
         hoy = utils.get_hoy()
@@ -148,12 +148,11 @@ class ServidorUtils:
             response_estado, response_datos = cls.aemet_api.get_prediccion(url)
             if response_estado == cls.aemet_api.COD_RESPONSE_OK:
                 id_aemet, f_elaboracion, pred_diaria = JsonAModelo.json_a_municipio(response_datos, True)
-                pred_municipio = Municipio(id_aemet,f_elaboracion,pred_diaria,pred_diaria)
                 url = cls.aemet_api.url_municipio_horas(str(id_municipio))
                 response_estado, response_datos = cls.aemet_api.get_prediccion(url)
                 if response_estado == cls.aemet_api.COD_RESPONSE_OK:
                     id_aemet, f_elaboracion, pred_horaria = JsonAModelo.json_a_municipio(response_datos, False)
-                    pred_municipio.pred_horaria = pred_horaria
+                    pred_municipio = Municipio(id_aemet, f_elaboracion, pred_diaria, pred_horaria)
                     prediccion = pred_municipio.to_dict
                     print("Insertado ", cls.meteo_ddbb.insert_pred_municipio(id_municipio, pred_municipio.f_elaboracion,
                                                                              hoy, json.dumps(prediccion)))

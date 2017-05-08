@@ -72,7 +72,7 @@ def montaña(area, dia):
 
 @app.route('/predicciones/municipio/<id_municipio>')
 def municipo(id_municipio):
-    response = utils.get_municipo(id_municipio)
+    response = utils.get_municipio(id_municipio)
     return response
 
 

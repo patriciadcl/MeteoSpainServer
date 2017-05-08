@@ -19,7 +19,6 @@ class BaseDatos:
     def __init__(cls):
         cls.params_db = cls.config()
 
-
     @classmethod
     def config(cls, filename='basedatos.ini', section='postgresql'):
         archivo = os.path.join(cls.base_dir, "data", filename)
@@ -38,7 +37,6 @@ class BaseDatos:
             raise Exception('Section {0} not found in the {1} file'.format(section, filename))
 
         return db
-
 
     def get_datos_municipios(self, cod_provincia):
         sql = "SELECT cod, nombre, cod_provincia, latitud, longitud FROM public.datos_municipio WHERE cod_provincia = %s " + \
@@ -217,8 +215,8 @@ class BaseDatos:
             return esta_ddbb, resultado
 
     def insert_pred_municipio(self, id_municipio, f_elaboracion, f_pronostico, prediccion):
-        sql = "INSERT INTO pred_municipio(id,f_insercion, f_elaboracion,f_pronostico,pred_horaria,prediccion) " + \
-              "VALUES(%s,%s,%s,%s,%s,%s) RETURNING id;"
+        sql = "INSERT INTO pred_municipio(id,f_insercion, f_elaboracion,f_pronostico,prediccion) " + \
+              "VALUES(%s,%s,%s,%s,%s) RETURNING id;"
         id_muni = None
         try:
             with psycopg2.connect(**self.params_db) as conn:

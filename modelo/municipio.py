@@ -148,7 +148,7 @@ class Municipio:
                 for prediccion in v:
                     pred_diaria.append(prediccion.to_dict)
                 propiedades[key] = pred_diaria
-            if key == "pred_horaria":
+            elif key == "pred_horaria":
                 pred_horaria = list()
                 for prediccion in v:
                     pred_horaria.append(prediccion.to_dict)
