@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="137514a8-e438-44ce-abe0-1572ad0609c8" name="Default" comment="">
+    <list default="true" id="137514a8-e438-44ce-abe0-1572ad0609c8" name="Default" comment="change pred municipio">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modelo/municipio.py" afterPath="$PROJECT_DIR$/modelo/municipio.py" />
     </list>
@@ -49,8 +49,8 @@
       <file leaf-file-name="municipio.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modelo/municipio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="136" column="20" lean-forward="true" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
+            <state relative-caret-position="791">
+              <caret line="140" column="4" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -576,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494252535391</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="change pred municipio">
+      <created>1494252980750</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1494252980750</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
@@ -911,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modelo/municipio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="136" column="20" lean-forward="true" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
+        <state relative-caret-position="791">
+          <caret line="140" column="4" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
           <folding />
         </state>
       </provider>

@@ -130,14 +130,13 @@ class Municipio:
     def pred_horaria(self):
         return self.__pred_horaria
 
-    @property.setter
-    def pred_diaria(self, pred_diaria):
-        self.__pred_diaria = pred_diaria
+    @pred_diaria.setter
+    def pred_diaria(self, prediccion):
+        self.__pred_diaria = prediccion
 
-    @property.setter
-    def pred_horaria(self, pred_horaria):
-        self.__pred_horaria = pred_horaria
-
+    @pred_horaria.setter
+    def pred_horaria(self, prediccion):
+        self.__pred_horaria = prediccion
 
     @property
     def to_dict(self):
