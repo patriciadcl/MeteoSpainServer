@@ -122,11 +122,11 @@ class Municipio:
     def f_elaboracion(self):
         return self.__f_elaboracion
 
-    @property.getter
+    @property
     def pred_diaria(self):
         return self.__pred_diaria
 
-    @property.getter
+    @property
     def pred_horaria(self):
         return self.__pred_horaria
 
