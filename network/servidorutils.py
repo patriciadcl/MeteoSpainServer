@@ -8,6 +8,8 @@ import network.aemetapi as api
 import network.utils as utils
 
 from network.jsonamodelo import JsonAModelo
+from modelo.municipio import Municipio
+
 
 
 class ServidorUtils:
@@ -61,7 +63,7 @@ class ServidorUtils:
         # marítima pasada por parámetro. Actualizacion una vez 24h
         # comprobamos si la tenemos en la base de datos
         hoy = utils.get_hoy()
-        en_ddbb, response_ddbb = cls.meteo_ddbb.get_altamar(area, hoy, hoy)
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_pred_altamar(area, hoy, hoy)
         if en_ddbb:
             print("altamar from db")
             response_estado = cls.aemet_api.COD_RESPONSE_OK
@@ -73,7 +75,7 @@ class ServidorUtils:
             if response_estado == cls.aemet_api.COD_RESPONSE_OK:
                 altamar = JsonAModelo.json_a_altamar(area, response_datos)
                 datos = altamar.to_dict
-                print("Insertado ", cls.meteo_ddbb.insert_altamar(area, altamar.f_elaboracion, altamar.f_inicio,
+                print("Insertado ", cls.meteo_ddbb.insert_pred_altamar(area, altamar.f_elaboracion, altamar.f_inicio,
                                                                   json.dumps(datos)))
             else:
                 datos = response_datos
@@ -86,7 +88,7 @@ class ServidorUtils:
         # costera pasada por parámetro. Actualizacion una vez 24h
         # comprobamos si la tenemos en la base de datos
         hoy = utils.get_hoy()
-        en_ddbb, response_ddbb = cls.meteo_ddbb.get_costa(area, hoy, hoy)
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_pred_costa(area, hoy, hoy)
         if en_ddbb:
             print("costa from db")
             response_estado = cls.aemet_api.COD_RESPONSE_OK
@@ -99,7 +101,7 @@ class ServidorUtils:
                 costa = JsonAModelo.json_a_costa(area, response_datos)
                 datos = costa.to_dict
                 print("Insertado ",
-                      cls.meteo_ddbb.insert_costa(area, costa.f_elaboracion, costa.f_inicio, json.dumps(datos)))
+                      cls.meteo_ddbb.insert_pred_costa(area, costa.f_elaboracion, costa.f_inicio, json.dumps(datos)))
             else:
                 datos = response_datos
         response = dict(estado=response_estado, datos=datos)
@@ -112,7 +114,7 @@ class ServidorUtils:
         # comprobamos si la tenemos en la base de datos
         hoy = utils.get_hoy()
         f_pronostico = utils.get_proximo_dia(dia)
-        en_ddbb, response_ddbb = cls.meteo_ddbb.get_montaña(area, hoy, f_pronostico, cls.incremento_horas)
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_pred_montaña(area, hoy, f_pronostico, cls.incremento_horas)
         if en_ddbb:
             print("montaña from db")
             response_estado = cls.aemet_api.COD_RESPONSE_OK
@@ -124,8 +126,8 @@ class ServidorUtils:
             if response_estado == cls.aemet_api.COD_RESPONSE_OK:
                 montaña = JsonAModelo.json_a_montaña(response_datos, dia)
                 datos = montaña.to_dict
-                print("Insertado ", cls.meteo_ddbb.insert_montaña(area, montaña.f_elaboracion,
-                                                                  montaña.f_pronostico, json.dumps(datos)))
+                print("Insertado ", cls.meteo_ddbb.insert_pred_montaña(area, montaña.f_elaboracion,
+                                                                       montaña.f_pronostico, json.dumps(datos)))
             else:
                 datos = response_datos
         response = dict(estado=response_estado, datos=datos)
@@ -136,39 +138,33 @@ class ServidorUtils:
         # Predicción diaria válida para 7 días para todos los municipios de España.
         # Actualizacion una vez 24h
         hoy = utils.get_hoy()
-        en_ddbb, response_ddbb = cls.meteo_ddbb.get_muni_diaria(id_municipio, hoy, cls.incremento_horas)
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_pred_municipio(id_municipio, hoy, cls.incremento_horas)
         if en_ddbb:
             print("municipio from db")
             response_estado = cls.aemet_api.COD_RESPONSE_OK
-            datos_diario = response_ddbb
+            prediccion = response_ddbb
         else:
             print("municipio from aemet")
             url = cls.aemet_api.url_municipio_dia(str(id_municipio))
             response_estado, response_datos = cls.aemet_api.get_prediccion(url)
             if response_estado == cls.aemet_api.COD_RESPONSE_OK:
-                municipio = JsonAModelo.json_a_municipio(response_datos, True)
-                datos_diario = municipio.to_dict
-                print("Insertado ", cls.meteo_ddbb.ins_muni_diaria(id_municipio, municipio.f_elaboracion,
-                                                                   hoy, json.dumps(datos_diario)))
+                id_aemet, f_elaboracion, pred_diaria = JsonAModelo.json_a_municipio(response_datos, True)
+                pred_municipio = Municipio(id_aemet,f_elaboracion,pred_diaria,pred_diaria)
+                url = cls.aemet_api.url_municipio_horas(str(id_municipio))
+                response_estado, response_datos = cls.aemet_api.get_prediccion(url)
+                if response_estado == cls.aemet_api.COD_RESPONSE_OK:
+                    id_aemet, f_elaboracion, pred_horaria = JsonAModelo.json_a_municipio(response_datos, False)
+                    pred_municipio.pred_horaria = pred_horaria
+                    prediccion = pred_municipio.to_dict
+                    print("Insertado ", cls.meteo_ddbb.insert_pred_municipio(id_municipio, pred_municipio.f_elaboracion,
+                                                                             hoy, json.dumps(prediccion)))
+                else:
+                    prediccion = response_datos
             else:
-                datos_diario = response_datos
-        en_ddbb, response_ddbb = cls.meteo_ddbb.get_muni_horaria(id_municipio, hoy, cls.incremento_horas)
-        if en_ddbb:
-            print("municipio from db")
-            response_estado = cls.aemet_api.COD_RESPONSE_OK
-            datos_horaria = response_ddbb
-        else:
+                prediccion = response_datos
             print("municipio from aemet")
-            url = cls.aemet_api.url_municipio_horas(str(id_municipio))
-            response_estado, response_datos = cls.aemet_api.get_prediccion(url)
-            if response_estado == cls.aemet_api.COD_RESPONSE_OK:
-                municipio = JsonAModelo.json_a_municipio(response_datos, False)
-                datos_horaria = municipio.to_dict
-                print("Insertado ", cls.meteo_ddbb.ins_muni_horaria(id_municipio, municipio.f_elaboracion,
-                                                                    hoy, json.dumps(datos_horaria)))
-            else:
-                datos_horaria = response_datos
-        response = dict(estado=response_estado, datos_horaria=datos_horaria, datos_diaria=datos_diario)
+
+        response = dict(estado=response_estado, datos=prediccion)
         return str(response)
 
     @classmethod
@@ -179,7 +175,7 @@ class ServidorUtils:
         entre las 08 y las 14 horas y entre las 14 y 20 horas. Actualizacion una vez 24h"""
         # comprobamos si la tenemos en la base de datos
         hoy = utils.get_hoy()
-        en_ddbb, response_ddbb = cls.meteo_ddbb.get_playa(id_playa, hoy, hoy)
+        en_ddbb, response_ddbb = cls.meteo_ddbb.get_pred_playa(id_playa, hoy, hoy)
         if en_ddbb:
             print("playa from bbdd")
             response_estado = cls.aemet_api.COD_RESPONSE_OK
@@ -191,8 +187,8 @@ class ServidorUtils:
             if response_estado == cls.aemet_api.COD_RESPONSE_OK:
                 playa = JsonAModelo.json_a_playa(response_datos)
                 datos = playa.to_dict
-                print("Insertado ", cls.meteo_ddbb.insert_playa(id_playa, playa.f_elaboracion,
-                                                                hoy, json.dumps(datos)))
+                print("Insertado ", cls.meteo_ddbb.insert_pred_playa(id_playa, playa.f_elaboracion, hoy,
+                                                                     json.dumps(datos)))
             else:
                 datos = response_datos
         response = dict(estado=response_estado, datos=datos)

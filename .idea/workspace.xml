@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="137514a8-e438-44ce-abe0-1572ad0609c8" name="Default" comment="cod error corregido">
+    <list default="true" id="137514a8-e438-44ce-abe0-1572ad0609c8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/basedatos.py" afterPath="$PROJECT_DIR$/data/basedatos.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/iniciar_bbdd.py" afterPath="$PROJECT_DIR$/data/iniciar_bbdd.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modelo/municipio.py" afterPath="$PROJECT_DIR$/modelo/municipio.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network/jsonamodelo.py" afterPath="$PROJECT_DIR$/network/jsonamodelo.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network/servidorutils.py" afterPath="$PROJECT_DIR$/network/servidorutils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,31 +22,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="servidorutils.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="servidorutils.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/network/servidorutils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="170" column="102" lean-forward="false" selection-start-line="170" selection-start-column="102" selection-end-line="170" selection-end-column="102" />
+            <state relative-caret-position="1887">
+              <caret line="129" column="71" lean-forward="false" selection-start-line="129" selection-start-column="71" selection-end-line="129" selection-end-column="71" />
               <folding>
-                <marker date="1494244489055" expanded="true" signature="826:1922" ph="..." />
-                <marker date="1494244489055" expanded="true" signature="863:876" ph="..." />
-                <marker date="1494244489055" expanded="true" signature="2840:3015" ph="..." />
-                <marker date="1494244489055" expanded="true" signature="4064:4189" ph="..." />
-                <marker date="1494244489055" expanded="true" signature="5360:5539" ph="..." />
-                <marker date="1494244489055" expanded="true" signature="6582:6763" ph="..." />
-                <marker date="1494244489055" expanded="true" signature="7520:7704" ph="..." />
-                <marker date="1494244489055" expanded="true" signature="9011:9171" ph="..." />
+                <element signature="e#24#35#0" expanded="true" />
+                <marker date="1494252187092" expanded="true" signature="866:1962" ph="..." />
+                <marker date="1494252187092" expanded="true" signature="903:916" ph="..." />
+                <marker date="1494252187092" expanded="true" signature="2885:3065" ph="..." />
+                <marker date="1494252187092" expanded="true" signature="4119:4249" ph="..." />
+                <marker date="1494252187092" expanded="true" signature="5425:5614" ph="..." />
+                <marker date="1494252187092" expanded="true" signature="8774:8944" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aemetapi.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/aemetapi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="42" column="45" lean-forward="false" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -51,8 +43,8 @@
       <file leaf-file-name="jsonamodelo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/jsonamodelo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2338">
-              <caret line="266" column="57" lean-forward="false" selection-start-line="266" selection-start-column="57" selection-end-line="266" selection-end-column="57" />
+            <state relative-caret-position="145">
+              <caret line="217" column="20" lean-forward="false" selection-start-line="217" selection-start-column="20" selection-end-line="217" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -61,8 +53,8 @@
       <file leaf-file-name="municipio.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modelo/municipio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="125" column="26" lean-forward="false" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
+            <state relative-caret-position="927">
+              <caret line="155" column="47" lean-forward="false" selection-start-line="155" selection-start-column="47" selection-end-line="155" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -71,20 +63,20 @@
       <file leaf-file-name="basedatos.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/basedatos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3145">
-              <caret line="191" column="16" lean-forward="false" selection-start-line="191" selection-start-column="16" selection-end-line="191" selection-end-column="16" />
+            <state relative-caret-position="4675">
+              <caret line="275" column="0" lean-forward="true" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
-                <marker date="1493725329142" expanded="true" signature="11630:12212" ph="..." />
+                <marker date="1494252187138" expanded="true" signature="10917:11499" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="961">
+            <state relative-caret-position="451">
               <caret line="72" column="36" lean-forward="false" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
@@ -188,7 +180,6 @@
         <option value="$PROJECT_DIR$/modelo/costa.py" />
         <option value="$PROJECT_DIR$/modelo/montaña.py" />
         <option value="$PROJECT_DIR$/modelo/playa.py" />
-        <option value="$PROJECT_DIR$/modelo/municipio.py" />
         <option value="$PROJECT_DIR$/data/sqlalchemy_declarative.py" />
         <option value="$PROJECT_DIR$/data/sqlalchemy_bbdd.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
@@ -198,11 +189,12 @@
         <option value="$PROJECT_DIR$/json/provincias.json" />
         <option value="$PROJECT_DIR$/json/cc_aa.json" />
         <option value="$PROJECT_DIR$/data/municipios.csv" />
-        <option value="$PROJECT_DIR$/data/basedatos.py" />
-        <option value="$PROJECT_DIR$/data/iniciar_bbdd.py" />
-        <option value="$PROJECT_DIR$/network/jsonamodelo.py" />
-        <option value="$PROJECT_DIR$/network/servidorutils.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/modelo/municipio.py" />
+        <option value="$PROJECT_DIR$/network/jsonamodelo.py" />
+        <option value="$PROJECT_DIR$/data/iniciar_bbdd.py" />
+        <option value="$PROJECT_DIR$/data/basedatos.py" />
+        <option value="$PROJECT_DIR$/network/servidorutils.py" />
       </list>
     </option>
   </component>
@@ -567,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494110400169</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="unido la prediccion diaria y horaria">
+      <created>1494244593808</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1494244593808</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -639,7 +638,8 @@
     <MESSAGE value="change fill_municipios" />
     <MESSAGE value="add iniciar_bbdd.py" />
     <MESSAGE value="cod error corregido" />
-    <option name="LAST_COMMIT_MESSAGE" value="cod error corregido" />
+    <MESSAGE value="unido la prediccion diaria y horaria" />
+    <option name="LAST_COMMIT_MESSAGE" value="unido la prediccion diaria y horaria" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -822,69 +822,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/iniciar_bbdd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-654">
-          <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/json/areas_altamar.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="63" lean-forward="false" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/basedatos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3145">
-          <caret line="191" column="16" lean-forward="false" selection-start-line="191" selection-start-column="16" selection-end-line="191" selection-end-column="16" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-            <marker date="1493725329142" expanded="true" signature="11630:12212" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modelo/municipio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="125" column="26" lean-forward="false" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/jsonamodelo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2338">
-          <caret line="266" column="57" lean-forward="false" selection-start-line="266" selection-start-column="57" selection-end-line="266" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/aemetapi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="42" column="45" lean-forward="false" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/servidorutils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="170" column="102" lean-forward="false" selection-start-line="170" selection-start-column="102" selection-end-line="170" selection-end-column="102" />
-          <folding>
-            <marker date="1494244489055" expanded="true" signature="826:1922" ph="..." />
-            <marker date="1494244489055" expanded="true" signature="863:876" ph="..." />
-            <marker date="1494244489055" expanded="true" signature="2840:3015" ph="..." />
-            <marker date="1494244489055" expanded="true" signature="4064:4189" ph="..." />
-            <marker date="1494244489055" expanded="true" signature="5360:5539" ph="..." />
-            <marker date="1494244489055" expanded="true" signature="6582:6763" ph="..." />
-            <marker date="1494244489055" expanded="true" signature="7520:7704" ph="..." />
-            <marker date="1494244489055" expanded="true" signature="9011:9171" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,10 +839,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="961">
+        <state relative-caret-position="451">
           <caret line="72" column="36" lean-forward="false" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/iniciar_bbdd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="47" column="12" lean-forward="false" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/basedatos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4675">
+          <caret line="275" column="0" lean-forward="true" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+            <marker date="1494252187138" expanded="true" signature="10917:11499" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/municipio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="927">
+          <caret line="155" column="47" lean-forward="false" selection-start-line="155" selection-start-column="47" selection-end-line="155" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/jsonamodelo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="217" column="20" lean-forward="false" selection-start-line="217" selection-start-column="20" selection-end-line="217" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/aemetapi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="42" column="45" lean-forward="false" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/servidorutils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1887">
+          <caret line="129" column="71" lean-forward="false" selection-start-line="129" selection-start-column="71" selection-end-line="129" selection-end-column="71" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <marker date="1494252187092" expanded="true" signature="866:1962" ph="..." />
+            <marker date="1494252187092" expanded="true" signature="903:916" ph="..." />
+            <marker date="1494252187092" expanded="true" signature="2885:3065" ph="..." />
+            <marker date="1494252187092" expanded="true" signature="4119:4249" ph="..." />
+            <marker date="1494252187092" expanded="true" signature="5425:5614" ph="..." />
+            <marker date="1494252187092" expanded="true" signature="8774:8944" ph="..." />
           </folding>
         </state>
       </provider>

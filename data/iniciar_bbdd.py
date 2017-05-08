@@ -62,7 +62,6 @@ def create_tables():
                f_insercion VARCHAR(255),
                f_elaboracion VARCHAR(255) NOT NULL,
                f_pronostico VARCHAR(255) NOT NULL,
-               pred_horaria BOOLEAN,
                prediccion JSON NOT NULL
            );"""
     create_table_muni = """ 

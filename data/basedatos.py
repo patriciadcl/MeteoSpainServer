@@ -68,7 +68,7 @@ class BaseDatos:
         finally:
             return esta_ddbb, resultado
 
-    def get_altamar(self, area_altamar, f_elaboracion, f_pronostico):
+    def get_pred_altamar(self, area_altamar, f_elaboracion, f_pronostico):
         sql = "SELECT prediccion FROM pred_altamar WHERE id = %s and " + \
               "f_elaboracion  = %s and f_pronostico = %s;"
         sql_delete = "DELETE FROM pred_altamar WHERE id = %s;"
@@ -92,7 +92,7 @@ class BaseDatos:
         finally:
             return esta_ddbb, resultado
 
-    def insert_altamar(self, area_altamar, f_elaboracion, f_pronostico, prediccion):
+    def insert_pred_altamar(self, area_altamar, f_elaboracion, f_pronostico, prediccion):
         sql = "INSERT INTO pred_altamar(id,f_pronostico, f_elaboracion,prediccion) " + \
               "VALUES(%s,%s,%s,%s) RETURNING id;"
         id_altamar = None
@@ -109,7 +109,7 @@ class BaseDatos:
         finally:
             return id_altamar
 
-    def get_costa(self, area_costa, f_elaboracion, f_pronostico):
+    def get_pred_costa(self, area_costa, f_elaboracion, f_pronostico):
         sql = "SELECT prediccion FROM pred_costa WHERE id = %s and f_elaboracion = %s and " + \
               "f_pronostico = %s;"
         sql_delete = "DELETE FROM pred_costa WHERE id = %s;"
@@ -133,7 +133,7 @@ class BaseDatos:
         finally:
             return esta_ddbb, resultado
 
-    def insert_costa(self, area_costa, f_elaboracion, f_pronostico, prediccion):
+    def insert_pred_costa(self, area_costa, f_elaboracion, f_pronostico, prediccion):
         sql = "INSERT INTO pred_costa(id,f_elaboracion,f_pronostico,prediccion) " + \
               "VALUES(%s,%s,%s,%s) RETURNING id;"
         id_costa = None
@@ -150,7 +150,7 @@ class BaseDatos:
         finally:
             return id_costa
 
-    def get_montaña(self, area_montaña, f_elaboracion, f_pronostico, horas):
+    def get_pred_montaña(self, area_montaña, f_elaboracion, f_pronostico, horas):
         sql = "SELECT f_insercion,prediccion FROM pred_montaña WHERE id = %s and f_elaboracion = %s and " + \
               " f_pronostico = %s;"
         sql_delete = "DELETE FROM pred_montaña WHERE id = %s;"
@@ -174,7 +174,7 @@ class BaseDatos:
         finally:
             return esta_ddbb, resultado
 
-    def insert_montaña(self, area_montaña, f_elaboracion, f_pronostico, prediccion):
+    def insert_pred_montaña(self, area_montaña, f_elaboracion, f_pronostico, prediccion):
         """ query data from the vendors table """
         sql = "INSERT INTO pred_montaña(id,f_insercion, f_elaboracion, f_pronostico,prediccion) " + \
               "VALUES(%s,%s,%s,%s,%s) RETURNING id;"
@@ -192,23 +192,23 @@ class BaseDatos:
         finally:
             return id_montaña
 
-    def get_municipio(self, id_municipio, fecha, horas, es_horaria=False):
+    def get_pred_municipio(self, id_municipio, fecha, horas):
         sql = "SELECT f_insercion, prediccion FROM pred_municipio WHERE id = %s and f_elaboracion = %s and " + \
-              "f_pronostico = %s and pred_horaria = %s;"
-        sql_delete = "DELETE FROM pred_municipio WHERE id = %s and pred_horaria = %s;"
+              "f_pronostico = %s;"
+        sql_delete = "DELETE FROM pred_municipio WHERE id = %s;"
         esta_ddbb = False
         resultado = None
         try:
             with psycopg2.connect(**self.params_db) as conn:
                 cur = conn.cursor()
-                cur.execute(sql, (str(id_municipio), fecha, fecha, es_horaria))
+                cur.execute(sql, (str(id_municipio), fecha, fecha))
                 row = cur.fetchone()
                 if row and not utils.es_ahora_mayor(row[0], horas):
                     esta_ddbb = True
                     resultado = row[1]
                 else:
                     # si no devuelve ningun dato actual, eliminamos los datos antinguos de esta id
-                    cur.execute(sql_delete, (str(id_municipio), es_horaria))
+                    cur.execute(sql_delete, (str(id_municipio),))
                     print("Rows deleted: ", cur.rowcount)
                 cur.close()
         except (Exception, psycopg2.DatabaseError) as error:
@@ -216,21 +216,14 @@ class BaseDatos:
         finally:
             return esta_ddbb, resultado
 
-    def get_muni_diaria(self, id_municipio, fecha, horas):
-        return self.get_municipio(id_municipio, fecha, horas, False)
-
-    def get_muni_horaria(self, id_municipio, fecha, horas):
-        return self.get_municipio(id_municipio, fecha, horas, True)
-
-    def ins_municipio(self, id_municipio, f_elaboracion, f_pronostico, prediccion, es_horaria=False):
+    def insert_pred_municipio(self, id_municipio, f_elaboracion, f_pronostico, prediccion):
         sql = "INSERT INTO pred_municipio(id,f_insercion, f_elaboracion,f_pronostico,pred_horaria,prediccion) " + \
               "VALUES(%s,%s,%s,%s,%s,%s) RETURNING id;"
         id_muni = None
         try:
             with psycopg2.connect(**self.params_db) as conn:
                 cur = conn.cursor()
-                cur.execute(sql,
-                            (id_municipio, utils.get_dia_hora(), f_elaboracion, f_pronostico, es_horaria, prediccion))
+                cur.execute(sql, (id_municipio, utils.get_dia_hora(), f_elaboracion, f_pronostico,  prediccion))
                 id_muni = cur.fetchone()[0]
                 # commit the changes to the database
                 conn.commit()
@@ -240,13 +233,7 @@ class BaseDatos:
         finally:
             return id_muni
 
-    def ins_muni_diaria(self, id_municipio, f_elaboracion, f_pronostico, prediccion):
-        return self.ins_municipio(id_municipio, f_elaboracion, f_pronostico, prediccion, False)
-
-    def ins_muni_horaria(self, id_municipio, f_elaboracion, f_pronostico, prediccion):
-        return self.ins_municipio(id_municipio, f_elaboracion, f_pronostico, prediccion, True)
-
-    def get_playa(self, id_playa, f_elaboracion, f_pronostico):
+    def get_pred_playa(self, id_playa, f_elaboracion, f_pronostico):
         """ query data from the vendors table """
         sql = "SELECT prediccion FROM pred_playa WHERE id = %s and f_elaboracion = %s and " + \
               "f_pronostico = %s;"
@@ -271,7 +258,7 @@ class BaseDatos:
         finally:
             return esta_ddbb, resultado
 
-    def insert_playa(self, id_playa, f_elaboracion, f_pronostico, prediccion):
+    def insert_pred_playa(self, id_playa, f_elaboracion, f_pronostico, prediccion):
         sql = "INSERT INTO pred_playa(id,f_elaboracion, f_pronostico,prediccion) VALUES(%s,%s,%s,%s) RETURNING id;"
         idplaya = None
         try:
