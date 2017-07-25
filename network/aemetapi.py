@@ -6,14 +6,12 @@ import requests
 
 class AemetAPI:
 
-    AEMET_API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYXRyaWN" \
-                    "pYWRjbEBnbWFpbC5jb20iLCJqdGkiOiI3MGU3Zj" +  \
-                    "Q5Yy05ZGY1LTQ3ZDEtYTViMy05YjBmOWJhNDFkM" +  \
-                    "mMiLCJleHAiOjE0OTY5MzQxNjMsImlzcyI6IkFF" + \
-                    "TUVUIiwiaWF0IjoxNDg5MTU4MTYzLCJ1c2VySWQ" + \
-                    "iOiI3MGU3ZjQ5Yy05ZGY1LTQ3ZDEtYTViMy05Yj" + \
-                    "BmOWJhNDFkMmMiLCJyb2xlIjoiIn0.qyhEVJ3ti" + \
-                    "Uyq7UzDRHmXGHS8IcxzZoej1V3KnSN9XpU"
+    AEMET_API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYXRyaWNpYWRjbEBnbWFpbC5" +\
+                    "jb20iLCJqdGkiOiJlMTlkMTFmYy05ZjY3LTRhODUtYTRjNC0wY2E2NDI" +\
+                    "zMDkyZGEiLCJleHAiOjE1MDg3NjE3NjksImlzcyI6IkFFTUVUIiwiaWF" +\
+                    "0IjoxNTAwOTg1NzY5LCJ1c2VySWQiOiJlMTlkMTFmYy05ZjY3LTRhODUt" +\
+                    "YTRjNC0wY2E2NDIzMDkyZGEiLCJyb2xlIjoiIn0.JftnuJlo0F6ypgi7" +\
+                    "-1pWRlBeP6f5L14HIA7rI1px_Cg"
     URL_BASE = "https://opendata.aemet.es/opendata/api/prediccion"
     PATH_MONTAÑA = "/especifica/montaña/pasada/area"
     PATH_MONTAÑA_DIA = "/dia"
