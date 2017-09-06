@@ -19,19 +19,12 @@ meteoserver_ddbb = BaseDatos()
 
 utils = servidor.ServidorUtils(base_dir, meteoserver_ddbb, 2)
 
+TIPOS_PETICION = {"altamar", "costa", "montaña", "municipio", "playa"}
+
 
 @app.route('/')
 def index():
     return "Bienvenido al servidor API de la aplicacion Meteo España para plataforma Android"
-
-
-@app.route('/datos/provincia/<cod_provincia>/municipios')
-def datos_municipios(cod_provincia):
-    if 1 < int(cod_provincia) < 53:
-        response = utils.get_datos_municipios(cod_provincia)
-    else:
-        response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
-    return response
 
 
 @app.route('/datos/<dato>')
@@ -40,6 +33,15 @@ def datos(dato):
         response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA, utils.MENSAJE_ERROR_FICHEROS))
     else:
         response = utils.get_datos(dato)
+    return response
+
+
+@app.route('/predicciones/<tipo>/metadatos')
+def metadatos(tipo):
+    if tipo not in TIPOS_PETICION:
+        response = str(aemet_api.get_response_error(aemet_api.COD_PET_INCORRECTA))
+    else:
+        response = utils.get_metadatos(tipo)
     return response
 
 

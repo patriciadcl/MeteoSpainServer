@@ -42,10 +42,6 @@ def drop_tables():
                 print("Eliminando la tabla ", tabla)
                 command = drop_table.format(tabla)
                 cur.execute(command)
-            # Eliminamos los datos municipios
-            print("Eliminando la tabla ", TABLA_MUNICIPIOS)
-            command = drop_table.format(TABLA_MUNICIPIOS)
-            cur.execute(command)
             cur.close()
     except (Exception, psycopg2.DatabaseError) as error:
         print(format(error))
@@ -64,14 +60,7 @@ def create_tables():
                f_pronostico VARCHAR(255) NOT NULL,
                prediccion JSON NOT NULL
            );"""
-    create_table_muni = """ 
-               CREATE TABLE {0} ( 
-               cod VARCHAR(255) NOT NULL,
-               nombre VARCHAR(255) NOT NULL,
-               cod_provincia VARCHAR(255) NOT NULL,
-               latitud VARCHAR(255) NOT NULL,
-               longitud VARCHAR(255) NOT NULL
-               );"""
+
     conexion = None
     try:
         with psycopg2.connect(**params_db) as conexion:
@@ -80,9 +69,6 @@ def create_tables():
                 print("Creando la tabla ", tabla)
                 command = create_table.format(tabla)
                 cur.execute(command)
-            print("Creando la tabla ", TABLA_MUNICIPIOS)
-            command = create_table_muni.format(TABLA_MUNICIPIOS)
-            cur.execute(command)
             cur.close()
     except (Exception, psycopg2.DatabaseError) as error:
         print(format(error))
@@ -90,35 +76,6 @@ def create_tables():
         if conexion:
             conexion.close()
 
-
-def fill_municipios_table(filename='municipios.csv'):
-    sql = "INSERT INTO datos_municipio(cod,nombre,cod_provincia,latitud,longitud) " + \
-          "VALUES(%s,%s,%s,%s,%s) RETURNING cod;"
-    #archivo = os.path.join(base_dir, "data", filename)
-    archivo = filename
-    with open(archivo, "r", encoding='utf-8') as f_open:
-        with psycopg2.connect(**params_db) as conn:
-            cur = conn.cursor()
-            contador = 0
-            for linea in f_open:
-                contador += 1
-                print(contador)
-                campos = linea.split(";")
-                try:
-                    cur.execute(sql, (str(campos[0]), str(campos[1]), str(campos[2]), str(campos[3]), str(campos[4])))
-                    cod_municipio = cur.fetchone()[0]
-                    if cod_municipio == str(campos[0]):
-                        print("Insertado ", str(campos[0]))
-                    else:
-                        print("No Insertado ", str(campos[0]))
-                    # commit the changes to the database
-                    conn.commit()
-                except (Exception, psycopg2.DatabaseError) as error:
-                    print(error)
-            cur.close()
-
-
 params_db = config()
 drop_tables()
 create_tables()
-fill_municipios_table()

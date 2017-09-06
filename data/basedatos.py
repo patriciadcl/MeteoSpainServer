@@ -11,7 +11,6 @@ from configparser import ConfigParser
 class BaseDatos:
     
     TABLAS_DB = ["pred_altamar", "pred_costa", "pred_montaña", "pred_municipio", "pred_playa"]
-    TABLA_MUNICIPIOS = "datos_municipio"
     base_dir = os.path.dirname(os.path.realpath('__file__'))
     params_db = None
 
@@ -37,34 +36,6 @@ class BaseDatos:
             raise Exception('Section {0} not found in the {1} file'.format(section, filename))
 
         return db
-
-    def get_datos_municipios(self, cod_provincia):
-        sql = "SELECT cod, nombre, cod_provincia, latitud, longitud FROM public.datos_municipio WHERE cod_provincia = %s " + \
-              "ORDER BY nombre ASC;"
-        print(cod_provincia)
-        esta_ddbb = False
-        resultado = None
-        try:
-            with psycopg2.connect(**self.params_db) as conn:
-                cur = conn.cursor()
-                cur.execute(sql, (cod_provincia,))
-                rows = cur.fetchall()
-                print(len(rows))
-                contador = 0
-                municipios = []
-                for row in rows:
-                    municipio = {'cod': str(row[0]), 'nombre': str(row[1]), 'cod_provincia': str(row[2]),
-                                 'latitud': str(row[3]), 'longitud': str(row[3])}
-                    contador += 1
-                    municipios.append(municipio)
-
-                cur.close()
-                esta_ddbb = True
-                resultado = municipios
-        except (Exception, psycopg2.DatabaseError) as error:
-            print(error)
-        finally:
-            return esta_ddbb, resultado
 
     def get_pred_altamar(self, area_altamar, f_elaboracion, f_pronostico):
         sql = "SELECT prediccion FROM pred_altamar WHERE id = %s and " + \
