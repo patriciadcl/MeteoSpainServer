@@ -34,6 +34,15 @@ class AemetAPI:
     DIAS_MONTAÑA = (0, 1, 2, 3)
     AREAS_COSTA = (40, 41, 42, 43, 44, 45, 46, 47)
 
+    aemet_api_key = None
+
+    @classmethod
+    def __init__(cls, base_dir):
+
+        cls.aemet_api = api.AemetAPI()
+        cls.meteo_ddbb = dd_bb
+        cls.incremento_horas = horas
+
     @classmethod
     def get_response_error(cls, cod_error, texto=None):
         response = None

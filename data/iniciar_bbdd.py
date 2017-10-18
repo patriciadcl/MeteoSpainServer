@@ -7,12 +7,11 @@ from configparser import ConfigParser
 
 
 TABLAS_DB = ["pred_altamar", "pred_costa", "pred_montaña", "pred_municipio", "pred_playa"]
-TABLA_MUNICIPIOS = "datos_municipio"
 base_dir = os.path.dirname(os.path.realpath('__file__'))
 
 
 def config(filename='basedatos.ini', section='postgresql'):
-    #archivo = os.path.join(base_dir, "data", filename)
+    # archivo = os.path.join(base_dir, "data", filename)
     archivo = filename
     print(archivo)
     # create a parser
